@@ -97,7 +97,7 @@ export function VisitorForm() {
           <span className="flex size-7 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">1</span>
           <h3 className="font-heading text-lg font-bold">What are you most interested in?</h3>
         </div>
-        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3">
           {ZONES.map((z) => {
             const active = interest === z.slug
             const Icon = z.icon
@@ -134,7 +134,7 @@ export function VisitorForm() {
         <span className="flex size-7 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">2</span>
         <h3 className="font-heading text-lg font-bold">Your details</h3>
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         <Field label="Full Name" htmlFor="v-name" required error={errors.name}>
           <TextInput id="v-name" value={form.name} error={!!errors.name} onChange={(e) => set('name', e.target.value)} placeholder="Your name" autoComplete="name" />
         </Field>

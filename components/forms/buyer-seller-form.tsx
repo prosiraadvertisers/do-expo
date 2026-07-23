@@ -103,7 +103,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
 
       <form onSubmit={submit} className="px-4 pb-6 pt-2 sm:px-8">
         {step === 1 && (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
             <div className="sm:col-span-2">
               <SectionTitle>Personal Details</SectionTitle>
             </div>
