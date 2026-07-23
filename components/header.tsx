@@ -72,34 +72,39 @@ export function Header() {
 
           <NavLink href="/exhibitor" color={linkColor}>Exhibitor</NavLink>
 
-          <button
-            onClick={() => open('buyer-seller')}
-            className={`flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition ${linkColor}`}
-          >
-            <Handshake className="size-4" /> Buyer Seller Meet
-          </button>
+          
         </nav>
 
-        <div className="flex items-center gap-2">
-          <CtaButton
-            variant="gold"
-            className="hidden sm:inline-flex"
-            onClick={() => open('visitor')}
-          >
-            <Ticket className="size-4" /> Free Pass
-          </CtaButton>
+       <div className="flex items-center gap-3">
+  <CtaButton
+    variant="gold"
+    className="hidden lg:inline-flex"
+    onClick={() => open('buyer-seller')}
+  >
+    <Handshake className="size-4" />
+    Buyer Seller Meet
+  </CtaButton>
 
-          <button
-            className={`inline-flex size-10 items-center justify-center rounded-lg lg:hidden ${
-              onDark ? 'text-white' : 'text-foreground'
-            }`}
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X className="size-6" /> : <Menu className="size-6" />}
-          </button>
-        </div>
+  <CtaButton
+    variant="gold"
+    className="hidden sm:inline-flex"
+    onClick={() => open('visitor')}
+  >
+    <Ticket className="size-4" />
+    Free Pass
+  </CtaButton>
+
+  <button
+    className={`inline-flex size-10 items-center justify-center rounded-lg lg:hidden ${
+      onDark ? 'text-white' : 'text-foreground'
+    }`}
+    onClick={() => setMobileOpen((v) => !v)}
+    aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+    aria-expanded={mobileOpen}
+  >
+    {mobileOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+  </button>
+</div>
       </div>
 
       {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}

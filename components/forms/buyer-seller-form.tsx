@@ -103,22 +103,25 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
 
       <form onSubmit={submit} className="px-4 pb-6 pt-2 sm:px-8">
         {step === 1 && (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <div className="sm:col-span-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="md:col-span-2">
               <SectionTitle>Personal Details</SectionTitle>
             </div>
+
             <Field label="Full Name" htmlFor="bs-name" required error={errors.name}>
               <TextInput id="bs-name" value={personal.name} error={!!errors.name} onChange={(e) => setP('name', e.target.value)} placeholder="e.g. Priya Sharma" autoComplete="name" />
             </Field>
             <Field label="Designation" htmlFor="bs-desig">
               <TextInput id="bs-desig" value={personal.designation} onChange={(e) => setP('designation', e.target.value)} placeholder="e.g. Head of Procurement" />
             </Field>
+
             <Field label="Company" htmlFor="bs-company" required error={errors.company}>
               <TextInput id="bs-company" value={personal.company} error={!!errors.company} onChange={(e) => setP('company', e.target.value)} placeholder="Company name" autoComplete="organization" />
             </Field>
             <Field label="Mobile" htmlFor="bs-mobile" required error={errors.mobile}>
               <PhoneInput id="bs-mobile" value={personal.mobile} error={!!errors.mobile} onChange={(e) => setP('mobile', e.target.value)} placeholder="98765 43210" />
             </Field>
+
             <Field label="Email" htmlFor="bs-email" required error={errors.email}>
               <TextInput id="bs-email" type="email" value={personal.email} error={!!errors.email} onChange={(e) => setP('email', e.target.value)} placeholder="you@company.com" autoComplete="email" />
             </Field>
@@ -127,9 +130,13 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
                 {COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
               </Select>
             </Field>
-            <Field label="Address" htmlFor="bs-address">
-              <TextInput id="bs-address" value={personal.address} onChange={(e) => setP('address', e.target.value)} placeholder="Street, area" autoComplete="street-address" />
-            </Field>
+
+            <div className="md:col-span-2">
+              <Field label="Address" htmlFor="bs-address">
+                <TextInput id="bs-address" value={personal.address} onChange={(e) => setP('address', e.target.value)} placeholder="Street, area" autoComplete="street-address" />
+              </Field>
+            </div>
+
             <Field label="City" htmlFor="bs-city" required error={errors.city}>
               <TextInput id="bs-city" value={personal.city} error={!!errors.city} onChange={(e) => setP('city', e.target.value)} placeholder="City" />
             </Field>
@@ -137,7 +144,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
               <TextInput id="bs-state" value={personal.state} error={!!errors.state} onChange={(e) => setP('state', e.target.value)} placeholder="State" />
             </Field>
 
-            <div className="mt-2 flex justify-end sm:col-span-2">
+            <div className="mt-2 flex justify-end md:col-span-2">
               <CtaButton type="button" variant="primary" onClick={next}>
                 Next: Trade Profile <ArrowRight className="size-4" />
               </CtaButton>
