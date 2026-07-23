@@ -91,13 +91,13 @@ export function VisitorForm() {
   }
 
   return (
-    <form onSubmit={submit} className="px-5 py-6 sm:px-8">
-      <div className="mb-5">
-        <div className="mb-3 flex items-center gap-2">
+    <form onSubmit={submit} className="px-4 py-6 sm:px-8 md:px-6">
+      <div className="mb-6 space-y-3">
+        <div className="flex items-center gap-2">
           <span className="flex size-7 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">1</span>
           <h3 className="font-heading text-lg font-bold">What are you most interested in?</h3>
         </div>
-        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
           {ZONES.map((z) => {
             const active = interest === z.slug
             const Icon = z.icon
@@ -121,7 +121,7 @@ export function VisitorForm() {
       </div>
 
       {rec && (
-        <div className="mb-5 flex gap-3 rounded-xl border border-gold/40 bg-gold/10 p-4 animate-fade-in-up">
+        <div className="mb-6 flex gap-3 rounded-xl border border-gold/40 bg-gold/10 p-4 animate-fade-in-up">
           <Sparkles className="mt-0.5 size-5 shrink-0 text-gold-foreground" />
           <p className="text-sm text-foreground">
             Because you&apos;re interested in <strong>{rec.zone.replace(' Zone', '')}</strong>, don&apos;t miss the{' '}
@@ -130,11 +130,11 @@ export function VisitorForm() {
         </div>
       )}
 
-      <div className="mb-3 flex items-center gap-2">
+      <div className="mb-4 flex items-center gap-2">
         <span className="flex size-7 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">2</span>
         <h3 className="font-heading text-lg font-bold">Your details</h3>
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <Field label="Full Name" htmlFor="v-name" required error={errors.name}>
           <TextInput id="v-name" value={form.name} error={!!errors.name} onChange={(e) => set('name', e.target.value)} placeholder="Your name" autoComplete="name" />
         </Field>

@@ -19,7 +19,7 @@ export function Field({
   children: ReactNode
 }) {
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className="flex flex-col gap-2">
       <label htmlFor={htmlFor} className="text-sm font-medium text-foreground">
         {label}
         {required && <span className="ml-0.5 text-destructive">*</span>}
@@ -32,7 +32,7 @@ export function Field({
 }
 
 const baseInput =
-  'w-full rounded-lg border border-input bg-background px-3.5 py-2.5 text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus:border-ring focus:ring-4 focus:ring-ring/15 aria-[invalid=true]:border-destructive aria-[invalid=true]:ring-destructive/20'
+  'w-full rounded-lg border border-input bg-background px-3.5 py-3 text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus:border-ring focus:ring-4 focus:ring-ring/15 aria-[invalid=true]:border-destructive aria-[invalid=true]:ring-destructive/20'
 
 export function TextInput({
   error,
@@ -73,12 +73,12 @@ export function PhoneInput({
         error ? 'border-destructive ring-destructive/20' : ''
       }`}
     >
-      <span className="flex items-center gap-1 border-r border-input bg-muted px-3 text-sm font-medium text-foreground">
+      <span className="flex items-center border-r border-input bg-muted px-3.5 text-sm font-medium text-foreground">
         +91
       </span>
       <input
         inputMode="tel"
-        className="w-full bg-transparent px-3.5 py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground"
+        className="w-full bg-transparent px-3.5 py-3 text-sm text-foreground outline-none placeholder:text-muted-foreground"
         {...props}
       />
     </div>

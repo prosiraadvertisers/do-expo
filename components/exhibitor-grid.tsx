@@ -14,12 +14,12 @@ export function ExhibitorGrid({ exhibitors }: ExhibitorGridProps) {
   return (
     <>
       {/* Logo Grid */}
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
         {exhibitors.map((exhibitor) => (
           <button
             key={exhibitor.id}
             onClick={() => setSelected(exhibitor)}
-            className="group relative flex h-32 items-center justify-center rounded-2xl border border-border bg-white/50 backdrop-blur transition-all duration-300 hover:border-primary hover:shadow-lg"
+            className="group relative flex min-h-28 items-center justify-center rounded-2xl border border-border bg-white/50 backdrop-blur transition-all duration-300 hover:border-primary hover:shadow-lg p-3"
             style={{
               backgroundColor: `color-mix(in oklab, ${exhibitor.color} 8%, rgb(255 255 255) 92%)`,
               borderColor: exhibitor.color,
