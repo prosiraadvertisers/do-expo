@@ -90,9 +90,9 @@ export function HomeSections() {
   return (
     <>
       {/* About snapshot */}
-      <section className="px-4 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="grid w-full items-center gap-8 sm:gap-10 lg:grid-cols-2">
             <div>
               <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
                 About the Expo
@@ -126,8 +126,8 @@ export function HomeSections() {
       </section>
 
       {/* Zones overview */}
-      <section className="bg-secondary/40 px-4 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="w-full overflow-x-hidden bg-secondary/40 px-4 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
           <SectionHeading
             eyebrow="Explore the Floor"
             title="Five focused technology zones"
@@ -138,8 +138,8 @@ export function HomeSections() {
       </section>
 
       {/* Why exhibit */}
-      <section className="px-4 py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+        <div className="mx-auto w-full grid max-w-6xl items-center gap-8 sm:gap-10 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <div className="glass-card rounded-2xl p-8">
               <ul className="space-y-4">
@@ -171,8 +171,8 @@ export function HomeSections() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-primary px-4 py-20 text-primary-foreground">
-        <div className="mx-auto max-w-6xl">
+      <section className="w-full overflow-x-hidden bg-primary px-4 py-16 text-primary-foreground sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <span className="mb-3 inline-block rounded-full bg-primary-foreground/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider">
               What Partners Say
@@ -181,7 +181,7 @@ export function HomeSections() {
               Trusted by leaders across the value chain
             </h2>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid w-full gap-4 sm:gap-5 md:grid-cols-3">
             {testimonials.map((t) => (
               <div key={t.name} className="rounded-2xl bg-primary-foreground/5 p-6 ring-1 ring-primary-foreground/10">
                 <Quote className="mb-3 h-7 w-7 text-accent" />
@@ -194,15 +194,15 @@ export function HomeSections() {
             ))}
           </div>
 
-          <div className="mt-14">
+          <div className="mt-12 sm:mt-14">
             <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
               Featured partners &amp; exhibitors
             </p>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4">
               {partners.map((p) => (
                 <div
                   key={p}
-                  className="flex h-16 items-center justify-center rounded-xl bg-primary-foreground/5 font-heading text-lg font-bold text-primary-foreground/80 ring-1 ring-primary-foreground/10"
+                  className="flex min-h-16 items-center justify-center rounded-xl bg-primary-foreground/5 font-heading text-base sm:text-lg font-bold text-primary-foreground/80 ring-1 ring-primary-foreground/10"
                 >
                   {p}
                 </div>
@@ -213,9 +213,9 @@ export function HomeSections() {
       </section>
 
       {/* News */}
-      <section className="px-4 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
                 Latest Updates
@@ -229,7 +229,7 @@ export function HomeSections() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid w-full gap-4 sm:gap-5 md:grid-cols-3">
             {news.map((n) => (
               <article key={n.title} className="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1">
                 <div className="mb-3 flex items-center justify-between">

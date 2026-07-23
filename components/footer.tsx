@@ -17,9 +17,9 @@ export function Footer() {
   }
 
   return (
-    <footer className="brand-gradient-radial text-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
+    <footer className="w-full overflow-x-hidden brand-gradient-radial text-white">
+      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5">
               <span className="flex size-10 items-center justify-center rounded-lg bg-white/15 ring-1 ring-white/25">
@@ -71,7 +71,7 @@ export function Footer() {
                 <Check className="size-4 text-cta" /> You&apos;re subscribed. Watch your inbox!
               </p>
             ) : (
-              <form onSubmit={subscribe} className="mt-4 flex gap-2">
+              <form onSubmit={subscribe} className="mt-4 flex min-w-0 gap-2">
                 <input
                   type="email"
                   required
@@ -79,7 +79,7 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@company.com"
                   aria-label="Email address"
-                  className="w-full rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/50 focus:border-gold focus:ring-2 focus:ring-gold/30"
+                  className="min-w-0 flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/50 focus:border-gold focus:ring-2 focus:ring-gold/30"
                 />
                 <button type="submit" aria-label="Subscribe" className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-gold text-gold-foreground transition hover:brightness-105">
                   <ArrowRight className="size-5" />

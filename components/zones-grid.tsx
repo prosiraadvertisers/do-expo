@@ -4,16 +4,16 @@ import { ZONES } from "@/lib/event-data"
 
 export function ZonesGrid({ withImages = true }: { withImages?: boolean }) {
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="w-full grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
       {ZONES.map((zone) => (
         <Link
           key={zone.slug}
           href={`/exhibit#zone-${zone.slug}`}
           id={`zone-${zone.slug}`}
-          className="group glass-card scroll-mt-28 overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1"
+          className="group glass-card scroll-mt-28 min-w-0 overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1"
         >
           {withImages && (
-            <div className="relative h-40 overflow-hidden">
+            <div className="relative h-40 w-full overflow-hidden">
               <img
                 src={zone.image || "/placeholder.svg"}
                 alt={`${zone.name} at ${"Automation Expo 2026"}`}

@@ -74,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable} bg-background`}>
-      <body className="font-sans antialiased">
+      <body className="w-full overflow-x-hidden font-sans antialiased">
         <SiteChrome>{children}</SiteChrome>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

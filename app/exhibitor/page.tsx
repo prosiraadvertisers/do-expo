@@ -23,8 +23,8 @@ export default function ExhibitorPage() {
         </CtaButton>
       </PageHero>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="w-full overflow-x-hidden px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl">
           <div className="mb-8 flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <h2 className="text-balance font-heading text-2xl font-bold text-foreground">
@@ -53,8 +53,8 @@ export default function ExhibitorPage() {
         </div>
       </section>
 
-      <section className="brand-gradient-radial px-4 py-14 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="w-full overflow-x-hidden brand-gradient-radial px-4 py-14 text-white sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-4xl text-center">
           <h2 className="text-balance font-heading text-3xl font-bold sm:text-4xl">
             Your Brand Belongs Here
           </h2>

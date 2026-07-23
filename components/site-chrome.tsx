@@ -10,11 +10,13 @@ import { FloatingCTA } from '@/components/floating-cta'
 export function SiteChrome({ children }: { children: ReactNode }) {
   return (
     <RegistrationProvider>
-      <Header />
-      <main className="min-h-screen">{children}</main>
-      <Footer />
-      <FloatingCTA />
-      <RegistrationModal />
+      <div className="w-full overflow-x-hidden">
+        <Header />
+        <main className="min-h-screen w-full overflow-x-hidden">{children}</main>
+        <Footer />
+        <FloatingCTA />
+        <RegistrationModal />
+      </div>
     </RegistrationProvider>
   )
 }

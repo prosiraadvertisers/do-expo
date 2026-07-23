@@ -19,17 +19,17 @@ export default function BuyerSellerMeetPage() {
         subtitle="Get matched with the right suppliers and buyers through curated 1:1 meetings tailored to your procurement needs and product focus."
       />
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+      <section className="w-full overflow-x-hidden px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="grid w-full grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-3 lg:gap-8">
             {/* Main form */}
-            <div className="lg:col-span-2">
+            <div className="w-full min-w-0 lg:col-span-2">
               <BuyerSellerForm />
             </div>
 
             {/* Benefits sidebar */}
-            <div>
-              <div className="sticky top-24 space-y-6">
+            <div className="w-full min-w-0">
+              <div className="sticky top-24 space-y-4 sm:space-y-6">
                 <div>
                   <h3 className="font-heading text-lg font-bold text-foreground">
                     Why Join the Deal Room?
