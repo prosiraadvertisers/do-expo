@@ -11,8 +11,8 @@ export const EVENT = {
   name: 'Automation Expo 2026',
   organizer: 'DOeximexpo',
   tagline: 'Where Industry Meets Innovation',
-  startISO: '2026-03-18T09:00:00+05:30',
-  dateLabel: '18\u201320 March 2026',
+  startISO: '2027-04-21T09:00:00+05:30',
+  dateLabel: '21\u201323 April 2027',
   venue: 'Bombay Exhibition Centre, Mumbai, India',
   venueShort: 'Mumbai, India',
 }

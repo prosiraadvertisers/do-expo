@@ -5,23 +5,23 @@ import { BookOpen, Plane, Lightbulb, Users } from "lucide-react"
 const items = [
   {
     icon: BookOpen,
-    title: "Visitor Guide",
-    desc: "Everything you need to plan a productive day on the trade floor.",
+    title: "Importer & Exporter Guide",
+    desc: "Everything you need to plan successful meetings and discover global trade opportunities.",
   },
   {
     icon: Plane,
-    title: "Travel & Stay",
-    desc: "Curated hotel partners and transit info for out-of-town delegates.",
+    title: "International Delegates",
+    desc: "Travel assistance, hotel partners and visa support for overseas visitors.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation Awards",
-    desc: "Discover breakthrough automation products competing on stage.",
+    title: "Trade Opportunities",
+    desc: "Explore innovative products, sourcing solutions and emerging international markets.",
   },
   {
     icon: Users,
-    title: "Networking",
-    desc: "Pre-scheduled B2B meetings connecting buyers and sellers.",
+    title: "B2B Matchmaking",
+    desc: "Pre-scheduled meetings connecting manufacturers, exporters, importers and global buyers.",
   },
 ]
 

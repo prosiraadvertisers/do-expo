@@ -27,19 +27,19 @@ function SectionHeading({
 }
 
 const stats = [
-  { icon: Building2, value: "600+", label: "Exhibitors" },
-  { icon: Globe2, value: "40+", label: "Countries" },
-  { icon: TrendingUp, value: "45,000+", label: "Trade Visitors" },
-  { icon: Handshake, value: "5,000+", label: "B2B Meetings" },
+  { icon: Building2, value: "1000+", label: "Exhibitors" },
+  { icon: Globe2, value: "50+", label: "Countries" },
+  { icon: TrendingUp, value: "25,000+", label: "Trade Visitors" },
+  { icon: Handshake, value: "5000+", label: "Business Meetings" },
 ]
 
 const whyExhibit = [
-  "Meet 45,000+ qualified industrial buyers under one roof",
-  "Launch products in front of decision-makers and media",
-  "Generate high-intent leads through the Buyer-Seller Deal Room",
-  "Position your brand alongside global automation leaders",
-  "Access curated matchmaking and pre-scheduled meetings",
-  "Gain visibility across zones, stages and digital channels",
+  "Connect with qualified importers and exporters from over 50 countries",
+  "Launch your products in international markets",
+  "Generate high-quality global trade leads",
+  "Build partnerships with distributors and sourcing companies",
+  "Participate in curated B2B matchmaking sessions",
+  "Increase your brand visibility in the international trade community",
 ]
 
 const testimonials = [
@@ -67,21 +67,21 @@ const partners = ["AxisRobo", "NovaVision", "ForgeAI", "AssembleX", "PrecisionMe
 const news = [
   {
     tag: "Announcement",
-    title: "Registrations open for Automation Expo 2026",
-    date: "12 Jan 2026",
-    desc: "Free visitor passes and exhibitor bookings are now live for the flagship edition in Mumbai.",
+    title: "DoExim Expo 2027 registrations are now open",
+    date: "21 April 2027",
+    desc: "Visitor registrations and exhibitor bookings are now available for the upcoming international trade exhibition.",
   },
   {
-    tag: "Speakers",
-    title: "First wave of keynote speakers revealed",
-    date: "28 Jan 2026",
-    desc: "Industry CTOs and startup founders join the Main Stage line-up across three power-packed days.",
+    tag: "International Trade",
+    title: "50+ countries confirm participation",
+    date: "28 Jan 2027",
+    desc: "Global buyers, exporters and trade organizations are preparing to showcase opportunities from around the world.",
   },
   {
-    tag: "Zones",
-    title: "New Innovation & Startup Zone confirmed",
-    date: "05 Feb 2026",
-    desc: "A dedicated pavilion and live pitch stage for deep-tech startups and university spin-offs.",
+    tag: "Business",
+    title: "Dedicated B2B Matchmaking Program announced",
+    date: "05 Feb 2027",
+    desc: "Pre-scheduled business meetings will help importers, exporters and manufacturers build valuable partnerships.",
   },
 ]
 
@@ -98,12 +98,10 @@ export function HomeSections() {
                 About the Expo
               </span>
               <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
-                India&apos;s flagship platform for industrial automation
+                Connecting Global Import & Export Professionals
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-                Presented by DOeximexpo, Automation Expo 2026 brings together the entire automation value chain —
-                robotics, machine vision, quality inspection, assembly systems and breakthrough startups — for three
-                days of business, learning and networking.
+                DoExim Expo is dedicated to fostering international trade and commerce by creating a premier platform where businesses can connect, learn and grow together. We bring together thousands of exhibitors, buyers and professionals from over 50 countries to explore new markets, establish partnerships and discover innovative import and export solutions.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <CtaLink href="/about" variant="outline">
@@ -130,8 +128,8 @@ export function HomeSections() {
         <div className="mx-auto w-full max-w-6xl">
           <SectionHeading
             eyebrow="Explore the Floor"
-            title="Five focused technology zones"
-            desc="Each zone curates the leading exhibitors, live demos and sessions in its field — so you spend time where it matters most."
+            title="Explore Global Trade Opportunities"
+            desc="Discover international exhibitors, sourcing partners, country pavilions, trade services and networking opportunities designed to help your business grow globally."
           />
           <ZonesGrid />
         </div>
@@ -157,11 +155,10 @@ export function HomeSections() {
               Why Exhibit
             </span>
             <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
-              Turn three days into a year of pipeline
+              Expand Your Business Beyond Borders
             </h2>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Exhibiting at Automation Expo 2026 puts your brand in front of the buyers, integrators and partners
-              driving India&apos;s next industrial decade.
+              Exhibiting at DoExim Expo gives your business direct access to importers, exporters, wholesalers, manufacturers and international buyers looking for trusted trade partners.
             </p>
             <div className="mt-6">
               <CtaButton onClick={() => open("exhibitor")}>Reserve your stand</CtaButton>
@@ -178,7 +175,7 @@ export function HomeSections() {
               What Partners Say
             </span>
             <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl">
-              Trusted by leaders across the value chain
+              Trusted by Global Trade Professionals
             </h2>
           </div>
           <div className="grid w-full gap-4 sm:gap-5 md:grid-cols-3">
