@@ -78,11 +78,50 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
     }
   }
 
-  const submit = (ev: React.FormEvent) => {
-    ev.preventDefault()
-    if (validateStep2()) setSubmitted(true)
-  }
+  const submit = async (ev: React.FormEvent) => {
+  ev.preventDefault();
 
+  if (!validateStep2()) return;
+
+  try {
+    const response = await fetch("/api/buyer-seller", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: personal.name,
+        designation: personal.designation,
+        company: personal.company,
+        mobile: personal.mobile,
+        email: personal.email,
+        address: personal.address,
+        country: personal.country,
+        city: personal.city,
+        state: personal.state,
+        companyType,
+        role,
+        categories,
+        industries,
+        purchaseValue,
+        timeline,
+        objective,
+        sources,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert(result.message || "Submission failed.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  }
+};
   if (submitted) {
     return (
       <FormSuccess

@@ -17,18 +17,52 @@ export function ExhibitorForm() {
   })
   const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }))
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const err: Record<string, string> = {}
-    if (!form.company.trim()) err.company = 'Company is required.'
-    if (!form.name.trim()) err.name = 'Contact name is required.'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) err.email = 'Enter a valid email.'
-    if (!/^\d{10}$/.test(form.mobile.replace(/\s/g, ''))) err.mobile = 'Enter a valid 10-digit number.'
-    if (!form.zone) err.zone = 'Select a zone.'
-    setErrors(err)
-    if (Object.keys(err).length === 0) setSubmitted(true)
-  }
+  const submit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
+  const err: Record<string, string> = {};
+
+  if (!form.company.trim()) err.company = "Company is required.";
+  if (!form.name.trim()) err.name = "Contact name is required.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+    err.email = "Enter a valid email.";
+  if (!/^\d{10}$/.test(form.mobile.replace(/\s/g, "")))
+    err.mobile = "Enter a valid 10-digit number.";
+  if (!form.zone) err.zone = "Select a zone.";
+
+  setErrors(err);
+
+  if (Object.keys(err).length > 0) return;
+
+  try {
+    const response = await fetch("/api/exhibitor", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        company: form.company,
+        contactName: form.name,
+        email: form.email,
+        mobile: form.mobile,
+        zone: form.zone,
+        boothSize: form.booth,
+        message: form.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert(result.message || "Submission failed.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  }
+};
   if (submitted) {
     return (
       <FormSuccess
