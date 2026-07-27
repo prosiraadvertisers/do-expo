@@ -30,7 +30,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.05] text-balance sm:text-6xl lg:text-7xl">
-            <span className="text-gradient-gold">DoExim Expo 2026</span>
+            <span className="text-gradient-gold">DoExim Expo 2027</span>
           </h1>
           <p className="mt-4 max-w-xl text-lg text-white/80 text-pretty sm:text-xl">
             Connecting global import & export professionals since 2020. Discover

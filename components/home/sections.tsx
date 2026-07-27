@@ -221,8 +221,10 @@ export function HomeSections() {
                 News &amp; announcements
               </h2>
             </div>
-            <Link href="/event" className="inline-flex items-center gap-1 font-semibold text-accent">
-              View full agenda
+<Link
+  href="/event"
+  className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary/80"
+>              View full agenda
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -230,7 +232,7 @@ export function HomeSections() {
             {news.map((n) => (
               <article key={n.title} className="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1">
                 <div className="mb-3 flex items-center justify-between">
-                  <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">{n.tag}</span>
+                  <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">{n.tag}</span>
                   <span className="text-xs text-muted-foreground">{n.date}</span>
                 </div>
                 <h3 className="mb-2 font-heading text-lg font-bold leading-snug text-foreground">{n.title}</h3>

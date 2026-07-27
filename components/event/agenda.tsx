@@ -6,12 +6,17 @@ import { AGENDA } from "@/lib/event-data"
 
 const trackColors: Record<string, string> = {
   Keynote: "bg-gold/15 text-gold-foreground ring-gold/30",
-  Robotics: "bg-primary/15 text-primary ring-primary/25",
-  Vision: "bg-accent/15 text-accent ring-accent/25",
-  Inspection: "bg-accent/15 text-accent ring-accent/25",
-  Assembly: "bg-primary/15 text-primary ring-primary/25",
-  Innovation: "bg-cta/15 text-cta ring-cta/25",
+  Registration: "bg-secondary text-secondary-foreground ring-border",
+  MSME: "bg-primary/15 text-primary ring-primary/25",
+  Policy: "bg-indigo-100 text-indigo-800 ring-indigo-300",
+  Documentation: "bg-sky-100 text-sky-800 ring-sky-300",
+  Logistics: "bg-primary/15 text-primary ring-primary/25",
+  Customs: "bg-cta/15 text-cta ring-cta/25",
+  Banking: "bg-gold/15 text-gold-foreground ring-gold/30",
+  Technology: "bg-primary/15 text-primary ring-primary/25",
+  Marketing: "bg-blue-100 text-blue-700 ring-blue-300",
   Panel: "bg-secondary text-secondary-foreground ring-border",
+  Investment: "bg-cta/15 text-cta ring-cta/25",
   Networking: "bg-cta/15 text-cta ring-cta/25",
 }
 
@@ -47,7 +52,7 @@ export function Agenda() {
         <div className="mb-6 text-center">
           <p className="font-heading text-xl font-bold text-foreground">{day.date}</p>
           <p className="text-sm text-muted-foreground">
-            Theme: <span className="font-medium text-accent">{day.theme}</span>
+            Theme: <span className="font-medium text-primary">{day.theme}</span>
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export function AgendaDownload() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement("a")
     a.href = url
-    a.download = "automation-expo-2026-agenda.txt"
+    a.download = "doexim-global-trade-expo-2027-agenda.txt"
     a.click()
     URL.revokeObjectURL(url)
   }
