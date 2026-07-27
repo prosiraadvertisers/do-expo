@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, MapPin, Phone, ArrowRight, Check } from 'lucide-react'
 import { EVENT, ZONES } from '@/lib/event-data'
 import { useRegistration } from '@/components/registration/registration-context'
@@ -21,15 +22,16 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <span className="flex size-10 items-center justify-center rounded-lg bg-white/15 ring-1 ring-white/25">
-                <span className="font-heading text-lg font-bold">D</span>
-              </span>
-              <div className="leading-none">
-                <p className="font-heading text-lg font-bold">DOeximexpo</p>
-                <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-gold">Automation Expo 2026</p>
-              </div>
-            </div>
+            <Link href="/" className="inline-block mb-4 shrink-0 max-w-[180px] lg:max-w-[220px]">
+              <Image
+                src="/logo-white.png"
+                alt="DO Exim Expo"
+                width={180}
+                height={38}
+                priority
+                className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-4 max-w-sm text-sm text-white/70 text-pretty">
               India&apos;s premier B2B automation trade show, connecting global technology leaders, buyers and innovators across three high-energy days.
             </p>
@@ -86,7 +88,7 @@ export function Footer() {
                 </button>
               </form>
             )}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <FooterHeading>Our partners</FooterHeading>
               <div className="mt-3 flex flex-wrap gap-2">
                 {['ACMA', 'CII', 'IESA', 'MAIT', 'NASSCOM'].map((p) => (
@@ -95,7 +97,7 @@ export function Footer() {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

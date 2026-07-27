@@ -7,10 +7,12 @@ import { Menu, X, ChevronDown, Ticket, Handshake, ArrowRight } from 'lucide-reac
 import { EXHIBIT_MENU, ZONES } from '@/lib/event-data'
 import { useRegistration } from '@/components/registration/registration-context'
 import { CtaButton } from '@/components/ui/cta'
+import Image from "next/image";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [megaOpen, setMegaOpen] = useState(false)
+  const [eventOpen, setEventOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
   const { open } = useRegistration()
@@ -25,6 +27,7 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false)
     setMegaOpen(false)
+    setEventOpen(false)
   }, [pathname])
 
   useEffect(() => {
@@ -50,7 +53,23 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           <NavLink href="/about" color={linkColor}>About</NavLink>
-          <NavLink href="/event" color={linkColor}>Event</NavLink>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setEventOpen(true)}
+            onMouseLeave={() => setEventOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition ${linkColor} ${
+                eventOpen ? (onDark ? 'text-white' : 'text-primary') : ''
+              }`}
+              aria-expanded={eventOpen}
+            >
+              Event
+              <ChevronDown className={`size-4 transition-transform ${eventOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {eventOpen && <EventDropdown />}
+          </div>
 
           <div
             className="relative"
@@ -114,18 +133,21 @@ export function Header() {
 
 function Logo({ onDark }: { onDark: boolean }) {
   return (
-    <Link href="/" className="flex items-center gap-2.5" aria-label="DOeximexpo home">
-      <span className="flex size-9 items-center justify-center rounded-lg brand-gradient text-white shadow-md">
-        <span className="font-heading text-lg font-bold">D</span>
-      </span>
-      <span className={`flex flex-col leading-none ${onDark ? 'text-white' : 'text-foreground'}`}>
-        <span className="font-heading text-base font-bold tracking-tight">DOeximexpo</span>
-        <span className={`text-[10px] font-medium uppercase tracking-[0.18em] ${onDark ? 'text-gold' : 'text-primary/70'}`}>
-          Automation Expo 2026
-        </span>
-      </span>
+    <Link
+      href="/"
+      aria-label="DO Exim Expo"
+      className="flex items-center shrink-0 max-w-[180px] lg:max-w-[220px]"
+    >
+      <Image
+        src={onDark ? "/logo-white.png" : "/logo-dark.png"}
+        alt="DO Exim Expo"
+        width={180}
+        height={38}
+        priority
+        className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
+      />
     </Link>
-  )
+  );
 }
 
 function NavLink({ href, color, children }: { href: string; color: string; children: React.ReactNode }) {
@@ -207,6 +229,27 @@ function MegaMenu() {
   )
 }
 
+function EventDropdown() {
+  return (
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="w-64 overflow-hidden rounded-2xl border border-border bg-popover p-4 shadow-2xl animate-fade-in-up">
+        <ul className="space-y-1">
+          <li>
+            <Link href="/pre-event" className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary">
+              Pre-Event Schedule
+            </Link>
+          </li>
+          <li>
+            <Link href="/event" className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary">
+              Event
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
 function MenuHeading({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">{children}</p>
 }
@@ -215,12 +258,29 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
   const { open } = useRegistration()
   const [exhibitOpen, setExhibitOpen] = useState(false)
   const [zonesOpen, setZonesOpen] = useState(false)
+  const [eventOpen, setEventOpen] = useState(false)
 
   return (
     <div className="lg:hidden">
       <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-4 pb-8 pt-2">
         <MobileLink href="/about" onClose={onClose}>About</MobileLink>
-        <MobileLink href="/event" onClose={onClose}>Event</MobileLink>
+
+        <div className="border-b border-border">
+          <button
+            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
+            onClick={() => setEventOpen((v) => !v)}
+            aria-expanded={eventOpen}
+          >
+            Event
+            <ChevronDown className={`size-5 transition-transform ${eventOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {eventOpen && (
+            <div className="pb-3 pl-3">
+              <Link href="/pre-event" onClick={onClose} className="block py-2 text-sm text-foreground/80">Complete Event Schedule</Link>
+              <Link href="/event" onClick={onClose} className="block py-2 text-sm text-foreground/80">Main Event</Link>
+            </div>
+          )}
+        </div>
 
         <div className="border-b border-border">
           <button
