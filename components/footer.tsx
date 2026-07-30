@@ -58,7 +58,7 @@ export function Footer() {
               {ZONES.map((z) => (
                 <li key={z.slug}>
                   <Link href={`/exhibit#zone-${z.slug}`} className="text-white/70 transition hover:text-white">
-                    {z.name.replace(' Zone', '')}
+                    {z.name}
                   </Link>
                 </li>
               ))}

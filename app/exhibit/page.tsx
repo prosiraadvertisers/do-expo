@@ -65,7 +65,7 @@ export default function ExhibitPage() {
               {
                 icon: Building2,
                 title: "Sector-Specific Zones",
-                desc: "Choose your zone — Robotics, Machine Vision, Quality Inspection, Assembly or Innovation — reaching your target audience.",
+                desc: "Choose your zone — Agriculture, Consumer Goods, Manufacturing, Textiles, Healthcare, or Export Services — reaching your target audience.",
               },
               {
                 icon: Star,
@@ -188,10 +188,10 @@ export default function ExhibitPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Five Dedicated Tech Zones
+            Six Dedicated Export &amp; Trade Zones
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            Choose your zone based on your technology focus. Each zone attracts a targeted audience of industry professionals and decision-makers.
+            Choose your zone based on your industry focus. Click on any zone to view its complete product and service categories.
           </p>
           <ZonesGrid />
         </div>
@@ -280,7 +280,7 @@ export default function ExhibitPage() {
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               { title: "Exhibition Floor", src: "/images/gallery-floor.png" },
-              { title: "Robotics Zone", src: "/images/gallery-robotics.png" },
+              { title: "Agriculture & Food Zone", src: "/images/gallery-robotics.png" },
               { title: "Networking", src: "/images/gallery-network.png" },
               { title: "Innovation Stage", src: "/images/gallery-stage.png" },
               { title: "Deal Room", src: "/images/gallery-dealroom.png" },

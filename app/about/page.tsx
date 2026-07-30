@@ -62,7 +62,7 @@ export default function AboutPage() {
               {[
                 { icon: Users, label: "Trade Visitors", value: "40,000+" },
                 { icon: Globe, label: "Global Exhibitors", value: "500+" },
-                { icon: Target, label: "Tech Zones", value: "5" },
+                { icon: Target, label: "Trade Zones", value: "6" },
                 {
                   icon: TrendingUp,
                   label: "Countries Represented",
@@ -170,7 +170,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <h2 className="text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Five Dedicated Zones
+              Six Dedicated Export &amp; Trade Zones
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
               Explore products, services and trade opportunities across multiple
@@ -181,33 +181,34 @@ export default function AboutPage() {
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
             {[
               {
-                title: "Import & Export Pavilion",
-                desc: "Meet exporters, importers and sourcing companies from around the world.",
-                highlights: ["Global Buyers", "Exporters", "Importers"],
+                title: "Agriculture, Food & FMCG",
+                desc: "Fresh produce, processed foods, spices, organic products, beverages & seafood.",
+                highlights: ["Fresh Produce", "Processed Foods", "Spices", "Organic Products"],
               },
               {
-                title: "Manufacturing Zone",
-                desc: "Manufacturers showcasing products for international markets.",
-                highlights: ["OEM Products", "Factories", "Private Label"],
+                title: "Consumer Goods & Lifestyle",
+                desc: "Home décor, houseware, kitchenware, gifts, handicrafts, toys and stationery.",
+                highlights: ["Home Décor", "Houseware", "Handicrafts", "Toys & Gifts"],
               },
               {
-                title: "International Country Pavilions",
-                desc: "Explore products and investment opportunities from participating countries.",
-                highlights: [
-                  "Country Booths",
-                  "Trade Delegations",
-                  "Investment",
-                ],
+                title: "Manufacturing & Industrial",
+                desc: "Engineering products, industrial supplies, auto components, electricals & machinery.",
+                highlights: ["Engineering", "Industrial Supplies", "Auto Parts", "Machinery"],
               },
               {
-                title: "Logistics & Supply Chain",
-                desc: "Shipping, freight forwarding, warehousing and customs solutions.",
-                highlights: ["Freight", "Customs", "Warehousing"],
+                title: "Textile, Fashion & Personal Care",
+                desc: "Garments, fabrics, leather goods, footwear, jewellery, cosmetics & wellness.",
+                highlights: ["Garments & Fabrics", "Leather Goods", "Jewellery", "Cosmetics"],
               },
               {
-                title: "Business Networking",
-                desc: "B2B matchmaking, seminars and networking sessions.",
-                highlights: ["Meetings", "Networking", "Knowledge Sessions"],
+                title: "Healthcare, Chemicals & Emerging Products",
+                desc: "Pharma, medical devices, chemicals, packaging, electronics & EV components.",
+                highlights: ["Pharmaceuticals", "Medical Devices", "Chemicals", "EV Components"],
+              },
+              {
+                title: "Export Services & Startup Pavilion",
+                desc: "Freight forwarders, CHAs, shipping lines, EXIM banks, ECGC, AI & SaaS, and startups.",
+                highlights: ["Freight & CHAs", "Shipping Lines", "EXIM Banking", "Startup Pavilion"],
               },
             ].map((zone, i) => (
               <div key={i} className="glass-card rounded-2xl p-6">

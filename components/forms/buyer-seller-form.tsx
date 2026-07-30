@@ -9,7 +9,18 @@ import { COUNTRIES } from '@/lib/event-data'
 
 const COMPANY_TYPES = ['OEM / Manufacturer', 'System Integrator', 'End User / Factory', 'Distributor / Reseller', 'Consultant', 'Government / PSU']
 const ROLES = ['Decision Maker / Approver', 'Influencer / Recommender', 'Technical Evaluator', 'Procurement / Purchase', 'Researcher']
-const CATEGORIES = ['Robotics', 'Machine Vision', 'Quality Inspection', 'Assembly Automation', 'Motion Control', 'IIoT & Sensors', 'Software & Digital Twin', 'Safety Systems']
+const CATEGORIES = [
+  'Fresh Produce & Processed Foods',
+  'Home Décor & Handicrafts',
+  'Engineering Products & Machinery',
+  'Auto Components',
+  'Garments & Sustainable Fabrics',
+  'Pharmaceuticals & Medical Devices',
+  'Chemicals & Packaging',
+  'Freight Forwarders & Logistics',
+  'Banks & EXIM Finance',
+  'AI & SaaS Export Tech',
+]
 const INDUSTRIES = ['Automotive', 'Electronics', 'Pharma', 'FMCG', 'Aerospace', 'Metal & Machining', 'Food & Beverage', 'Textiles', 'Logistics', 'Energy']
 const OBJECTIVES = ['Evaluate new suppliers', 'Compare products & pricing', 'Plan an upcoming project', 'Partnership / distribution', 'Investment / funding', 'General networking']
 const SOURCES = ['LinkedIn', 'Email invitation', 'Industry association', 'Colleague / referral', 'Search engine', 'Print / trade media', 'Previous edition']

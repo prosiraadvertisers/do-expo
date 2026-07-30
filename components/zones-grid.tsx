@@ -1,43 +1,49 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { Tag } from "lucide-react"
 import { ZONES } from "@/lib/event-data"
 
-export function ZonesGrid({ withImages = true }: { withImages?: boolean }) {
+export function ZonesGrid({ withImages }: { withImages?: boolean }) {
   return (
-    <div className="w-full grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {ZONES.map((zone) => (
-        <Link
+        <div
           key={zone.slug}
-          href={`/exhibit#zone-${zone.slug}`}
           id={`zone-${zone.slug}`}
-          className="group glass-card scroll-mt-28 min-w-0 overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1"
+          className="glass-card flex flex-col justify-between scroll-mt-28 min-w-0 overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-6 transition-all duration-300 shadow-xs"
         >
-          {withImages && (
-            <div className="relative h-40 w-full overflow-hidden">
-              <img
-                src={zone.image || "/placeholder.svg"}
-                alt={`${zone.name} at ${"Automation Expo 2026"}`}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
-              <span className="absolute left-3 top-3 rounded-full bg-background/70 px-3 py-1 text-xs font-semibold text-foreground backdrop-blur">
+          <div>
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <zone.icon className="h-6 w-6" />
+              </div>
+              <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
                 {zone.hall}
               </span>
             </div>
-          )}
-          <div className="p-5">
-            <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
-              <zone.icon className="h-6 w-6" />
-            </div>
-            <h3 className="mb-1 font-heading text-lg font-bold text-foreground">{zone.name}</h3>
-            <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{zone.short}</p>
-            <span className="inline-flex items-center gap-1 text-sm font-semibold text-accent">
-              Explore
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
+            <h3 className="mb-2 font-heading text-xl font-bold text-foreground">
+              {zone.name}
+            </h3>
+            <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+              {zone.short}
+            </p>
           </div>
-        </Link>
+
+          <div>
+            <p className="mb-2.5 text-xs font-bold uppercase tracking-wider text-primary/80">
+              Categories
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {zone.categories.map((cat) => (
+                <span
+                  key={cat}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-border/60 bg-muted/50 px-2.5 py-1 text-xs font-semibold text-foreground/85"
+                >
+                  <Tag className="size-3 text-primary/70 shrink-0" />
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       ))}
     </div>
   )

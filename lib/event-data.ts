@@ -1,8 +1,9 @@
 import {
-  Bot,
-  ScanEye,
-  ShieldCheck,
-  Cog,
+  Wheat,
+  ShoppingBag,
+  Factory,
+  Shirt,
+  Activity,
   Rocket,
   type LucideIcon,
 } from 'lucide-react'
@@ -10,9 +11,9 @@ import {
 export const EVENT = {
   name: 'DoExim Global Trade Expo 2027',
   organizer: 'Doeximexpo',
-  tagline: 'Exporting India to the World \u2014 Vision 2030',
+  tagline: 'Exporting India to the World — Vision 2030',
   startISO: '2027-04-21T09:00:00+05:30',
-  dateLabel: '21\u201323 April 2027',
+  dateLabel: '21–23 April 2027',
   venue: 'Bombay Exhibition Centre, Mumbai, India',
   venueShort: 'Mumbai, India',
 }
@@ -33,7 +34,7 @@ export const PARALLEL_ZONES: ParallelZone[] = [
   },
   {
     name: 'Business Matchmaking Lounge',
-    description: 'The Buyer Seller Meeting Zone \u2014 curated, pre-scheduled B2B meetings between exporters and international buyers.',
+    description: 'The Buyer Seller Meeting Zone — curated, pre-scheduled B2B meetings between exporters and international buyers.',
   },
   {
     name: 'Media Center & Product Launch Lounge',
@@ -82,6 +83,7 @@ export const EXPECTED_AUDIENCE: string[] = [
 ]
 
 export type Zone = {
+  id: string
   slug: string
   name: string
   icon: LucideIcon
@@ -89,64 +91,140 @@ export type Zone = {
   image: string
   short: string
   description: string
-  highlights: string[]
+  categories: string[]
+  highlights?: string[]
 }
 
 export const ZONES: Zone[] = [
   {
-    slug: 'robotics',
-    name: 'Robotics Zone',
-    icon: Bot,
+    id: 'agriculture-food-fmcg',
+    slug: 'agriculture-food-fmcg',
+    name: 'Agriculture, Food & FMCG',
+    icon: Wheat,
     hall: 'Hall 1',
     image: '/images/zone-robotics.png',
-    short: 'Industrial robots, cobots and autonomous mobile systems.',
+    short: 'Fresh produce, processed foods, spices, organic products, beverages & seafood.',
     description:
-      'Experience the cutting edge of industrial and collaborative robotics — from six-axis arms and SCARA systems to autonomous mobile robots transforming logistics and manufacturing.',
-    highlights: ['6-axis & SCARA robots', 'Collaborative cobots', 'AMRs & AGVs', 'Robotic welding'],
+      'Showcasing India’s agricultural abundance, processed food innovations, spices, organic certifications, beverages, seafood, and ready-to-eat products for international markets.',
+    categories: [
+      'Fresh Produce',
+      'Processed Foods',
+      'Spices',
+      'Organic Products',
+      'Beverages',
+      'Seafood',
+      'Ready-to-Eat',
+    ],
+    highlights: ['Fresh Produce', 'Processed Foods', 'Spices', 'Organic Products', 'Beverages', 'Seafood', 'Ready-to-Eat'],
   },
   {
-    slug: 'machine-vision',
-    name: 'Machine Vision Zone',
-    icon: ScanEye,
+    id: 'consumer-goods-lifestyle',
+    slug: 'consumer-goods-lifestyle',
+    name: 'Consumer Goods & Lifestyle',
+    icon: ShoppingBag,
     hall: 'Hall 2',
     image: '/images/zone-vision.png',
-    short: 'Smart cameras, sensors and AI-powered vision systems.',
+    short: 'Home décor, houseware, kitchenware, gifts, handicrafts, toys and stationery.',
     description:
-      'Discover AI-driven vision systems, smart cameras and 3D sensors that power defect detection, guidance and traceability across modern production lines.',
-    highlights: ['AI defect detection', '3D vision & sensors', 'Barcode & OCR', 'Vision-guided robotics'],
+      'Highlighting India’s rich artisanal craftsmanship and modern manufacturing across home décor, sustainable houseware, kitchenware, handcrafted gifts, toys, and premium stationery.',
+    categories: [
+      'Home Décor',
+      'Houseware',
+      'Kitchenware',
+      'Gifts',
+      'Handicrafts',
+      'Toys',
+      'Stationery',
+    ],
+    highlights: ['Home Décor', 'Houseware', 'Kitchenware', 'Gifts', 'Handicrafts', 'Toys', 'Stationery'],
   },
   {
-    slug: 'quality-inspection',
-    name: 'Quality Inspection Zone',
-    icon: ShieldCheck,
-    hall: 'Hall 2',
-    image: '/images/zone-inspection.png',
-    short: 'Metrology, testing and in-line quality assurance.',
-    description:
-      'Precision metrology, non-destructive testing and in-line inspection technologies that guarantee zero-defect manufacturing and full compliance.',
-    highlights: ['CMM & metrology', 'Non-destructive testing', 'In-line QA', 'Digital calibration'],
-  },
-  {
-    slug: 'assembly-automation',
-    name: 'Assembly Automation Zone',
-    icon: Cog,
+    id: 'manufacturing-industrial',
+    slug: 'manufacturing-industrial',
+    name: 'Manufacturing & Industrial',
+    icon: Factory,
     hall: 'Hall 3',
-    image: '/images/zone-assembly.png',
-    short: 'Automated assembly, conveyors and end-of-line systems.',
+    image: '/images/zone-inspection.png',
+    short: 'Engineering products, industrial supplies, auto components, electricals & machinery.',
     description:
-      'End-to-end assembly automation — pick-and-place, conveyors, fastening, dispensing and packaging solutions that maximise throughput and uptime.',
-    highlights: ['Pick & place', 'Conveyor systems', 'Fastening & dispensing', 'End-of-line packaging'],
+      'Connecting global buyers with top-tier Indian engineering manufacturers, industrial supplies, automotive components, electrical equipment, and heavy industrial machinery.',
+    categories: [
+      'Engineering Products',
+      'Industrial Supplies',
+      'Auto Components',
+      'Electrical',
+      'Machinery',
+      'Industrial Equipment',
+    ],
+    highlights: ['Engineering Products', 'Industrial Supplies', 'Auto Components', 'Electrical', 'Machinery', 'Industrial Equipment'],
   },
   {
-    slug: 'innovation-startup',
-    name: 'Innovation & Startup Zone',
-    icon: Rocket,
+    id: 'textile-fashion-personal-care',
+    slug: 'textile-fashion-personal-care',
+    name: 'Textile, Fashion & Personal Care',
+    icon: Shirt,
     hall: 'Hall 4',
-    image: '/images/zone-startup.png',
-    short: 'Emerging tech, deep-tech startups and live demos.',
+    image: '/images/zone-assembly.png',
+    short: 'Garments, fabrics, leather goods, footwear, jewellery, cosmetics & wellness.',
     description:
-      'Meet the disruptors — deep-tech startups, university spin-offs and R&D labs showcasing tomorrow\u2019s automation breakthroughs and pitching live on stage.',
-    highlights: ['Startup pavilion', 'Live pitch stage', 'Deep-tech demos', 'Investor connect'],
+      'Bringing together leading Indian apparel exporters, sustainable textile fabrics, fine leather goods, footwear, handcrafted jewellery, cosmetics, and Ayurvedic wellness products.',
+    categories: [
+      'Garments',
+      'Fabrics',
+      'Leather',
+      'Footwear',
+      'Jewellery',
+      'Cosmetics',
+      'Wellness Products',
+    ],
+    highlights: ['Garments', 'Fabrics', 'Leather', 'Footwear', 'Jewellery', 'Cosmetics', 'Wellness Products'],
+  },
+  {
+    id: 'healthcare-chemicals-emerging',
+    slug: 'healthcare-chemicals-emerging',
+    name: 'Healthcare, Chemicals & Emerging Products',
+    icon: Activity,
+    hall: 'Hall 5',
+    image: '/images/gallery-floor.png',
+    short: 'Pharma, medical devices, chemicals, packaging, electronics & EV components.',
+    description:
+      'Displaying high-growth export sectors including active pharmaceutical ingredients, medical devices, specialty chemicals, eco-packaging, electronics, renewable energy, and EV components.',
+    categories: [
+      'Pharmaceuticals',
+      'Medical Devices',
+      'Chemicals',
+      'Packaging',
+      'Electronics',
+      'Renewable Energy',
+      'EV Components',
+    ],
+    highlights: ['Pharmaceuticals', 'Medical Devices', 'Chemicals', 'Packaging', 'Electronics', 'Renewable Energy', 'EV Components'],
+  },
+  {
+    id: 'export-services-startup',
+    slug: 'export-services-startup',
+    name: 'Export Services & Startup Pavilion',
+    icon: Rocket,
+    hall: 'Hall 6',
+    image: '/images/zone-startup.png',
+    short: 'Freight forwarders, CHAs, shipping lines, EXIM banks, ECGC, AI & SaaS, and startups.',
+    description:
+      'The core trade enablement ecosystem — custom house agents, shipping lines, trade finance, export compliance, digital marketing agencies, AI/SaaS solutions, and emerging export startups.',
+    categories: [
+      'Freight Forwarders',
+      'CHAs',
+      'Shipping Lines',
+      'Banks',
+      'ECGC',
+      'Export Consultants',
+      'Digital Marketing Agencies',
+      'AI & SaaS',
+      'Packaging Companies',
+      'Inspection Agencies',
+      'Certification Bodies',
+      'Startup Pavilion',
+    ],
+    highlights: ['Freight Forwarders', 'CHAs', 'Shipping Lines', 'Banks', 'Export Consultants', 'AI & SaaS', 'Startup Pavilion'],
   },
 ]
 
@@ -188,11 +266,12 @@ export const EXHIBIT_MENU = {
 }
 
 export type ExhibitorCategory =
-  | 'Robotics'
-  | 'Machine Vision'
-  | 'Quality Inspection'
-  | 'Assembly Automation'
-  | 'Innovation'
+  | 'Agriculture, Food & FMCG'
+  | 'Consumer Goods & Lifestyle'
+  | 'Manufacturing & Industrial'
+  | 'Textile, Fashion & Personal Care'
+  | 'Healthcare, Chemicals & Emerging Products'
+  | 'Export Services & Startup Pavilion'
 
 export type Exhibitor = {
   id: string
@@ -204,30 +283,27 @@ export type Exhibitor = {
 }
 
 export const EXHIBITOR_CATEGORIES: ExhibitorCategory[] = [
-  'Robotics',
-  'Machine Vision',
-  'Quality Inspection',
-  'Assembly Automation',
-  'Innovation',
+  'Agriculture, Food & FMCG',
+  'Consumer Goods & Lifestyle',
+  'Manufacturing & Industrial',
+  'Textile, Fashion & Personal Care',
+  'Healthcare, Chemicals & Emerging Products',
+  'Export Services & Startup Pavilion',
 ]
 
 export const EXHIBITORS: Exhibitor[] = [
-  { id: 'e1', name: 'AxisRobo', category: 'Robotics', booth: 'A-12', description: 'Six-axis industrial robots and turnkey robotic welding cells for heavy manufacturing.', color: 'oklch(0.55 0.18 265)' },
-  { id: 'e2', name: 'CoboWorks', category: 'Robotics', booth: 'A-08', description: 'Collaborative cobots designed for safe human-robot assembly and machine tending.', color: 'oklch(0.6 0.16 200)' },
-  { id: 'e3', name: 'NovaVision', category: 'Machine Vision', booth: 'B-21', description: 'AI-powered smart cameras for high-speed defect detection and traceability.', color: 'oklch(0.62 0.17 160)' },
-  { id: 'e4', name: 'OptiScan', category: 'Machine Vision', booth: 'B-14', description: '3D sensors and vision-guided robotics for precision pick-and-place.', color: 'oklch(0.58 0.2 300)' },
-  { id: 'e5', name: 'PrecisionMetric', category: 'Quality Inspection', booth: 'C-05', description: 'Coordinate measuring machines and digital metrology suites.', color: 'oklch(0.6 0.15 85)' },
-  { id: 'e6', name: 'InspectPro', category: 'Quality Inspection', booth: 'C-11', description: 'In-line quality assurance and non-destructive testing platforms.', color: 'oklch(0.55 0.19 25)' },
-  { id: 'e7', name: 'AssembleX', category: 'Assembly Automation', booth: 'D-03', description: 'Modular assembly lines with fastening, dispensing and packaging automation.', color: 'oklch(0.52 0.18 275)' },
-  { id: 'e8', name: 'ConveyoTech', category: 'Assembly Automation', booth: 'D-09', description: 'Smart conveyor and material-handling systems for continuous production.', color: 'oklch(0.6 0.14 220)' },
-  { id: 'e9', name: 'FlexLine', category: 'Assembly Automation', booth: 'D-17', description: 'Flexible end-of-line automation and palletising robots.', color: 'oklch(0.63 0.16 145)' },
-  { id: 'e10', name: 'DeepMotion', category: 'Innovation', booth: 'E-02', description: 'Deep-tech startup building AI motion planning for autonomous machines.', color: 'oklch(0.5 0.21 320)' },
-  { id: 'e11', name: 'SenseGrid', category: 'Innovation', booth: 'E-06', description: 'IIoT sensor mesh and predictive-maintenance analytics.', color: 'oklch(0.58 0.18 190)' },
-  { id: 'e12', name: 'ForgeAI', category: 'Innovation', booth: 'E-10', description: 'Generative design and digital-twin software for smart factories.', color: 'oklch(0.55 0.2 290)' },
-  { id: 'e13', name: 'RoboArm Systems', category: 'Robotics', booth: 'A-19', description: 'Payload-optimised robotic arms for automotive assembly.', color: 'oklch(0.57 0.17 255)' },
-  { id: 'e14', name: 'VisionEdge', category: 'Machine Vision', booth: 'B-27', description: 'Edge-AI inspection cameras with on-device inference.', color: 'oklch(0.6 0.16 175)' },
-  { id: 'e15', name: 'MetroLab', category: 'Quality Inspection', booth: 'C-18', description: 'Laser scanning and reverse-engineering metrology services.', color: 'oklch(0.62 0.14 95)' },
-  { id: 'e16', name: 'PackMate', category: 'Assembly Automation', booth: 'D-22', description: 'Robotic packaging and case-erecting solutions.', color: 'oklch(0.54 0.17 310)' },
+  { id: 'e1', name: 'AgriExport Organics', category: 'Agriculture, Food & FMCG', booth: 'A-12', description: 'Certified organic spices, processed foods, and fresh produce exporters.', color: 'oklch(0.55 0.18 265)' },
+  { id: 'e2', name: 'SpiceRealm Exim', category: 'Agriculture, Food & FMCG', booth: 'A-08', description: 'Premium Indian spices, tea, and specialty beverages for global markets.', color: 'oklch(0.6 0.16 200)' },
+  { id: 'e3', name: 'IndusDecor & Crafts', category: 'Consumer Goods & Lifestyle', booth: 'B-21', description: 'Handcrafted home decor, sustainable kitchenware, and lifestyle goods.', color: 'oklch(0.62 0.17 160)' },
+  { id: 'e4', name: 'GlobalToys & Gifts', category: 'Consumer Goods & Lifestyle', booth: 'B-14', description: 'Eco-friendly toys, handcrafted gifts, and premium stationery products.', color: 'oklch(0.58 0.2 300)' },
+  { id: 'e5', name: 'Precision Engineering Ltd', category: 'Manufacturing & Industrial', booth: 'C-05', description: 'Automotive components, industrial supplies, and precision machinery.', color: 'oklch(0.6 0.15 85)' },
+  { id: 'e6', name: 'Apex Industrial Gears', category: 'Manufacturing & Industrial', booth: 'C-11', description: 'Heavy industrial equipment, electrical control panels, and gearboxes.', color: 'oklch(0.55 0.19 25)' },
+  { id: 'e7', name: 'Vedic Threads & Fabrics', category: 'Textile, Fashion & Personal Care', booth: 'D-03', description: 'Sustainable cotton fabrics, luxury garments, and organic apparel.', color: 'oklch(0.52 0.18 275)' },
+  { id: 'e8', name: 'Royal Leather & Craft', category: 'Textile, Fashion & Personal Care', booth: 'D-09', description: 'Fine leather goods, export footwear, and handcrafted jewellery.', color: 'oklch(0.6 0.14 220)' },
+  { id: 'e9', name: 'BioPharma India', category: 'Healthcare, Chemicals & Emerging Products', booth: 'E-02', description: 'Active pharmaceutical ingredients, medical devices, and specialty chemicals.', color: 'oklch(0.63 0.16 145)' },
+  { id: 'e10', name: 'SunGreen Renewable', category: 'Healthcare, Chemicals & Emerging Products', booth: 'E-06', description: 'Solar energy solutions, EV battery components, and eco-packaging.', color: 'oklch(0.5 0.21 320)' },
+  { id: 'e11', name: 'Oceanic Freight Systems', category: 'Export Services & Startup Pavilion', booth: 'F-01', description: 'Global freight forwarders, CHA customs clearance, and shipping logistics.', color: 'oklch(0.58 0.18 190)' },
+  { id: 'e12', name: 'TradeAI SaaS Technologies', category: 'Export Services & Startup Pavilion', booth: 'F-10', description: 'AI-driven export lead generation, digital marketing, and trade compliance platform.', color: 'oklch(0.55 0.2 290)' },
 ]
 
 export type Session = {

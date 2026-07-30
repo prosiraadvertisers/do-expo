@@ -48,8 +48,8 @@ export default function FreeVisitorRegistrationPage() {
                 {[
                   {
                     icon: MapPin,
-                    title: "Access All 5 Zones",
-                    desc: "Explore Robotics, Machine Vision, Quality Inspection, Assembly & Innovation.",
+                    title: "Access All 6 Trade Zones",
+                    desc: "Explore Agriculture, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services.",
                   },
                   {
                     icon: Users,
@@ -157,7 +157,7 @@ export default function FreeVisitorRegistrationPage() {
               {
                 step: "1",
                 title: "Select Your Interest",
-                desc: "Tell us which zone excites you most — Robotics, Machine Vision, Quality, Assembly or Innovation.",
+                desc: "Tell us which zone excites you most — Agriculture, Consumer Goods, Manufacturing, Textiles, Healthcare, or Export Services.",
               },
               {
                 step: "2",
@@ -207,7 +207,7 @@ export default function FreeVisitorRegistrationPage() {
               },
               {
                 q: "What does the visitor pass include?",
-                a: "Full access to all five tech zones, all keynotes and sessions, networking events, exhibition floor, and the deal room (if invited).",
+                a: "Full access to all six trade zones, all keynotes and sessions, networking events, exhibition floor, and the deal room (if invited).",
               },
               {
                 q: "Can I bring a colleague?",

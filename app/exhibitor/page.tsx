@@ -16,7 +16,7 @@ export default function ExhibitorPage() {
       <PageHero
         eyebrow="Meet Our Exhibitors"
         title="500+ Global & Indian Technology Leaders"
-        subtitle="Explore the companies transforming industrial automation. Search, filter and connect with suppliers across all five tech zones."
+        subtitle="Explore top exporters, manufacturers and trade suppliers. Search, filter and connect across all six export & trade zones."
       >
         <CtaButton variant="cta" size="lg">
           Become an Exhibitor

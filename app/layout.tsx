@@ -21,19 +21,21 @@ const SITE_URL = 'https://doeximexpo.com'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'DOeximexpo | Automation Expo 2026 — Global B2B Trade Show',
+    default: 'DOeximexpo | Global B2B Trade & Export Show 2027',
     template: '%s | DOeximexpo',
   },
   description:
-    'DOeximexpo presents Automation Expo 2026 — India\u2019s premier B2B trade show for robotics, machine vision, quality inspection, assembly automation and innovation. Exhibit, meet buyers, and register free.',
+    'DOeximexpo presents Global Trade Expo — India’s premier B2B export exhibition across 6 zones: Agriculture, FMCG, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services. Register free pass.',
   keywords: [
-    'Automation Expo 2026',
     'DOeximexpo',
     'B2B trade show',
-    'robotics expo',
-    'machine vision',
-    'industrial automation',
-    'exhibition',
+    'export exhibition',
+    'Agriculture Food FMCG',
+    'Consumer Goods Lifestyle',
+    'Manufacturing Industrial',
+    'Textile Fashion',
+    'Healthcare Chemicals',
+    'Export Services Startup Pavilion',
   ],
   generator: 'v0.app',
   openGraph: {

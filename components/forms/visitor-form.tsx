@@ -7,11 +7,42 @@ import { CtaButton } from '@/components/ui/cta'
 import { ZONES, EVENT } from '@/lib/event-data'
 
 const RECS: Record<string, { zone: string; hall: string; sessions: string; day: string }> = {
-  robotics: { zone: 'Robotics Zone', hall: 'Hall 1', sessions: 'the live robotics shop-floor demo & the Cobots session', day: 'Day 1 & Day 2' },
-  'machine-vision': { zone: 'Machine Vision Zone', hall: 'Hall 2', sessions: 'AI at the Edge & Zero-Defect Manufacturing talks', day: 'Day 1 & Day 2' },
-  'quality-inspection': { zone: 'Quality Inspection Zone', hall: 'Hall 2', sessions: 'the Metrology Masterclass', day: 'Day 2' },
-  'assembly-automation': { zone: 'Assembly Automation Zone', hall: 'Hall 3', sessions: 'High-Mix Assembly Automation', day: 'Day 3' },
-  'innovation-startup': { zone: 'Innovation & Startup Zone', hall: 'Hall 4', sessions: 'the Startup Pitch Battle finals', day: 'Day 2' },
+  'agriculture-food-fmcg': {
+    zone: 'Agriculture, Food & FMCG',
+    hall: 'Hall 1',
+    sessions: 'the Agri-Food Export Masterclass & Organic Products Summit',
+    day: 'Day 1 & Day 2',
+  },
+  'consumer-goods-lifestyle': {
+    zone: 'Consumer Goods & Lifestyle',
+    hall: 'Hall 2',
+    sessions: 'the Global Sourcing & Handicrafts Buyer Session',
+    day: 'Day 1 & Day 2',
+  },
+  'manufacturing-industrial': {
+    zone: 'Manufacturing & Industrial',
+    hall: 'Hall 3',
+    sessions: 'the Precision Engineering & Heavy Machinery Expo',
+    day: 'Day 2',
+  },
+  'textile-fashion-personal-care': {
+    zone: 'Textile, Fashion & Personal Care',
+    hall: 'Hall 4',
+    sessions: 'the Sustainable Fabrics & Wellness Pavilion',
+    day: 'Day 3',
+  },
+  'healthcare-chemicals-emerging': {
+    zone: 'Healthcare, Chemicals & Emerging Products',
+    hall: 'Hall 5',
+    sessions: 'the Pharma API & EV Battery Technology Summit',
+    day: 'Day 2',
+  },
+  'export-services-startup': {
+    zone: 'Export Services & Startup Pavilion',
+    hall: 'Hall 6',
+    sessions: 'the Startup Pitch Battle & EXIM Logistics Masterclass',
+    day: 'Day 2 & Day 3',
+  },
 }
 
 function icsDownload(name: string) {
@@ -113,7 +144,7 @@ export function VisitorForm() {
                 <span className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${active ? 'bg-primary text-primary-foreground' : 'bg-muted text-primary'}`}>
                   <Icon className="size-5" />
                 </span>
-                <span className="text-sm font-semibold">{z.name.replace(' Zone', '')}</span>
+                <span className="text-sm font-semibold">{z.name}</span>
               </button>
             )
           })}
@@ -124,7 +155,7 @@ export function VisitorForm() {
         <div className="mb-6 flex gap-3 rounded-xl border border-gold/40 bg-gold/10 p-4 animate-fade-in-up">
           <Sparkles className="mt-0.5 size-5 shrink-0 text-gold-foreground" />
           <p className="text-sm text-foreground">
-            Because you&apos;re interested in <strong>{rec.zone.replace(' Zone', '')}</strong>, don&apos;t miss the{' '}
+            Because you&apos;re interested in <strong>{rec.zone}</strong>, don&apos;t miss{' '}
             <strong>{rec.zone}</strong> in {rec.hall} and {rec.sessions} on <strong>{rec.day}</strong>.
           </p>
         </div>
