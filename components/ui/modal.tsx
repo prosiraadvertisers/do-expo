@@ -11,15 +11,25 @@ type ModalProps = {
   className?: string
 }
 
-export function Modal({ open, onClose, children, labelledBy, className = '' }: ModalProps) {
+export function Modal({
+  open,
+  onClose,
+  children,
+  labelledBy,
+  className = '',
+}: ModalProps) {
   useEffect(() => {
     if (!open) return
+
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
+
     document.addEventListener('keydown', onKey)
+
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = prev
@@ -30,28 +40,46 @@ export function Modal({ open, onClose, children, labelledBy, className = '' }: M
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-stretch justify-center overflow-y-auto sm:items-center sm:p-4"
+      className="fixed inset-0 z-[100] overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby={labelledBy}
     >
+      {/* Backdrop */}
       <button
         aria-label="Close dialog"
         onClick={onClose}
         className="fixed inset-0 h-full w-full cursor-default bg-[oklch(0.15_0.05_270_/_0.7)] backdrop-blur-sm"
         tabIndex={-1}
       />
-      <div
-        className={`relative z-10 flex w-full flex-col bg-card shadow-2xl sm:max-w-3xl sm:rounded-2xl sm:my-8 animate-fade-in-up ${className}`}
-      >
-        <button
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute right-3 top-3 z-20 inline-flex size-9 items-center justify-center rounded-full bg-background/80 text-foreground shadow-sm ring-1 ring-border transition hover:bg-muted"
+
+      {/* Modal positioning */}
+      <div className="relative z-10 flex min-h-full items-start justify-center p-0 sm:p-4">
+        
+        {/* Modal */}
+        <div
+          className={`
+            relative flex w-full flex-col bg-card shadow-2xl
+            sm:my-4
+            sm:max-w-3xl
+            sm:rounded-2xl
+            sm:max-h-[calc(100dvh-2rem)]
+            animate-fade-in-up
+            ${className}
+          `}
         >
-          <X className="size-5" />
-        </button>
-        {children}
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-3 top-3 z-20 inline-flex size-9 items-center justify-center rounded-full bg-background/80 text-foreground shadow-sm ring-1 ring-border transition hover:bg-muted"
+          >
+            <X className="size-5" />
+          </button>
+
+          {/* Modal Content */}
+          {children}
+        </div>
       </div>
     </div>
   )

@@ -8,6 +8,37 @@ import {
   Lightbulb,
   Globe,
   TrendingUp,
+  Ship,
+  Handshake,
+  ClipboardCheck,
+  MapPinned,
+  Building2,
+  Factory,
+  Boxes,
+  Truck,
+  Wrench,
+  Rocket,
+  Stamp,
+  PackageCheck,
+  Package,
+  PackageOpen,
+  Anchor,
+  Warehouse,
+  BadgeCheck,
+  Landmark,
+  ShieldCheck,
+  Wallet,
+  Compass,
+  Building,
+  Megaphone,
+  Users2,
+  Network,
+  Sprout,
+  PiggyBank,
+  Cpu,
+  Share2,
+  Laptop,
+  FileText,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -27,12 +58,16 @@ export default function AboutPage() {
         subtitle="Building international trade relationships by bringing together exhibitors, buyers and industry professionals from over 50 countries."
       />
 
+      {/* Why DoExim Expo — copy on the left, a stamped "expo manifest" on the right */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div>
-              <h2 className="text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
+              <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                 Why DoExim Expo?
+              </p>
+              <h2 className="mt-2 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
+                A trading floor built for real deals, not just booths
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
                 DoExim Expo is dedicated to fostering international trade and
@@ -43,193 +78,330 @@ export default function AboutPage() {
                 business relationships.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Our mission is to facilitate meaningful business connections,
-                showcase innovative products and services, foster knowledge
-                sharing and support the growth of global trade through
-                world-class exhibitions and networking opportunities.
+                Every edition is built around one goal: fewer brochures,
+                more signed leads. That means curated buyer-seller meetings,
+                trade zones grouped by industry, and sessions run by people
+                who move cargo for a living — not just talk about it.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/exhibit">
                   <CtaButton variant="cta">Become an Exhibitor</CtaButton>
                 </Link>
-                <Link href="#statistics">
-                  <CtaButton variant="outline">See Statistics</CtaButton>
+                <Link href="#journey">
+                  <CtaButton variant="outline">See How It Works</CtaButton>
                 </Link>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: Users, label: "Trade Visitors", value: "40,000+" },
-                { icon: Globe, label: "Global Exhibitors", value: "500+" },
-                { icon: Target, label: "Trade Zones", value: "6" },
-                {
-                  icon: TrendingUp,
-                  label: "Countries Represented",
-                  value: "25+",
-                },
-                { icon: Award, label: "Speakers & Experts", value: "80+" },
-                {
-                  icon: Lightbulb,
-                  label: "Startup Pavilion",
-                  value: "Pitch Battle",
-                },
-              ].map((stat) => {
-                const Icon = stat.icon;
-                return (
-                  <div
-                    key={stat.label}
-                    className="glass-card rounded-2xl p-6 text-center"
-                  >
-                    <Icon className="mx-auto mb-3 size-8 text-primary" />
-                    <p className="font-heading text-2xl font-bold text-foreground">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs font-medium text-muted-foreground">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
+            {/* Signature element: stamped manifest panel */}
+            <div
+              id="statistics"
+              className="glass-card overflow-hidden rounded-2xl border border-border/60"
+            >
+              <div className="flex items-center justify-between border-b border-dashed border-border/60 px-5 py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                  Expo Manifest
+                </p>
+                <span className="rounded-full border border-primary/40 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-primary">
+                  Est. 2020
+                </span>
+              </div>
+              <div className="divide-y divide-dashed divide-border/60">
+                {[
+                  { icon: Users, label: "Trade Visitors", value: "15,000+" },
+                  { icon: Globe, label: "Global Visitors", value: "5000+" },
+                  { icon: Target, label: "Trade Zones", value: "6" },
+      
+                  { icon: Award, label: "Speakers & Experts", value: "80+" },
+                  {
+                    icon: Lightbulb,
+                    label: "Startup Pavilion",
+                    value: "Pitch Battle",
+                  },
+                ].map((stat, i) => {
+                  const Icon = stat.icon;
+                  return (
+                    <div
+                      key={stat.label}
+                      className="flex items-center gap-4 px-5 py-4"
+                    >
+                      <span className="font-mono text-xs tabular-nums text-muted-foreground/60">
+                        {String(i + 1).padStart(3, "0")}
+                      </span>
+                      <Icon className="size-4 shrink-0 text-primary" />
+                      <span className="flex-1 text-sm text-muted-foreground">
+                        {stat.label}
+                      </span>
+                      <span className="font-heading text-lg font-bold text-foreground">
+                        {stat.value}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="statistics"
-        className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8"
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <h2 className="text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              What Our Participants Say
-            </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-muted-foreground">
-              Discover why exporters, importers, manufacturers and international
-              buyers choose DoExim Expo to expand their global business network.
-            </p>
-          </div>
+      
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                quote:
-                  "We connected with international buyers from multiple countries and secured valuable export opportunities.",
-                author: "Rahul Sharma",
-                role: "Export Manager",
-              },
-              {
-                quote:
-                  "The B2B matchmaking sessions helped us find trusted suppliers and long-term business partners.",
-                author: "Priya Mehta",
-                role: "Import Consultant",
-              },
-              {
-                quote:
-                  "DoExim Expo opened new markets for our products and expanded our global business network.",
-                author: "Ahmed Khan",
-                role: "Manufacturer",
-              },
-              {
-                quote:
-                  "An excellent platform to meet exporters, distributors and trade professionals under one roof.",
-                author: "Neha Joshi",
-                role: "Business Owner",
-              },
-              {
-                quote:
-                  "The networking opportunities and knowledge sessions were extremely valuable for our international expansion.",
-                author: "David Wilson",
-                role: "International Buyer",
-              },
-              {
-                quote:
-                  "One of the best trade expos for connecting businesses across borders.",
-                author: "Amit Patel",
-                role: "Exporter",
-              },
-            ].map((testimonial, i) => (
-              <div key={i} className="glass-card rounded-2xl p-6 backdrop-blur">
-                <p className="text-sm text-foreground/80 italic">
-                  "{testimonial.quote}"
-                </p>
-                <p className="mt-4 font-heading font-semibold text-foreground">
-                  {testimonial.author}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {testimonial.role}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* Visitor Profile — a categorized directory, not a card grid */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="text-center">
-            <h2 className="text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Six Dedicated Export &amp; Trade Zones
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+              One Platform, Every Link In The Chain
+            </p>
+            <h2 className="mt-2 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
+              Visitor Profile
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              Explore products, services and trade opportunities across multiple
-              international business sectors.
+            <p className="mt-5 leading-relaxed text-muted-foreground">
+              If your business touches a shipment at any point between
+              factory and final customer — sourcing it, shipping it,
+              financing it, clearing it or funding it — there is a reason
+              for you to be on the floor.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
+          <div className="mt-14 space-y-6">
             {[
               {
-                title: "Agriculture, Food & FMCG",
-                desc: "Fresh produce, processed foods, spices, organic products, beverages & seafood.",
-                highlights: ["Fresh Produce", "Processed Foods", "Spices", "Organic Products"],
+                zone: "A",
+                title: "Core Trade Profiles",
+                items: [
+                  {
+                    icon: Factory,
+                    title: "Manufacturers",
+                    desc: "Showcase products, capabilities and connect with international buyers.",
+                  },
+                  {
+                    icon: Building2,
+                    title: "MSMEs",
+                    desc: "Explore export opportunities, government schemes and global markets.",
+                  },
+                  {
+                    icon: Ship,
+                    title: "Merchant Exporters",
+                    desc: "Discover products, suppliers and new international markets.",
+                  },
+                  {
+                    icon: Boxes,
+                    title: "Importers",
+                    desc: "Source products and connect with Indian manufacturers and suppliers.",
+                  },
+                  {
+                    icon: Handshake,
+                    title: "International Buyers",
+                    desc: "Discover export-ready products and connect directly with Indian suppliers.",
+                  },
+                  {
+                    icon: Rocket,
+                    title: "Merchant Importers ",
+                    desc: "Learn how to start exporting and secure your first international order.",
+                  },
+                ],
               },
               {
-                title: "Consumer Goods & Lifestyle",
-                desc: "Home décor, houseware, kitchenware, gifts, handicrafts, toys and stationery.",
-                highlights: ["Home Décor", "Houseware", "Handicrafts", "Toys & Gifts"],
+                zone: "B",
+                title: "Logistics, Packaging & Compliance",
+                items: [
+                  {
+                    icon: Truck,
+                    title: "Freight Forwarders",
+                    desc: "Connect with exporters requiring international freight and shipping solutions.",
+                  },
+                  {
+                    icon: Stamp,
+                    title: "Custom House Agents (CHAs)",
+                    desc: "Support exporters with customs clearance, documentation and compliance.",
+                  },
+                  {
+                    icon: PackageCheck,
+                    title: "Logistics Providers",
+                    desc: "Provide shipping, warehousing and supply chain solutions to exporters.",
+                  },
+                  {
+                    icon: Package,
+                    title: "Packaging Companies",
+                    desc: "Connect with exporters looking for international-standard packaging solutions.",
+                  },
+                  {
+                    icon: Anchor,
+                    title: "Shipping Lines & Transport Companies",
+                    desc: "Connect with exporters requiring ocean, air and multimodal transportation.",
+                  },
+                  {
+                    icon: Warehouse,
+                    title: "Warehousing & Supply Chain Companies",
+                    desc: "Provide storage, consolidation and supply chain services for international trade.",
+                  },
+                  
+                  {
+                    icon: FileText,
+                    title: "Export Documentation Professionals",
+                    desc: "Assist businesses with shipping documents, certificates and export compliance.",
+                  },
+                  {
+                    icon: Award,
+                    title: "Product Certification & Quality Agencies",
+                    desc: "Support exporters with product standards, certification and quality requirements.",
+                  },
+                ],
               },
               {
-                title: "Manufacturing & Industrial",
-                desc: "Engineering products, industrial supplies, auto components, electricals & machinery.",
-                highlights: ["Engineering", "Industrial Supplies", "Auto Parts", "Machinery"],
+                zone: "C",
+                title: "Finance & Insurance",
+                items: [
+                  {
+                    icon: Landmark,
+                    title: "Banks & Financial Institutions",
+                    desc: "Provide export finance, international payments and trade banking solutions.",
+                  },
+                  {
+                    icon: ShieldCheck,
+                    title: "Export Credit & Insurance Providers",
+                    desc: "Support exporters with credit protection, insurance and risk management.",
+                  },
+                  {
+                    icon: Wallet,
+                    title: "Export Finance Professionals",
+                    desc: "Help businesses access packing credit, buyer credit and export financing.",
+                  },
+                ],
               },
               {
-                title: "Textile, Fashion & Personal Care",
-                desc: "Garments, fabrics, leather goods, footwear, jewellery, cosmetics & wellness.",
-                highlights: ["Garments & Fabrics", "Leather Goods", "Jewellery", "Cosmetics"],
+                zone: "D",
+                title: "Government, Trade Bodies & Advisory",
+                items: [
+                  {
+                    icon: Compass,
+                    title: "Export Consultants",
+                    desc: "Guide businesses on export documentation, compliance and global trade.",
+                  },
+                  {
+                    icon: Building,
+                    title: "Government Agencies",
+                    desc: "Support exporters through schemes, registrations and trade facilitation.",
+                  },
+                  {
+                    icon: Megaphone,
+                    title: "Export Promotion Organizations",
+                    desc: "Connect with exporters through training, market intelligence and global trade initiatives.",
+                  },
+                  {
+                    icon: Globe,
+                    title: "Embassies & Trade Missions",
+                    desc: "Build international trade connections and facilitate cross-border opportunities.",
+                  },
+                  {
+                    icon: Users2,
+                    title: "Chambers of Commerce",
+                    desc: "Connect businesses with international trade networks and market opportunities.",
+                  },
+                  {
+                    icon: Network,
+                    title: "Industry Associations",
+                    desc: "Connect members with export opportunities, training and international business networks.",
+                  },
+                  {
+                    icon: Sprout,
+                    title: "Government Incubators",
+                    desc: "Support export-focused startups with mentorship, funding and growth opportunities.",
+                  },
+                  {
+                    icon: PiggyBank,
+                    title: "Investors & Venture Capital Firms",
+                    desc: "Discover promising export startups and scalable international businesses.",
+                  },
+                ],
               },
               {
-                title: "Healthcare, Chemicals & Emerging Products",
-                desc: "Pharma, medical devices, chemicals, packaging, electronics & EV components.",
-                highlights: ["Pharmaceuticals", "Medical Devices", "Chemicals", "EV Components"],
+                zone: "E",
+                title: "Technology & Marketing",
+                items: [
+                 
+                  {
+                    icon: Share2,
+                    title: "Digital Marketing & B2B Agencies",
+                    desc: "Help exporters generate international leads and build their global presence.",
+                  },
+                  {
+                    icon: Laptop,
+                    title: "Export Technology & SaaS Providers",
+                    desc: "Showcase digital tools for lead generation, CRM, documentation and trade automation.",
+                  },
+                ],
               },
               {
-                title: "Export Services & Startup Pavilion",
-                desc: "Freight forwarders, CHAs, shipping lines, EXIM banks, ECGC, AI & SaaS, and startups.",
-                highlights: ["Freight & CHAs", "Shipping Lines", "EXIM Banking", "Startup Pavilion"],
+                zone: "F",
+                title: "General Trade Enablers",
+                items: [
+                  {
+                    icon: Wrench,
+                    title: "Trade Service Providers",
+                    desc: "Connect with businesses requiring logistics, finance, compliance and EXIM support.",
+                  },
+                ],
               },
-            ].map((zone, i) => (
-              <div key={i} className="glass-card rounded-2xl p-6">
-                <h3 className="font-heading text-lg font-bold text-foreground">
-                  {zone.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {zone.desc}
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {zone.highlights.map((h) => (
-                    <span
-                      key={h}
-                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                    >
-                      {h}
-                    </span>
-                  ))}
-                </ul>
+            ].map((group) => (
+              <div
+                key={group.zone}
+                className="glass-card overflow-hidden rounded-2xl border border-border/60"
+              >
+                <div className="flex items-center gap-3 border-b border-dashed border-border/60 px-5 py-4">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-primary/40 font-mono text-xs font-bold text-primary">
+                    {group.zone}
+                  </span>
+                  <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
+                    {group.title}
+                  </p>
+                  <span className="ml-auto font-mono text-[10px] text-muted-foreground/50">
+                    {group.items.length.toString().padStart(2, "0")} listed
+                  </span>
+                </div>
+                <div
+                  className={`grid grid-cols-1 ${
+                    group.items.length > 1 ? "sm:grid-cols-2" : ""
+                  }`}
+                >
+                  {group.items.map((item, i) => {
+                    const Icon = item.icon;
+                    const isRightCol =
+                      group.items.length > 1 && i % 2 === 1;
+                    const isLastItem = i === group.items.length - 1;
+                    return (
+                      <div
+                        key={item.title}
+                        className={`flex items-start gap-3 border-dashed border-border/60 px-5 py-4 ${
+                          isLastItem ? "" : "border-b"
+                        } ${isRightCol ? "sm:border-l" : ""}`}
+                      >
+                        <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                          <Icon className="size-4 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-heading text-sm font-bold text-foreground">
+                            {item.title}
+                          </h3>
+                          <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link href="/exhibit">
+              <CtaButton variant="cta">
+                Explore Exhibiting Opportunities
+              </CtaButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -240,7 +412,9 @@ export default function AboutPage() {
             Ready to Grow Your Global Business?
           </h2>
           <p className="mt-4 text-lg text-white/75">
-            Whether you're an exporter, importer, manufacturer or international buyer, DoExim Expo is your gateway to global trade opportunities and meaningful business partnerships.
+            Whether you're an exporter, importer, manufacturer or
+            international buyer, DoExim Expo is your gateway to global trade
+            opportunities and meaningful business partnerships.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link href="/exhibit">
