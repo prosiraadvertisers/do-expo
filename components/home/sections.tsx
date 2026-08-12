@@ -113,7 +113,7 @@ export function HomeSections() {
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <div key={s.label} className="glass-card rounded-2xl p-6 text-center">
-                  <s.icon className="mx-auto mb-2 h-7 w-7 text-accent" />
+                  <s.icon className="mx-auto mb-2 h-7 w-7 text-accent " />
                   <div className="font-heading text-3xl font-extrabold text-foreground">{s.value}</div>
                   <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
                 </div>

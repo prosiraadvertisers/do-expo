@@ -28,17 +28,29 @@ const items = [
 export function Highlights() {
   return (
     <section className="relative z-10 -mt-10 px-4">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
           <div
             key={item.title}
-            className="glass-card rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1"
+            className="group rounded-2xl bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
-              <item.icon className="h-6 w-6" />
+            {/* Icon */}
+            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30 transition-all duration-300 group-hover:scale-110">
+              <item.icon
+                className="h-7 w-7 opacity-100"
+                strokeWidth={2.5}
+              />
             </div>
-            <h3 className="mb-1 font-heading text-lg font-bold text-foreground">{item.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+
+            {/* Title */}
+            <h3 className="mb-3 text-3xl font-bold text-slate-900">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-base leading-8 text-slate-600">
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>
