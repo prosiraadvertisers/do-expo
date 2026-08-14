@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, Ticket, Handshake } from "lucide-react";
+import { Menu, X, ChevronDown, Ticket, Handshake, LayoutGrid, MessageCircle } from "lucide-react";
 import { useRegistration } from "@/components/registration/registration-context";
 import { CtaButton } from "@/components/ui/cta";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import Image from "next/image";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [eventOpen, setEventOpen] = useState(false);
+  const [exhibitOpen, setExhibitOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -26,6 +27,7 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false);
     setEventOpen(false);
+    setExhibitOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -75,12 +77,36 @@ export function Header() {
             {eventOpen && <EventDropdown />}
           </div>
 
-          <NavLink href="/exhibit" color={linkColor}>
-            Exhibit
-          </NavLink>
-          <NavLink href="/exhibitor" color={linkColor}>
-            Exhibitor's List
-          </NavLink>
+          <div
+            className="relative"
+            onMouseEnter={() => setExhibitOpen(true)}
+            onMouseLeave={() => setExhibitOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition ${linkColor} ${
+                exhibitOpen ? (onDark ? "text-white" : "text-primary") : ""
+              }`}
+              aria-expanded={exhibitOpen}
+            >
+              Exhibit
+              <ChevronDown
+                className={`size-4 transition-transform ${exhibitOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {exhibitOpen && <ExhibitDropdown />}
+          </div>
+          <NavLink href="/layout" color={linkColor}>
+  <span className="flex items-center gap-2">
+    <LayoutGrid className="size-4" />
+    Layout
+  </span>
+</NavLink>
+          <NavLink href="/contact" color={linkColor}>
+  <span className="flex items-center gap-2">
+    <MessageCircle className="size-4" />
+    Contact Us
+  </span>
+</NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -135,8 +161,7 @@ function Logo({ onDark }: { onDark: boolean }) {
         width={180}
         height={38}
         priority
-        className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
-      />
+className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300"      />
     </Link>
   );
 }
@@ -187,9 +212,53 @@ function EventDropdown() {
   );
 }
 
+function ExhibitDropdown() {
+  return (
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="w-64 overflow-hidden rounded-2xl border border-border bg-popover p-4 shadow-2xl animate-fade-in-up">
+        <ul className="space-y-1">
+          <li>
+            <Link
+              href="/why-doexim-expo"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Why doexim expo
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/book-space"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Book Your Space
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/sponsorship"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Sponsorship
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/exhibitors"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Exhibitors List
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function MobileMenu({ onClose }: { onClose: () => void }) {
   const { open } = useRegistration();
   const [eventOpen, setEventOpen] = useState(false);
+  const [exhibitOpen, setExhibitOpen] = useState(false);
 
   return (
     <div className="lg:hidden">
@@ -197,6 +266,12 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <MobileLink href="/about" onClose={onClose}>
           About
         </MobileLink>
+        <MobileLink href="/layout" onClose={onClose}>
+    Hall Layout
+  </MobileLink>
+        <MobileLink href="/contact" onClose={onClose}>
+    Contact Us
+  </MobileLink>
 
         <div className="border-b border-border">
           <button
@@ -229,12 +304,50 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           )}
         </div>
 
-        <MobileLink href="/exhibit" onClose={onClose}>
-          Exhibit
-        </MobileLink>
-        <MobileLink href="/exhibitor" onClose={onClose}>
-          Exhibitor List
-        </MobileLink>
+        <div className="border-b border-border">
+          <button
+            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
+            onClick={() => setExhibitOpen((v) => !v)}
+            aria-expanded={exhibitOpen}
+          >
+            Exhibit
+            <ChevronDown
+              className={`size-5 transition-transform ${exhibitOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          {exhibitOpen && (
+            <div className="pb-3 pl-3">
+              <Link
+                href="/why-doexim-expo"
+                onClick={onClose}
+                className="block py-2 text-sm text-foreground/80"
+              >
+                Whydoexim Expo
+              </Link>
+              <Link
+                href="/book-space"
+                onClick={onClose}
+                className="block py-2 text-sm text-foreground/80"
+              >
+                Book Space
+              </Link>
+              <Link
+                href="/sponsorship"
+                onClick={onClose}
+                className="block py-2 text-sm text-foreground/80"
+              >
+                Sponsorship
+              </Link>
+              <Link
+                href="/exhibitors"
+                onClick={onClose}
+                className="block py-2 text-sm text-foreground/80"
+              >
+                Exhibitors List
+              </Link>
+            </div>
+          )}
+        </div>
 
         <button
           onClick={() => {

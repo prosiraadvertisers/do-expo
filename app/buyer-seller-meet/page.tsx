@@ -14,9 +14,9 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Buyer Seller Meet | DO EXIM Expo",
+  title: "Buyer Seller Meet |doexim Expo",
   description:
-    "Join the DO EXIM Buyer Seller Meet and connect with exporters, importers, manufacturers and buyers through curated B2B meetings and sourcing opportunities.",
+    "Join thedoexim Buyer Seller Meet and connect with exporters, importers, manufacturers and buyers through curated B2B meetings and sourcing opportunities.",
 }
 
 export default function BuyerSellerMeetPage() {
@@ -43,7 +43,7 @@ export default function BuyerSellerMeetPage() {
 
             <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
               Share your business requirements and connect with relevant exporters,
-              importers, manufacturers and buyers at DO EXIM Expo.
+              importers, manufacturers and buyers atdoexim Expo.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ export default function BuyerSellerMeetPage() {
                   </span>
 
                   <h3 className="mt-1 font-heading text-lg font-bold leading-snug text-foreground">
-                    DO EXIM Matches Suppliers
+                   doexim Matches Suppliers
                   </h3>
 
                   
@@ -273,7 +273,7 @@ export default function BuyerSellerMeetPage() {
                       🤝 B2B Meetings:
                     </span>{" "}
                     Register your business profile to connect with relevant buyers,
-                    sellers, exporters and importers at DO EXIM Expo.
+                    sellers, exporters and importers atdoexim Expo.
                   </p>
                 </div>
 
@@ -315,7 +315,7 @@ export default function BuyerSellerMeetPage() {
               },
               {
                 q: "What happens after I register?",
-                a: "Our team reviews your business profile and identifies relevant buyers or sellers for focused B2B meetings at DO EXIM Expo.",
+                a: "Our team reviews your business profile and identifies relevant buyers or sellers for focused B2B meetings atdoexim Expo.",
               },
               {
                 q: "What should I bring to the meeting?",

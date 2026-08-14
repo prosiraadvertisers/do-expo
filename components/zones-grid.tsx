@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Tag } from "lucide-react"
-import { useState } from "react"
-import { ZONES } from "@/lib/event-data"
+import { Tag } from "lucide-react";
+import { useState } from "react";
+import { ZONES } from "@/lib/event-data";
 
 export function ZonesGrid({ withImages }: { withImages?: boolean }) {
-  const [expanded, setExpanded] = useState<string | null>(null)
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   const palettes = [
     "from-emerald-500 to-green-700",
@@ -14,13 +14,13 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
     "from-violet-500 to-purple-700",
     "from-teal-400 to-teal-700",
     "from-amber-400 to-orange-500",
-  ]
+  ];
 
   return (
     <div className="grid w-full grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
       {ZONES.map((zone, idx) => {
-        const grad = palettes[idx % palettes.length]
-        const isExpanded = expanded === zone.slug
+        const grad = palettes[idx % palettes.length];
+        const isExpanded = expanded === zone.slug;
 
         return (
           <div
@@ -38,11 +38,7 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
               hover:-translate-y-3
               hover:scale-[1.02]
               hover:shadow-2xl
-              ${
-                isExpanded
-                  ? "-translate-y-3 scale-[1.02] shadow-2xl"
-                  : ""
-              }
+              ${isExpanded ? "-translate-y-3 scale-[1.02] shadow-2xl" : ""}
             `}
           >
             {/* Decorative top circle */}
@@ -71,9 +67,33 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
                 NORMAL CARD CONTENT
             ========================== */}
 
-           {/* Icon */}
-<div
-  className={`
+            {/* Zone label */}
+            <span
+              className={`
+                absolute left-5 top-5 z-10
+                inline-flex items-center gap-1.5
+                rounded-full
+                border border-white/25
+                bg-white/20
+                px-3 py-1
+                text-[11px] font-bold
+                uppercase tracking-wider
+                text-white
+                backdrop-blur-md
+                transition-all duration-300
+                ${
+                  isExpanded
+                    ? "-translate-y-3 opacity-0"
+                    : "translate-y-0 opacity-100 group-hover:-translate-y-3 group-hover:opacity-0"
+                }
+              `}
+            >
+              Zone {idx + 1}
+            </span>
+
+            {/* Icon */}
+            <div
+              className={`
     absolute left-1/2 top-7 z-10
     flex h-14 w-14
     -translate-x-1/2
@@ -91,13 +111,13 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
         : "-translate-x-1/2 translate-y-0 opacity-100 group-hover:-translate-x-1/2 group-hover:-translate-y-3 group-hover:opacity-0"
     }
   `}
->
-  <zone.icon className="h-7 w-7" />
-</div>
+            >
+              <zone.icon className="h-7 w-7" />
+            </div>
 
-           {/* Zone Title */}
-<div
-  className={`
+            {/* Zone Title */}
+            <div
+              className={`
     absolute left-7 right-7 top-[120px] z-10
     transition-all duration-300 ease-out
     ${
@@ -106,11 +126,11 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
         : "translate-y-0 opacity-100 group-hover:-translate-y-5 group-hover:opacity-0"
     }
   `}
->
-  <h3 className="text-center text-2xl font-bold leading-snug text-white">
-    {zone.name}
-  </h3>
-</div>
+            >
+              <h3 className="text-center text-2xl font-bold leading-snug text-white">
+                {zone.name}
+              </h3>
+            </div>
 
             {/* =========================
                 CATEGORIES HOVER CONTENT
@@ -198,8 +218,8 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
               </div>
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

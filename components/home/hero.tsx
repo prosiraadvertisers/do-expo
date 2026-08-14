@@ -21,8 +21,8 @@ import { useRegistration } from "@/components/registration/registration-context"
 // "Event Organised By" now supports multiple logos. Put the primary
 // organiser first — it renders larger than the rest.
 const ORGANISERS = [
-  { logo: "/logos/organiser.svg", alt: "Event organiser", big: true },
-  { logo: "/logos/organiser-2.svg", alt: "Co-organiser", big: true },
+  { logo: "/herologo/plogo.png", alt: "Event organiser", big: true },
+  { logo: "/logo-white.png", alt: "Co-organiser", big: true },
 ];
 const POWERED_BY = [
   { logo: "/logos/powered-1.svg", alt: "Powered by sponsor 1" },
@@ -53,12 +53,12 @@ function LogoChip({
   alt: string;
   size?: "sm" | "md" | "lg";
 }) {
-  const heightClass = size === "sm" ? "h-10" : size === "lg" ? "h-20" : "h-14";
+  const heightClass = size === "sm" ? "h-10" : size === "lg" ? "h-28" : "h-14";
   const dims =
     size === "sm"
       ? { width: 88, height: 32 }
       : size === "lg"
-        ? { width: 160, height: 60 }
+        ? { width: 260, height: 100 }
         : { width: 120, height: 40 };
 
   return (
@@ -95,9 +95,14 @@ function SponsorTier({
         {label}
       </p>
       <div className="hide-scrollbar flex gap-2 overflow-x-auto pb-1">
-        {items.map((item) => (
-          <div key={item.logo} className="shrink-0">
-            <LogoChip logo={item.logo} alt={item.alt} size="sm" />
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="flex h-10 min-w-[110px] shrink-0 items-center justify-center rounded-lg border border-dashed border-white/20 bg-white/5 px-4"
+          >
+            <span className="text-xs font-semibold uppercase tracking-wider text-white/70">
+              Logo {index + 1}
+            </span>
           </div>
         ))}
       </div>
@@ -163,20 +168,25 @@ export function Hero() {
 
           {/* Desktop (lg+): full tiered layout, room to breathe. */}
           <div className="hidden space-y-3 lg:block">
-            <div className="min-w-0">
-              <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
+            <div className="flex flex-col items-center">
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
                 Event Organised By
               </p>
-              <div className="hide-scrollbar flex items-center gap-3 overflow-x-auto pb-1">
-                {ORGANISERS.map((item) => (
-                  <div key={item.logo} className="shrink-0">
-                    <LogoChip
-                      logo={item.logo}
-                      alt={item.alt}
-                      size={item.big ? "lg" : "md"}
-                    />
-                  </div>
-                ))}
+
+              {/* Small Logo */}
+              <LogoChip
+                logo={ORGANISERS[0].logo}
+                alt={ORGANISERS[0].alt}
+                size="sm"
+              />
+
+              {/* Big Logo */}
+              <div className="mt-5">
+                <LogoChip
+                  logo={ORGANISERS[1].logo}
+                  alt={ORGANISERS[1].alt}
+                  size="lg"
+                />
               </div>
             </div>
 

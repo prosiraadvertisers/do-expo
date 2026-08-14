@@ -97,6 +97,7 @@ export type Zone = {
 
 export const ZONES: Zone[] = [
   {
+    
     id: 'agriculture-food-fmcg',
     slug: 'agriculture-food-fmcg',
     name: 'Agriculture, Food & FMCG',
