@@ -85,8 +85,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <CtaButton
-            variant="gold"
-            className="hidden lg:inline-flex"
+            className="hidden lg:inline-flex border border-[#3f6cff] bg-[#061AC9] text-white shadow-[0_0_18px_rgba(6,26,201,0.45)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_30px_rgba(6,26,201,0.75)]"
             onClick={() => router.push("/buyer-seller-meet")}
           >
             <Handshake className="size-4" />
@@ -94,12 +93,11 @@ export function Header() {
           </CtaButton>
 
           <CtaButton
-            variant="gold"
-            className="hidden sm:inline-flex"
+            className="hidden sm:inline-flex border border-[#3f6cff] bg-[#061AC9] text-white shadow-[0_0_18px_rgba(6,26,201,0.45)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_30px_rgba(6,26,201,0.75)]"
             onClick={() => open("visitor")}
           >
             <Ticket className="size-4" />
-            Free Pass
+            Visitor Pass
           </CtaButton>
 
           <button

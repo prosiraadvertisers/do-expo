@@ -37,17 +37,34 @@ export function Countdown({ variant = 'light' }: { variant?: 'light' | 'dark' })
       : 'bg-card text-foreground ring-1 ring-border shadow-sm'
 
   return (
-    <div className="flex gap-2.5 sm:gap-3" role="timer" aria-label="Countdown to event">
-      {units.map((u) => (
-        <div key={u.label} className={`flex min-w-16 flex-col items-center rounded-xl px-3 py-2.5 sm:min-w-20 sm:py-3 ${cardClass}`}>
-          <span className="font-heading text-2xl font-bold tabular-nums sm:text-4xl">
-            {t === null ? '--' : String(u.value).padStart(2, '0')}
-          </span>
-          <span className={`text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-xs ${variant === 'dark' ? 'text-white/70' : 'text-muted-foreground'}`}>
-            {u.label}
-          </span>
-        </div>
-      ))}
-    </div>
-  )
+  // Sizing uses clamp(min, Ndvh, max) instead of fixed/breakpoint sizes so
+  // the digits shrink automatically on short viewports (short tablets,
+  // landscape phones) instead of only responding to width.
+  <div
+    className="grid w-full grid-cols-4 gap-[clamp(0.25rem,1dvh,0.5rem)]"
+    role="timer"
+    aria-label="Countdown to event"
+  >
+    {units.map((u) => (
+      <div
+        key={u.label}
+        className={`flex w-full flex-col items-center justify-center rounded-lg px-[clamp(0.2rem,0.8dvh,0.5rem)] py-[clamp(0.25rem,1dvh,0.625rem)] ${cardClass}`}
+      >
+        <span className="font-heading text-[clamp(1rem,3.2dvh,1.5rem)] font-bold tabular-nums leading-none">
+          {t === null ? "--" : String(u.value).padStart(2, "0")}
+        </span>
+
+        <span
+          className={`mt-0.5 text-[clamp(0.5rem,1.2dvh,0.625rem)] font-semibold uppercase tracking-[0.12em] ${
+            variant === "dark"
+              ? "text-white/70"
+              : "text-muted-foreground"
+          }`}
+        >
+          {u.label}
+        </span>
+      </div>
+    ))}
+  </div>
+)
 }
