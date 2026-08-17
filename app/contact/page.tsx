@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with the DoExim Global Trade Expo team. Office address, East & West zone contacts, and inquiry form.",
+    "Get in touch with the doexim Global Trade Expo team. Office address, East & West zone contacts, and inquiry form.",
 }
 
 const ZONE_CONTACTS = [
@@ -162,7 +162,7 @@ export default function ContactPage() {
           </p>
           <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-lg">
             <iframe
-              title="DoExim Expo Office Location"
+              title="doexim Expo Office Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7!2d73.8567!3d18.5018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f00000001%3A0x1!2sSwargate%2C%20Pune%2C%20Maharashtra%20411037!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
               height="400"

@@ -67,7 +67,7 @@ const partners = ["AxisRobo", "NovaVision", "ForgeAI", "AssembleX", "PrecisionMe
 const news = [
   {
     tag: "Announcement",
-    title: "DoExim Expo 2027 registrations are now open",
+    title: "doexim Expo 2027 registrations are now open",
     date: "21 April 2027",
     desc: "Visitor registrations and exhibitor bookings are now available for the upcoming international trade exhibition.",
   },
@@ -101,7 +101,7 @@ export function HomeSections() {
                 Connecting Global Import & Export Professionals
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-                DoExim Expo is dedicated to fostering international trade and commerce by creating a premier platform where businesses can connect, learn and grow together. We bring together thousands of exhibitors, buyers and professionals from over 50 countries to explore new markets, establish partnerships and discover innovative import and export solutions.
+                doexim Expo is dedicated to fostering international trade and commerce by creating a premier platform where businesses can connect, learn and grow together. We bring together thousands of exhibitors, buyers and professionals from over 50 countries to explore new markets, establish partnerships and discover innovative import and export solutions.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <CtaLink href="/about" variant="outline">
@@ -158,7 +158,7 @@ export function HomeSections() {
               Expand Your Business Beyond Borders
             </h2>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Exhibiting at DoExim Expo gives your business direct access to importers, exporters, wholesalers, manufacturers and international buyers looking for trusted trade partners.
+              Exhibiting at doexim Expo gives your business direct access to importers, exporters, wholesalers, manufacturers and international buyers looking for trusted trade partners.
             </p>
             <div className="mt-6">
               <CtaButton onClick={() => open("exhibitor")}>Reserve your stand</CtaButton>

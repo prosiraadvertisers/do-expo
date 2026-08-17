@@ -7,7 +7,7 @@ import { ExhibitorGrid } from "@/components/exhibitor-grid"
 export const metadata: Metadata = {
   title: "Exhibitors",
   description:
-    "Meet the 500+ exhibitors showcasing automation solutions at DOeximexpo 2026. Browse by category, search, and discover your next technology partner.",
+    "Meet the 500+ exhibitors showcasing automation solutions at doeximexpo 2026. Browse by category, search, and discover your next technology partner.",
 }
 
 export default function ExhibitorPage() {

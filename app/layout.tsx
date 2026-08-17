@@ -21,13 +21,13 @@ const SITE_URL = 'https://doeximexpo.com'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'DOeximexpo | Global B2B Trade & Export Show 2027',
-    template: '%s | DOeximexpo',
+    default: 'doeximexpo | Global B2B Trade & Export Show 2027',
+    template: '%s | doeximexpo',
   },
   description:
-    'DOeximexpo presents Global Trade Expo — India’s premier B2B export exhibition across 6 zones: Agriculture, FMCG, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services. Register free pass.',
+    'doeximexpo presents Global Trade Expo — India’s premier B2B export exhibition across 6 zones: Agriculture, FMCG, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services. Register free pass.',
   keywords: [
-    'DOeximexpo',
+    'doeximexpo',
     'B2B trade show',
     'export exhibition',
     'Agriculture Food FMCG',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'DOeximexpo | Automation Expo 2026',
+    title: 'doeximexpo | Automation Expo 2026',
     description:
       'India\u2019s premier B2B automation trade show. Exhibit, network in the Deal Room, and get your free visitor pass.',
-    siteName: 'DOeximexpo',
+    siteName: 'doeximexpo',
     images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'Automation Expo 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DOeximexpo | Automation Expo 2026',
+    title: 'doeximexpo | Automation Expo 2026',
     description: 'India\u2019s premier B2B automation trade show.',
     images: ['/images/hero-expo.png'],
   },

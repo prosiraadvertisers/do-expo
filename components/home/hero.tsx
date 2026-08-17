@@ -24,24 +24,6 @@ const ORGANISERS = [
   { logo: "/herologo/plogo.png", alt: "Event organiser", big: true },
   { logo: "/logo-white.png", alt: "Co-organiser", big: true },
 ];
-const POWERED_BY = [
-  { logo: "/logos/powered-1.svg", alt: "Powered by sponsor 1" },
-  { logo: "/logos/powered-2.svg", alt: "Powered by sponsor 2" },
-];
-const CO_POWERED_BY = [
-  { logo: "/logos/co-powered-1.svg", alt: "Co-powered by sponsor 1" },
-  { logo: "/logos/co-powered-2.svg", alt: "Co-powered by sponsor 2" },
-  { logo: "/logos/co-powered-3.svg", alt: "Co-powered by sponsor 3" },
-  { logo: "/logos/co-powered-4.svg", alt: "Co-powered by sponsor 4" },
-];
-const ASSOCIATE_PARTNERS = [
-  { logo: "/logos/partner-1.svg", alt: "Associate partner 1" },
-  { logo: "/logos/partner-2.svg", alt: "Associate partner 2" },
-  { logo: "/logos/partner-3.svg", alt: "Associate partner 3" },
-  { logo: "/logos/partner-4.svg", alt: "Associate partner 4" },
-  { logo: "/logos/partner-5.svg", alt: "Associate partner 5" },
-  { logo: "/logos/partner-6.svg", alt: "Associate partner 6" },
-];
 const TIME_LABEL = "10:00 AM – 6:00 PM";
 
 function LogoChip({
@@ -76,41 +58,6 @@ function LogoChip({
   );
 }
 
-/**
- * Fixed-height, horizontally-scrollable row of logos. Using a row instead
- * of a wrapping grid means this tier's height never changes no matter how
- * many logos are added or how narrow the screen is — that's what keeps the
- * whole hero from growing taller than one screen on any device.
- */
-function SponsorTier({
-  label,
-  items,
-}: {
-  label: string;
-  items: { logo: string; alt: string }[];
-}) {
-  return (
-    <div>
-      <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
-        {label}
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-2">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex h-9 w-[130px] items-center justify-center rounded-lg border border-dashed border-white/20 bg-white/5 px-3 backdrop-blur-sm"
-          >
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-white/70">
-              Logo {index + 1}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function Hero() {
   const { open } = useRegistration();
 
@@ -133,7 +80,7 @@ export function Hero() {
     >
       <Image
         src="/images/hero-expo.png"
-        alt="Visitors networking at DoExim Expo"
+        alt="Visitors networking at doexim Expo"
         fill
         priority
         sizes="100vw"
@@ -150,20 +97,29 @@ export function Hero() {
               on a short phone screen without scrolling, so everything is
               condensed into a single horizontally-scrollable strip. */}
           <div className="lg:hidden">
-            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
-              Our Partners
-            </p>
             <div className="hide-scrollbar flex items-center gap-2 overflow-x-auto pb-1">
-              {[
-                ORGANISERS[0],
-                ...POWERED_BY,
-                ...CO_POWERED_BY,
-                ...ASSOCIATE_PARTNERS,
-              ].map((item, i) => (
-                <div key={`${item.logo}-${i}`} className="shrink-0">
-                  <LogoChip logo={item.logo} alt={item.alt} size="sm" />
-                </div>
-              ))}
+              <div className="shrink-0">
+                <LogoChip
+                  logo={ORGANISERS[0].logo}
+                  alt={ORGANISERS[0].alt}
+                  size="sm"
+                />
+              </div>
+            </div>
+
+            {/* TEMP: replaces sponsor logo strip until real logos exist */}
+            <div className="mt-4 text-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
+                Connect. Collaborate.
+              </p>
+              <p className="mt-1 text-2xl font-extrabold leading-tight">
+                GROW <span className="text-[#ff8a1e]">GLOBAL</span>
+              </p>
+              <p className="mt-1.5 text-xs text-white/60">
+                India&apos;s Premier B2B International Trade Expo for
+                Importers, Exporters, Manufacturers &amp; Global Trade
+                Leaders
+              </p>
             </div>
           </div>
 
@@ -193,13 +149,20 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="space-y-2 border-t border-white/10 pt-2">
-              <SponsorTier label="Powered By" items={POWERED_BY} />
-              <SponsorTier label="Co Powered By" items={CO_POWERED_BY} />
-              <SponsorTier
-                label="Associate Partners"
-                items={ASSOCIATE_PARTNERS}
-              />
+            {/* TEMP: replaces sponsor tiers (Powered By / Co Powered By /
+                Associate Partners) until real sponsor logos exist */}
+            <div className="border-t border-white/10 pt-4 text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                Connect. Collaborate.
+              </p>
+              <p className="mt-1 text-3xl font-extrabold leading-tight sm:text-4xl">
+                GROW <span className="text-[#ff8a1e]">GLOBAL</span>
+              </p>
+              <p className="mx-auto mt-2 max-w-md text-sm text-white/60">
+                India&apos;s Premier B2B International Trade Expo for
+                Exporters, Importers Manufacturers &amp; Global Trade
+                Leaders
+              </p>
             </div>
           </div>
         </div>
@@ -233,7 +196,7 @@ export function Hero() {
                 onClick={() => open("exhibitor")}
                 className="w-full animate-bounce rounded-xl border border-[#3f6cff] bg-[#061AC9] !py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(6,26,201,0.55)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_35px_rgba(6,26,201,0.85)] sm:!py-3 sm:text-base"
               >
-                Book Your Stall Now! <ArrowRight className="size-4" />
+                Book Your Space Now! <ArrowRight className="size-4" />
               </CtaButton>
             </div>
           </div>

@@ -14,7 +14,7 @@ const CONFIG: Record<
   exhibitor: {
     icon: Store,
     eyebrow: 'Exhibitor Registration',
-    title: 'Showcase your brand to 40,000+ buyers',
+    title: 'Showcase your brand to 20,000+ buyers',
     blurb: 'Secure your booth in India\u2019s biggest automation showcase and generate qualified leads across 3 high-energy days.',
   },
   'buyer-seller': {

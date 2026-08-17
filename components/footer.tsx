@@ -25,7 +25,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-4 shrink-0 max-w-[180px] lg:max-w-[220px]">
               <Image
                 src="/logo-white.png"
-                alt="DO Exim Expo"
+                alt="doexim Expo"
                 width={180}
                 height={38}
                 priority
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 sm:flex-row">
-          <p className="text-xs text-white/60">&copy; {new Date().getFullYear()} DOeximexpo. All rights reserved. doeximexpo.com</p>
+          <p className="text-xs text-white/60">&copy; {new Date().getFullYear()} doeximexpo. All rights reserved. doeximexpo.com</p>
           <div className="flex items-center gap-2">
             {[
               { label: "LinkedIn", short: "in" },

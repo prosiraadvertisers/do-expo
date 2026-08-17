@@ -4,6 +4,7 @@ import { Tag } from "lucide-react";
 import { useState } from "react";
 import { ZONES } from "@/lib/event-data";
 
+
 export function ZonesGrid({ withImages }: { withImages?: boolean }) {
   const [expanded, setExpanded] = useState<string | null>(null);
 

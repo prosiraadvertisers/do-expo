@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Discover whydoexim Expo 2026 is India's premier platform for exhibitors. Reach 40,000+ qualified buyers, generate high-quality leads, and establish industry credibility.",
 }
 
-export default function WhyDoEximExpoPage() {
+export default function WhydoeximExpoPage() {
   return (
     <>
       <PageHero

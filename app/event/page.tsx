@@ -8,7 +8,7 @@ import { CalendarDays, MapPin, Ticket, Trophy, Users } from "lucide-react"
 export const metadata: Metadata = {
   title: "Event & Agenda",
   description:
-    "Explore the full three-day agenda for the DoExim Global Trade Expo 2027 — keynotes, masterclasses, panels and the Business Matchmaking Lounge. Download the agenda.",
+    "Explore the full three-day agenda for the doexim Global Trade Expo 2027 — keynotes, masterclasses, panels and the Business Matchmaking Lounge. Download the agenda.",
 }
 
 const keyDates = [

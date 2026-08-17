@@ -20,6 +20,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [eventOpen, setEventOpen] = useState(false);
   const [exhibitOpen, setExhibitOpen] = useState(false);
+  const [visitorOpen, setVisitorOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -45,7 +46,7 @@ export function Header() {
     };
   }, [mobileOpen]);
 
-const onDark = false;
+  const onDark = false;
   const linkColor = onDark
     ? "text-white/85 hover:text-white"
     : "text-foreground/75 hover:text-primary";
@@ -56,10 +57,6 @@ const onDark = false;
         <Logo onDark={onDark} />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
-          <NavLink href="/about" color={linkColor}>
-            About
-          </NavLink>
-
           <div
             className="relative"
             onMouseEnter={() => setEventOpen(true)}
@@ -67,16 +64,18 @@ const onDark = false;
           >
             <button
               className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition ${linkColor} ${
-                eventOpen ? (onDark ? "text-white" : "text-primary") : ""
+                eventOpen ? "text-primary" : ""
               }`}
-              aria-expanded={eventOpen}
             >
-              Event
+              About
               <ChevronDown
-                className={`size-4 transition-transform ${eventOpen ? "rotate-180" : ""}`}
+                className={`size-4 transition-transform ${
+                  eventOpen ? "rotate-180" : ""
+                }`}
               />
             </button>
-            {eventOpen && <EventDropdown />}
+
+            {eventOpen && <AboutDropdown />}
           </div>
 
           <div
@@ -90,15 +89,47 @@ const onDark = false;
               }`}
               aria-expanded={exhibitOpen}
             >
-              Exhibit
+              Exhibitors
               <ChevronDown
                 className={`size-4 transition-transform ${exhibitOpen ? "rotate-180" : ""}`}
               />
             </button>
             {exhibitOpen && <ExhibitDropdown />}
           </div>
+          <div
+            className="relative"
+            onMouseEnter={() => setVisitorOpen(true)}
+            onMouseLeave={() => setVisitorOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition ${linkColor} ${
+                visitorOpen ? "text-primary" : ""
+              }`}
+            >
+              Visitors
+              <ChevronDown
+                className={`size-4 transition-transform ${
+                  visitorOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {visitorOpen && <VisitorsDropdown />}
+          </div>
           <NavLink href="/layout" color={linkColor}>
             <span className="flex items-center gap-2">Layout</span>
+          </NavLink>
+
+          <NavLink href="/seminar" color={linkColor}>
+            Seminar
+          </NavLink>
+
+          <NavLink href="/partners" color={linkColor}>
+            Partners
+          </NavLink>
+
+          <NavLink href="/media" color={linkColor}>
+            Media
           </NavLink>
           <NavLink href="/contact" color={linkColor}>
             <span className="flex items-center gap-2">Contact Us</span>
@@ -106,22 +137,6 @@ const onDark = false;
         </nav>
 
         <div className="flex items-center gap-3">
-          <CtaButton
-            className="hidden lg:inline-flex border border-[#3f6cff] bg-[#061AC9] text-white shadow-[0_0_18px_rgba(6,26,201,0.45)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_30px_rgba(6,26,201,0.75)]"
-            onClick={() => router.push("/buyer-seller-meet")}
-          >
-            <Handshake className="size-4" />
-            Buyer Seller Meet
-          </CtaButton>
-
-          <CtaButton
-            className="hidden sm:inline-flex border border-[#3f6cff] bg-[#061AC9] text-white shadow-[0_0_18px_rgba(6,26,201,0.45)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_30px_rgba(6,26,201,0.75)]"
-            onClick={() => open("visitor")}
-          >
-            <Ticket className="size-4" />
-            Visitor Pass
-          </CtaButton>
-
           <button
             className={`inline-flex size-10 items-center justify-center rounded-lg lg:hidden ${
               onDark ? "text-white" : "text-foreground"
@@ -144,16 +159,71 @@ const onDark = false;
   );
 }
 
+function VisitorsDropdown() {
+  return (
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="w-72 overflow-hidden rounded-2xl border border-border bg-popover p-4 shadow-2xl">
+        <ul className="space-y-1">
+          <li>
+            <Link
+              href="/visitors#why-visit"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Why Visit doexim Expo
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/visitors#who-attend"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Who Should Attend
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/visitors#visitor-profile"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Visitor Profile
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/visitors#visitor-registration"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Visitor Registration
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/visitors#visitor-faq"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              FAQ
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function Logo({ onDark }: { onDark: boolean }) {
   return (
     <Link
       href="/"
-      aria-label="DO Exim Expo"
+      aria-label="doexim Expo"
       className="flex items-center shrink-0 max-w-[180px] lg:max-w-[220px]"
     >
       <Image
         src={onDark ? "/logo-white.png" : "/logo-dark.png"}
-        alt="DO Exim Expo"
+        alt="doexim Expo"
         width={180}
         height={38}
         priority
@@ -179,6 +249,70 @@ function NavLink({
     >
       {children}
     </Link>
+  );
+}
+
+function AboutDropdown() {
+  return (
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="w-72 overflow-hidden rounded-2xl border border-border bg-popover p-4 shadow-2xl animate-fade-in-up">
+        <ul className="space-y-1">
+          <li>
+            <Link
+              href="/about#about"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              About doexim Expo
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/about#why-doexim"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Why doexim Expo
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/about#why-attend"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Why Should Attend
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/about#expo-highlights"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Expo Highlights
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/about#zones"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Zones
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/about#faq"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              FAQ
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
@@ -230,12 +364,22 @@ function ExhibitDropdown() {
               Book Your Space
             </Link>
           </li>
+          <li></li>
           <li>
             <Link
-              href="/sponsorship"
+              href="/pre-event"
               className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
             >
-              Sponsorship
+              Pre-Event Schedule
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/event"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Event Flow
             </Link>
           </li>
           <li>
@@ -244,6 +388,22 @@ function ExhibitDropdown() {
               className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
             >
               Exhibitors List
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/exhibitors"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Exhibitors Manual
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/exhibitors"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Exhibitors broshers
             </Link>
           </li>
         </ul>
@@ -268,6 +428,21 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         </MobileLink>
         <MobileLink href="/contact" onClose={onClose}>
           Contact Us
+        </MobileLink>
+        <MobileLink href="/attend-do-exim-visitors" onClose={onClose}>
+          Visitors
+        </MobileLink>
+
+        <MobileLink href="/seminar" onClose={onClose}>
+          Seminar
+        </MobileLink>
+
+        <MobileLink href="/partners" onClose={onClose}>
+          Partners
+        </MobileLink>
+
+        <MobileLink href="/media" onClose={onClose}>
+          Media
         </MobileLink>
 
         <div className="border-b border-border">
@@ -346,40 +521,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           )}
         </div>
 
-        <button
-          onClick={() => {
-            onClose();
-            window.location.href = "/buyer-seller-meet";
-          }}
-          className="flex w-full items-center justify-between border-b border-border py-3.5 text-left text-base font-semibold"
-        >
-          Buyer Seller Meet <Handshake className="size-5 text-primary" />
-        </button>
-
-        <div className="mt-5 flex flex-col gap-3">
-          <CtaButton
-            variant="gold"
-            size="lg"
-            className="w-full"
-            onClick={() => {
-              onClose();
-              open("visitor");
-            }}
-          >
-            <Ticket className="size-5" /> Free Visitor Pass
-          </CtaButton>
-          <CtaButton
-            variant="cta"
-            size="lg"
-            className="w-full"
-            onClick={() => {
-              onClose();
-              open("exhibitor");
-            }}
-          >
-            Become an Exhibitor
-          </CtaButton>
-        </div>
+        <div className="mt-5 flex flex-col gap-3"></div>
       </nav>
     </div>
   );

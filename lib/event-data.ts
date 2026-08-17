@@ -9,12 +9,12 @@ import {
 } from 'lucide-react'
 
 export const EVENT = {
-  name: 'DoExim Global Trade Expo 2027',
-  organizer: 'Doeximexpo',
+  name: 'doexim Global Trade Expo 2027',
+  organizer: 'doeximexpo',
   tagline: 'Exporting India to the World — Vision 2030',
-  startISO: '2027-04-21T09:00:00+05:30',
-  dateLabel: '21–23 April 2027',
-  venue: 'Bombay Exhibition Centre, Mumbai, India',
+startISO: '2027-12-15T09:00:00+05:30',
+  dateLabel: '15, 16 & 17 Dec 2027',
+  venue: 'Bombay Exhibition Centre, Nesco Mumbai, India',
   venueShort: 'Mumbai, India',
 }
 
@@ -38,7 +38,7 @@ export const PARALLEL_ZONES: ParallelZone[] = [
   },
   {
     name: 'Media Center & Product Launch Lounge',
-    description: 'A dedicated space for press interactions, product launches and DoExim partner announcements.',
+    description: 'A dedicated space for press interactions, product launches and doexim partner announcements.',
   },
 ]
 
@@ -55,8 +55,8 @@ export const CONTINUOUS_FEATURES: ContinuousFeature[] = [
     points: ['IEC registration', 'Export documentation', 'GST', 'Customs', 'Banking', 'Product certification', 'Packaging', 'International pricing'],
   },
   {
-    title: 'DoExim Digital Platform Experience Centre',
-    description: 'Hands-on with the DoExim.com platform:',
+    title: 'doexim Digital Platform Experience Centre',
+    description: 'Hands-on with the doexim.com platform:',
     points: ['Live onboarding', 'Supplier registration', 'Buyer registration', 'AI product listing', 'Export lead generation demos'],
   },
   {
@@ -332,7 +332,7 @@ export const AGENDA: AgendaDay[] = [
     theme: "India's Export Vision & Starting Your Export Journey",
     sessions: [
       { time: '09:30 \u2013 10:15', title: 'Registration', speaker: 'All Delegates', role: 'Check-in', hall: 'Main Foyer', track: 'Registration' },
-      { time: '10:30 \u2013 11:30', title: 'Grand Inauguration', speaker: 'Chief Minister of Maharashtra, Union Minister of Commerce & Industry, DGFT, APEDA Chairman, FIEO President & International Ambassadors', role: 'Lighting of Lamp \u00b7 National Anthem \u00b7 Launch of DoExim.com', hall: 'Main Stage', track: 'Keynote' },
+      { time: '10:30 \u2013 11:30', title: 'Grand Inauguration', speaker: 'Chief Minister of Maharashtra, Union Minister of Commerce & Industry, DGFT, APEDA Chairman, FIEO President & International Ambassadors', role: 'Lighting of Lamp \u00b7 National Anthem \u00b7 Launch of doexim.com', hall: 'Main Stage', track: 'Keynote' },
       { time: '11:45 \u2013 12:45', title: "India's Export Vision 2030", speaker: 'Government of India Speakers', role: 'Export Promotion Mission, Districts as Export Hubs, Make in India, ODOP', hall: 'Knowledge Summit', track: 'Keynote' },
       { time: '13:45 \u2013 14:45', title: 'Why Every MSME Should Export', speaker: 'Industry Experts', role: 'Domestic vs Export Business, Global Demand, Success Stories', hall: 'Knowledge Summit', track: 'MSME' },
       { time: '15:00 \u2013 16:00', title: 'Government Schemes Every Exporter Must Know', speaker: 'DGFT Officials', role: 'RoDTEP, Duty Drawback, EPCG, Advance Authorization', hall: 'Knowledge Summit', track: 'Policy' },
@@ -360,10 +360,10 @@ export const AGENDA: AgendaDay[] = [
     theme: 'Winning Global Markets',
     sessions: [
       { time: '09:30 \u2013 10:30', title: 'How to Find International Buyers', speaker: 'Trade Facilitation Experts', role: 'Market Research, Trade Portals, AI for Lead Generation', hall: 'Knowledge Summit', track: 'Marketing' },
-      { time: '10:45 \u2013 11:45', title: 'Digital Export Marketing', speaker: 'DoExim Team', role: 'Export Branding, International SEO, CRM Automation', hall: 'Knowledge Summit', track: 'Marketing' },
+      { time: '10:45 \u2013 11:45', title: 'Digital Export Marketing', speaker: 'doexim Team', role: 'Export Branding, International SEO, CRM Automation', hall: 'Knowledge Summit', track: 'Marketing' },
       { time: '12:00 \u2013 13:00', title: 'Export Success Stories', speaker: '10 Successful Exporters', role: 'First Export Order, Challenges, Scaling Globally', hall: 'Knowledge Summit', track: 'Panel' },
       { time: '13:30 \u2013 14:30', title: 'Investor & Startup Pitch', speaker: 'Venture Capital \u00b7 Banks \u00b7 Export Investors \u00b7 Govt Incubators', role: 'Live Pitch Session', hall: 'Business Matchmaking Lounge', track: 'Investment' },
-      { time: '15:00 \u2013 16:15', title: 'Closing Ceremony', speaker: 'DoExim Committee', role: 'Export Excellence Awards, Innovation Awards, Partnership Announcements', hall: 'Main Stage', track: 'Keynote' },
+      { time: '15:00 \u2013 16:15', title: 'Closing Ceremony', speaker: 'doexim Committee', role: 'Export Excellence Awards, Innovation Awards, Partnership Announcements', hall: 'Main Stage', track: 'Keynote' },
     ],
   },
 ]

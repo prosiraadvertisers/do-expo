@@ -48,7 +48,7 @@ const RECS: Record<string, { zone: string; hall: string; sessions: string; day: 
 function icsDownload(name: string) {
   const dt = '20260318T093000'
   const ics = [
-    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//DOeximexpo//EN', 'BEGIN:VEVENT',
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//doeximexpo//EN', 'BEGIN:VEVENT',
     `SUMMARY:${EVENT.name}`, `DTSTART:${dt}`, 'DTEND:20260320T170000',
     `LOCATION:${EVENT.venue}`, `DESCRIPTION:Your free visitor pass for ${EVENT.name}. Attendee: ${name}`,
     'END:VEVENT', 'END:VCALENDAR',

@@ -66,7 +66,7 @@ export default function PreEventPage() {
 
       <PageHero
         eyebrow="Complete Event Schedule"
-        title="DoExim Expo 2024"
+        title="doexim Expo 2024"
         subtitle="India's Gateway to Global Trade"
       >
         <p className="text-white/75 max-w-2xl mx-auto font-body">
@@ -157,7 +157,7 @@ export default function PreEventPage() {
                   Destination
                 </p>
                 <p className="font-display text-2xl font-extrabold text-white leading-tight">
-                  DoExim
+                  doexim
                   <br />
                   Expo Floor
                 </p>
