@@ -403,7 +403,7 @@ function ExhibitDropdown() {
               href="/exhibitors"
               className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
             >
-              Exhibitors broshers
+              Exhibitors brochure
             </Link>
           </li>
         </ul>
