@@ -19,7 +19,7 @@ export function Footer() {
 
   return (
     <footer className="w-full overflow-x-hidden brand-gradient-radial text-white">
-      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-4 shrink-0 max-w-[180px] lg:max-w-[220px]">

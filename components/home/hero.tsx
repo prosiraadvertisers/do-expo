@@ -88,7 +88,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.2_0.09_270)] via-transparent to-[oklch(0.2_0.09_270_/_0.6)]" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-6 pb-24 sm:gap-6 sm:px-6 sm:pb-24 lg:grid-cols-12 lg:items-start lg:px-8 lg:py-4">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-4 py-8 pb-24 sm:gap-8 sm:px-6 sm:pb-24 lg:grid-cols-12 lg:items-center lg:px-8 lg:py-10">
         {" "}
         {/* LEFT — sponsor tiers (headline text removed per request) */}
         <div className="order-2 lg:order-1 lg:col-span-8">
@@ -168,7 +168,7 @@ export function Hero() {
         </div>
         {/* RIGHT — countdown, key details, CTAs */}
         <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-24 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
-          <div className="glass space-y-3 rounded-2xl p-3 sm:space-y-4 sm:p-4">
+          <div className="glass space-y-4 rounded-3xl p-4 sm:space-y-5 sm:p-5">
             <div className="min-w-0">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
                 Doors open in

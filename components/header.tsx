@@ -52,7 +52,7 @@ export function Header() {
     : "text-foreground/75 hover:text-primary";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl shadow-sm transition-all duration-300">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/75 backdrop-blur-2xl shadow-[0_8px_30px_oklch(.2_.06_258_/_0.06)] transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-18 lg:px-8">
         <Logo onDark={onDark} />
 
@@ -245,7 +245,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`rounded-full px-3.5 py-2 text-sm font-medium transition ${color}`}
+      className={`rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-primary/8 ${color}`}
     >
       {children}
     </Link>

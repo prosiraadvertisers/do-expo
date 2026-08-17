@@ -90,7 +90,7 @@ export function HomeSections() {
   return (
     <>
       {/* About snapshot */}
-      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+      <section className="w-full overflow-x-hidden px-4 py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl">
           <div className="grid w-full items-center gap-8 sm:gap-10 lg:grid-cols-2">
             <div>
@@ -136,7 +136,7 @@ export function HomeSections() {
       </section>
 
       {/* Why exhibit */}
-      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+      <section className="w-full overflow-x-hidden px-4 py-20 sm:py-24">
         <div className="mx-auto w-full grid max-w-6xl items-center gap-8 sm:gap-10 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <div className="glass-card rounded-2xl p-8">
@@ -210,7 +210,7 @@ export function HomeSections() {
       </section>
 
       {/* News */}
-      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
+      <section className="w-full overflow-x-hidden px-4 py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>

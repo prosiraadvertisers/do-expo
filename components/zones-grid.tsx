@@ -31,10 +31,10 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
             aria-expanded={isExpanded}
             className={`
               group relative h-[280px] cursor-pointer overflow-hidden
-              rounded-[28px]
+              rounded-3xl
               bg-gradient-to-br ${grad}
               p-7
-              shadow-lg
+              shadow-xl shadow-primary/10
               transition-all duration-500 ease-out
               hover:-translate-y-3
               hover:scale-[1.02]

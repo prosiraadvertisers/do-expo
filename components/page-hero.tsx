@@ -12,8 +12,8 @@ export function PageHero({
   children?: ReactNode
 }) {
   return (
-    <section className="brand-gradient-radial px-4 pb-14 pt-24 text-white sm:px-6 sm:pb-16 sm:pt-28 lg:px-8 lg:pb-16 lg:pt-32">
-      <div className="mx-auto max-w-4xl text-center">
+    <section className="relative overflow-hidden brand-gradient-radial px-4 pb-16 pt-28 text-white sm:px-6 sm:pb-20 sm:pt-32 lg:px-8 lg:pb-24"><div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,oklch(1_0_0_/_0.08)_48%,transparent_100%)]" />
+      <div className="relative mx-auto max-w-4xl text-center">
         {eyebrow && (
           <span className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold ring-1 ring-white/20 backdrop-blur">
             {eyebrow}

@@ -44,7 +44,7 @@ export function PriorityCards() {
   const { open } = useRegistration();
 
   return (
-    <section className="relative bg-background px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="relative -mt-4 bg-background px-4 py-14 sm:px-6 sm:py-18 lg:px-8">
       {" "}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-3">
         {CARDS.map((c) => {
@@ -53,7 +53,7 @@ export function PriorityCards() {
             <button
               key={c.type}
               onClick={() => open(c.type)}
-              className="group relative flex flex-col items-start gap-3 overflow-hidden rounded-2xl border border-border bg-card p-6 text-left shadow-lg shadow-black/5 transition hover:-translate-y-1 hover:shadow-xl"
+              className="glass-card group relative flex flex-col items-start gap-4 overflow-hidden rounded-3xl p-7 text-left"
             >
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${c.accent}`}

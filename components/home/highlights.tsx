@@ -27,12 +27,12 @@ const items = [
 
 export function Highlights() {
   return (
-    <section className="relative z-10 -mt-10 px-4">
+    <section className="relative z-10 -mt-12 px-4 sm:-mt-16">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
           <div
             key={item.title}
-            className="group rounded-2xl bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            className="glass-card group rounded-3xl p-6 transition-all duration-300"
           >
             {/* Icon */}
             <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30 transition-all duration-300 group-hover:scale-110">
