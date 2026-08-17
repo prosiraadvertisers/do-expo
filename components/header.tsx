@@ -3,7 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, Ticket, Handshake, LayoutGrid, MessageCircle } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Ticket,
+  Handshake,
+  LayoutGrid,
+  MessageCircle,
+} from "lucide-react";
 import { useRegistration } from "@/components/registration/registration-context";
 import { CtaButton } from "@/components/ui/cta";
 import Image from "next/image";
@@ -37,19 +45,13 @@ export function Header() {
     };
   }, [mobileOpen]);
 
-  const onDark = !scrolled && !mobileOpen;
+const onDark = false;
   const linkColor = onDark
     ? "text-white/85 hover:text-white"
     : "text-foreground/75 hover:text-primary";
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || mobileOpen
-          ? "border-b border-border bg-background/90 backdrop-blur-xl shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl shadow-sm transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-18 lg:px-8">
         <Logo onDark={onDark} />
 
@@ -96,17 +98,11 @@ export function Header() {
             {exhibitOpen && <ExhibitDropdown />}
           </div>
           <NavLink href="/layout" color={linkColor}>
-  <span className="flex items-center gap-2">
-    <LayoutGrid className="size-4" />
-    Layout
-  </span>
-</NavLink>
+            <span className="flex items-center gap-2">Layout</span>
+          </NavLink>
           <NavLink href="/contact" color={linkColor}>
-  <span className="flex items-center gap-2">
-    <MessageCircle className="size-4" />
-    Contact Us
-  </span>
-</NavLink>
+            <span className="flex items-center gap-2">Contact Us</span>
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -161,7 +157,8 @@ function Logo({ onDark }: { onDark: boolean }) {
         width={180}
         height={38}
         priority
-className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300"      />
+        className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300"
+      />
     </Link>
   );
 }
@@ -267,11 +264,11 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           About
         </MobileLink>
         <MobileLink href="/layout" onClose={onClose}>
-    Hall Layout
-  </MobileLink>
+          Hall Layout
+        </MobileLink>
         <MobileLink href="/contact" onClose={onClose}>
-    Contact Us
-  </MobileLink>
+          Contact Us
+        </MobileLink>
 
         <div className="border-b border-border">
           <button

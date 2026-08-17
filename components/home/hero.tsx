@@ -90,17 +90,18 @@ function SponsorTier({
   items: { logo: string; alt: string }[];
 }) {
   return (
-    <div className="min-w-0">
-      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
+    <div>
+      <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
         {label}
       </p>
-      <div className="hide-scrollbar flex gap-2 overflow-x-auto pb-1">
+
+      <div className="flex flex-wrap justify-center gap-2">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex h-10 min-w-[110px] shrink-0 items-center justify-center rounded-lg border border-dashed border-white/20 bg-white/5 px-4"
+            className="flex h-9 w-[130px] items-center justify-center rounded-lg border border-dashed border-white/20 bg-white/5 px-3 backdrop-blur-sm"
           >
-            <span className="text-xs font-semibold uppercase tracking-wider text-white/70">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-white/70">
               Logo {index + 1}
             </span>
           </div>
@@ -140,7 +141,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.2_0.09_270)] via-transparent to-[oklch(0.2_0.09_270_/_0.6)]" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-6 pb-20 sm:gap-6 sm:px-6 sm:pb-24 lg:grid-cols-12 lg:items-start lg:px-8 lg:py-0">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-6 pb-24 sm:gap-6 sm:px-6 sm:pb-24 lg:grid-cols-12 lg:items-start lg:px-8 lg:py-4">
         {" "}
         {/* LEFT — sponsor tiers (headline text removed per request) */}
         <div className="order-2 lg:order-1 lg:col-span-8">
@@ -167,11 +168,9 @@ export function Hero() {
           </div>
 
           {/* Desktop (lg+): full tiered layout, room to breathe. */}
-          <div className="hidden space-y-3 lg:block">
+          <div className="hidden space-y-2 lg:block">
             <div className="flex flex-col items-center">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
-                Event Organised By
-              </p>
+            
 
               {/* Small Logo */}
               <LogoChip
@@ -179,9 +178,13 @@ export function Hero() {
                 alt={ORGANISERS[0].alt}
                 size="sm"
               />
+              
+<p className="mt-3 mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
+                Presents
+              </p>
 
               {/* Big Logo */}
-              <div className="mt-5">
+              <div className="mt-2">
                 <LogoChip
                   logo={ORGANISERS[1].logo}
                   alt={ORGANISERS[1].alt}
@@ -190,7 +193,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="space-y-3 border-t border-white/10 pt-3">
+            <div className="space-y-2 border-t border-white/10 pt-2">
               <SponsorTier label="Powered By" items={POWERED_BY} />
               <SponsorTier label="Co Powered By" items={CO_POWERED_BY} />
               <SponsorTier
