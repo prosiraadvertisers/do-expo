@@ -53,27 +53,33 @@ export function PriorityCards() {
             <button
               key={c.type}
               onClick={() => open(c.type)}
-              className="group relative flex flex-col items-start gap-3 overflow-hidden rounded-2xl border border-border bg-card p-6 text-left shadow-lg shadow-black/5 transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex flex-col items-start gap-4 overflow-hidden rounded-[28px] border border-slate-200 bg-white/80 p-7 text-left backdrop-blur-xl shadow-[0_10px_35px_rgba(15,23,42,0.10)] transition-all duration-500 hover:-translate-y-2 hover:border-[#061AC9]/20 hover:bg-white hover:shadow-[0_20px_60px_rgba(6,26,201,0.18)]"
             >
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${c.accent}`}
               >
+                {/* Glossy Effect */}
+                <div className="pointer-events-none absolute inset-0 rounded-[28px] overflow-hidden">
+                  <div className="absolute -left-40 top-0 h-full w-20 -skew-x-12 bg-white/60 blur-xl transition-all duration-1000 group-hover:left-[130%]" />
+                </div>
+
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/35 to-transparent" />
                 {c.badge}
               </span>
-              <span className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="size-6" />
+<span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#061AC9] to-[#3B82F6] text-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">                <Icon className="size-6" />
               </span>
-              <h3 className="font-heading text-xl font-bold text-foreground">
+              <h3 className="relative z-10 font-heading text-2xl font-bold text-slate-900">
                 {c.title}
               </h3>
-              <p className="text-sm text-muted-foreground text-pretty">
+              <p className="relative z-10 text-[15px] leading-7 text-slate-600">
                 {c.desc}
               </p>
-              <span className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+              <span className="relative z-10 mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#061AC9]">
                 Register now{" "}
                 <ArrowRight className="size-4 transition group-hover:translate-x-1" />
               </span>
-            </button>
+            </button >
+            
           );
         })}
       </div>

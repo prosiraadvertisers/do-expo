@@ -1,7 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, CalendarDays, Clock, Ticket, ArrowRight } from "lucide-react";
+import {
+  MapPin,
+  CalendarDays,
+  Clock,
+  Ticket,
+  ArrowRight,
+  Store,
+  Globe,
+  Users,
+  Map as MapIcon,
+} from "lucide-react";
 import { EVENT } from "@/lib/event-data";
 import { Countdown } from "@/components/countdown";
 import { CtaButton } from "@/components/ui/cta";
@@ -79,19 +89,21 @@ export function Hero() {
       style={{ minHeight: "100dvh" }}
     >
       <Image
-        src="/images/hero-expo.png"
-        alt="Visitors networking at doexim Expo"
+        src="/herobg/hero.png"
+        alt="Mumbai Skyline"
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-30"
+        className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.2_0.09_270)] via-transparent to-[oklch(0.2_0.09_270_/_0.6)]" />
+      <div className="absolute inset-0 bg-black/45" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-4 py-6 pb-24 sm:gap-6 sm:px-6 sm:pb-24 lg:grid-cols-12 lg:items-start lg:px-8 lg:py-4">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#07152c]/80 via-[#07152c]/35 to-transparent" />
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-10 lg:grid-cols-12 lg:px-8">
         {" "}
         {/* LEFT — sponsor tiers (headline text removed per request) */}
-        <div className="order-2 lg:order-1 lg:col-span-8">
+        <div className="order-2 flex items-center lg:order-1 lg:col-span-8">
+          {" "}
           {/* Mobile / tablet (< lg): one combined row. Four separate
               stacked rows plus the countdown card below simply cannot fit
               on a short phone screen without scrolling, so everything is
@@ -108,74 +120,93 @@ export function Hero() {
             </div>
 
             {/* TEMP: replaces sponsor logo strip until real logos exist */}
-            <div className="mt-4 text-center">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
+            <div className="-mt-4 text-right ">
+              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
                 Connect. Collaborate.
               </p>
-              <p className="mt-1 text-2xl font-extrabold leading-tight">
+
+              <h1 className="mt-2 text-6xl font-black leading-none">
                 GROW <span className="text-[#ff8a1e]">GLOBAL</span>
-              </p>
-              <p className="mt-1.5 text-xs text-white/60">
-                India&apos;s Premier B2B International Trade Expo for
-                Importers, Exporters, Manufacturers &amp; Global Trade
-                Leaders
+              </h1>
+
+              <p className="mt-6 max-w-none text-lg xl:text-xl leading-relaxed text-white/90 lg:whitespace-nowrap">
+                India&apos;s Premier B2B International Trade Expo for Exporters,
+                Importers, Manufacturers &amp; Global Trade Leaders
               </p>
             </div>
           </div>
-
-          {/* Desktop (lg+): full tiered layout, room to breathe. */}
-          <div className="hidden space-y-2 lg:block">
-            <div className="flex flex-col items-center">
-            
-
-              {/* Small Logo */}
+          {/* Desktop (lg+): row-based layout matching the reference —
+              nothing is stacked in one tall column. Row 1: small logo +
+              "PRESENTS" inline. Row 2: big logo on the left, heading +
+              description on the right, both at the same vertical level.
+              Row 3: full-width stats strip. */}
+          <div className="hidden w-full flex-col items-start justify-center lg:flex">
+            {/* Row 1 — small logo + PRESENTS, inline */}
+            {/* <div className="flex items-center gap-3">
               <LogoChip
                 logo={ORGANISERS[0].logo}
                 alt={ORGANISERS[0].alt}
                 size="sm"
               />
-              
-<p className="mt-3 mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
                 Presents
               </p>
+            </div> */}
 
-              {/* Big Logo */}
-              <div className="mt-2">
-                <LogoChip
-                  logo={ORGANISERS[1].logo}
-                  alt={ORGANISERS[1].alt}
-                  size="lg"
-                />
+            {/* Row 2 — big logo (left) + heading/description (right) */}
+            <div className="-mt-6 grid w-full grid-cols-[auto_1fr] items-center gap-x-10">
+              {" "}
+              {/* <LogoChip
+                logo={ORGANISERS[1].logo}
+                alt={ORGANISERS[1].alt}
+                size="lg"
+              /> */}
+              <div className="-mt-4 text-left">
+                <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
+                  Connect. Collaborate.
+                </p>
+                <p className="mt-3 text-5xl font-black leading-none">
+                  GROW <span className="text-[#ff8a1e]">GLOBAL</span>
+                </p>
+                <p className="mt-1 max-w-2xl text-sm leading-8 text-white/90">
+                  India&apos;s Premier B2B International Trade Expo for
+                  Exporters, Importers Manufacturers &amp; Global Trade Leaders
+                </p>
               </div>
             </div>
 
-            {/* TEMP: replaces sponsor tiers (Powered By / Co Powered By /
-                Associate Partners) until real sponsor logos exist */}
-            <div className="border-t border-white/10 pt-4 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-                Connect. Collaborate.
-              </p>
-              <p className="mt-1 text-3xl font-extrabold leading-tight sm:text-4xl">
-                GROW <span className="text-[#ff8a1e]">GLOBAL</span>
-              </p>
-              <p className="mx-auto mt-2 max-w-md text-sm text-white/60">
-                India&apos;s Premier B2B International Trade Expo for
-                Exporters, Importers Manufacturers &amp; Global Trade
-                Leaders
-              </p>
+            {/* Row 3 — full-width stats strip, placeholder numbers */}
+            <div className="mt-8 flex w-full max-w-xl items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
+              {[
+                { icon: Store, label: "Exhibitors", value: "300+" },
+                { icon: Globe, label: "Countries", value: "25+" },
+                { icon: Users, label: "Visitors", value: "10K+" },
+              ].map(({ icon: Icon, label, value }) => (
+                <span key={label} className="flex items-center gap-3">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <Icon className="size-4 text-gold" />
+                  </span>
+                  <span className="leading-tight">
+                    <span className="block text-base font-bold text-white">
+                      {value}
+                    </span>
+                    <span className="block text-xs text-white/60">{label}</span>
+                  </span>
+                </span>
+              ))}
             </div>
           </div>
         </div>
         {/* RIGHT — countdown, key details, CTAs */}
-        <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-24 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
-          <div className="glass space-y-3 rounded-2xl p-3 sm:space-y-4 sm:p-4">
+        <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-0 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
+          <div className="rounded-3xl border border-white/40 bg-white/18 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:p-4 sm:space-y-4">
+            {" "}
             <div className="min-w-0">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
                 Doors open in
               </p>
               <Countdown variant="dark" />
             </div>
-
             <div className="space-y-2 border-t border-white/10 pt-3 text-sm font-medium text-white/90">
               <span className="flex items-start gap-2.5">
                 <CalendarDays className="mt-0.5 size-4 shrink-0 text-gold" />
@@ -190,8 +221,7 @@ export function Hero() {
                 <span>{TIME_LABEL}</span>
               </span>
             </div>
-
-            <div className="flex flex-col gap-2 border-t border-white/10 pt-3">
+            <div className="flex flex-col gap-2 border-t border-white/10 pt-3 sm:flex-row">
               <CtaButton
                 onClick={() => open("exhibitor")}
                 className="w-full animate-bounce rounded-xl border border-[#3f6cff] bg-[#061AC9] !py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(6,26,201,0.55)] transition-all duration-300 hover:bg-[#1326CB] hover:shadow-[0_0_35px_rgba(6,26,201,0.85)] sm:!py-3 sm:text-base"
