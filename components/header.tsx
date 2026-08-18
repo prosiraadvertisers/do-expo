@@ -423,26 +423,23 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <MobileLink href="/about" onClose={onClose}>
           About
         </MobileLink>
-        <MobileLink href="/layout" onClose={onClose}>
-          Hall Layout
-        </MobileLink>
-        <MobileLink href="/contact" onClose={onClose}>
-          Contact Us
-        </MobileLink>
         <MobileLink href="/attend-do-exim-visitors" onClose={onClose}>
           Visitors
         </MobileLink>
-
+        <MobileLink href="/layout" onClose={onClose}>
+           Layout
+        </MobileLink>
         <MobileLink href="/seminar" onClose={onClose}>
           Seminar
         </MobileLink>
-
         <MobileLink href="/partners" onClose={onClose}>
           Partners
         </MobileLink>
-
         <MobileLink href="/media" onClose={onClose}>
           Media
+        </MobileLink>
+        <MobileLink href="/contact" onClose={onClose}>
+          Contact Us
         </MobileLink>
 
         <div className="border-b border-border">

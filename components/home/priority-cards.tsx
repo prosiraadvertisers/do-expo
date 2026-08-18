@@ -33,9 +33,9 @@ const CARDS: {
   {
     type: "visitor",
     icon: Ticket,
-    title: "Free Visitor Registration",
+    title: "Visitor Registration",
     desc: "Register free and meet international exhibitors, buyers and exporters under one roof.",
-    badge: "100% Free",
+    badge: "Pass",
     accent: "bg-gold text-gold-foreground",
   },
 ];

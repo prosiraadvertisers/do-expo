@@ -89,7 +89,7 @@ export function Hero() {
       style={{ minHeight: "100dvh" }}
     >
       <Image
-        src="/herobg/hero.png"
+        src="/herobg/hero.webp"
         alt="Mumbai Skyline"
         fill
         priority
@@ -109,8 +109,6 @@ export function Hero() {
               on a short phone screen without scrolling, so everything is
               condensed into a single horizontally-scrollable strip. */}
           <div className="lg:hidden">
-            
-
             {/* TEMP: replaces sponsor logo strip until real logos exist */}
             <div className="-mt-4 text-right ">
               <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
@@ -154,25 +152,27 @@ export function Hero() {
                 size="lg"
               /> */}
               <div className="-mt-4 text-left">
-                <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
+                <p className="ml-[4px] text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
                   Connect. Collaborate.
                 </p>
+
                 <p className="mt-3 text-5xl font-black leading-none">
-                  GROW <span className="text-[#ff8a1e]">GLOBAL</span>
+                  GROW <span className="text-[#3228ee]">GLOBAL</span>
                 </p>
-                <p className="mt-1 max-w-2xl text-sm leading-8 text-white/90">
+                <p className="mt-3 max-w-2xl text-base leading-7 text-white/90">
                   India&apos;s Premier B2B International Trade Expo for
-                  Exporters, Importers Manufacturers &amp; Global Trade Leaders
+                  Exporters, Importers
+                  <br />
+                  Manufacturers &amp; Global Trade Leaders
                 </p>
               </div>
             </div>
 
             {/* Row 3 — full-width stats strip, placeholder numbers */}
-            <div className="mt-8 flex w-full max-w-xl items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
-              {[
-                { icon: Store, label: "Exhibitors", value: "300+" },
-                { icon: Globe, label: "Countries", value: "25+" },
-                { icon: Users, label: "Visitors", value: "10K+" },
+<div className="mt-24 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">              {[
+                { icon: Store, label: "Exhibitors", value: "360+" },
+                { icon: Globe, label: "Countries", value: "10+" },
+                { icon: Users, label: "Visitors", value: "25K+" },
               ].map(({ icon: Icon, label, value }) => (
                 <span key={label} className="flex items-center gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">

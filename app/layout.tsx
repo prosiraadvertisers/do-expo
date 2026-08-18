@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Manrope, Space_Grotesk } from 'next/font/google'
+import { Manrope, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { SiteChrome } from '@/components/site-chrome'
 
@@ -10,11 +10,12 @@ const manrope = Manrope({
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-heading',
-  display: 'swap',
-})
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
 
 const SITE_URL = 'https://doeximexpo.com'
 
@@ -75,8 +76,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable} bg-background`}>
-      <body className="w-full overflow-x-hidden font-sans antialiased">
+<html
+  lang="en"
+  className={`${manrope.variable} ${plusJakarta.variable} bg-background`}
+>      <body className="w-full overflow-x-hidden font-sans antialiased">
         <SiteChrome>{children}</SiteChrome>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
