@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ZonesGrid } from "@/components/zones-grid";
+import { PageHero } from "@/components/page-hero";
 
 import Link from "next/link";
 import {
@@ -95,38 +96,24 @@ export default function VisitorsPage() {
     <>
       {/* ================= HERO ================= */}
 
-      <section className="bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] py-28 text-white">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur">
-            VISITOR INFORMATION
-          </span>
+      <PageHero
+  eyebrow="Visitor Information"
+  title="Visit DO EXIM Expo"
+>
+  <a
+    href="#visitor-registration"
+    className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
+  >
+    Register Now
+  </a>
 
-          <h1 className="mt-7 text-5xl font-extrabold leading-tight lg:text-6xl">
-            Visit DO EXIM Expo
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-xl text-white/85">
-            Meet exhibitors, discover innovations, attend expert sessions and
-            build valuable business connections from across the globe.
-          </p>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#visitor-registration"
-              className="rounded-xl bg-white px-7 py-4 font-semibold text-[#191456] transition hover:scale-105"
-            >
-              Register Now
-            </a>
-
-            <a
-              href="#why-visit"
-              className="rounded-xl border border-white/20 bg-white/10 px-7 py-4 font-semibold backdrop-blur transition hover:bg-white/20"
-            >
-              Explore More
-            </a>
-          </div>
-        </div>
-      </section>
+  <a
+    href="#why-visit"
+    className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20"
+  >
+    Explore More
+  </a>
+</PageHero>
 
       {/* ================= WHY VISIT ================= */}
 

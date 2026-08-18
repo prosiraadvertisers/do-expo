@@ -22,7 +22,7 @@ export default function EventPage() {
   return (
     <>
       <PageHero
-        eyebrow="Event & Agenda"
+        
         title={EVENT.tagline}
         subtitle={`${EVENT.dateLabel} · ${EVENT.venue}`}
       />

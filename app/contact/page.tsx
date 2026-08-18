@@ -80,11 +80,11 @@ const VENUE_TILES = [
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Get in Touch"
-        title="Contact Us"
-        subtitle="Have a question about exhibiting, visiting, or partnerships? Our team is ready to help you."
-      />
+  <div className="pt-6">
+    <PageHero
+      title="Contact Us"
+    />
+  </div>
 
       {/* ================= OFFICE + ZONE CONTACT CARDS ================= */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
@@ -196,92 +196,98 @@ export default function ContactPage() {
       </section>
 
       {/* ================= EXPO VENUE (Bombay Exhibition Centre) ================= */}
-      <section className="bg-[#1c3db7] px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-muted/30 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white/70">
+            <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Expo Venue
             </span>
-            <h2 className="mt-4 font-heading text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-4 font-heading text-3xl font-bold text-foreground sm:text-4xl">
               Bombay Exhibition Centre, Goregaon
             </h2>
-            <p className="mt-3 text-white/60">
+            <p className="mt-3 text-muted-foreground">
               15, 16 &amp; 17 Dec 2027 — plan your travel and arrival with the
               details below.
             </p>
           </div>
 
-          <div className="mt-10 overflow-hidden rounded-2xl shadow-2xl">
+          {/* Single elevated card — thin brand-gradient accent line instead
+              of a full-bleed color block */}
+          <div className="mt-10 overflow-hidden rounded-[28px] border border-border bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)]">
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#191456] via-[#191B65] to-[#F0B429]" />
+
+            {/* Map — horizontal, full width */}
             <iframe
               title="Bombay Exhibition Centre Location"
               src="https://www.google.com/maps?q=Bombay+Exhibition+Centre,+NESCO,+Goregaon+East,+Mumbai,+Maharashtra+400063&output=embed"
               width="100%"
-              height="380"
+              height="340"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full"
             />
-          </div>
 
-          {/* Getting there — connected journey strip */}
-          <div className="mt-12">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
-              Getting There
-            </p>
+            <div className="p-6 sm:p-10">
+              {/* Getting there — connected journey strip */}
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">
+                Getting There
+              </p>
 
-            <div className="relative mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-              {/* connecting line — desktop only */}
-              <div className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-white/15 to-transparent sm:block" />
+              <div className="relative mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <div className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-border sm:block" />
 
-              {JOURNEY.map(({ icon: Icon, label, place, distance }) => (
-                <div key={label} className="relative flex flex-col items-start gap-3">
-                  <span className="relative z-10 flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm">
-                    <Icon className="size-6 text-[#F0B429]" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-bold uppercase tracking-wide text-white/50">
-                      {label}
-                    </p>
-                    <p className="mt-1 text-base font-semibold text-white">
-                      {place}
-                    </p>
-                    <p className="mt-1 text-sm font-medium text-[#F0B429]">
-                      {distance} from venue
-                    </p>
+                {JOURNEY.map(({ icon: Icon, label, place, distance }) => (
+                  <div key={label} className="relative flex flex-col items-start gap-3">
+                    <span className="relative z-10 flex size-14 items-center justify-center rounded-2xl bg-primary/10">
+                      <Icon className="size-6 text-primary" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold uppercase tracking-wide text-muted-foreground">
+                        {label}
+                      </p>
+                      <p className="mt-1 text-base font-semibold text-foreground">
+                        {place}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-[#a9791a]">
+                        {distance} from venue
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
 
-          {/* At the venue — icon tiles */}
-          <div className="mt-12">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
-              At the Venue
-            </p>
+              {/* At the venue — icon tiles */}
+              <div className="mt-10 border-t border-border pt-10">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">
+                  At the Venue
+                </p>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {VENUE_TILES.map(({ icon: Icon, label, detail, note }) => (
-                <div
-                  key={label}
-                  className="flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-colors duration-300 hover:bg-white/[0.07]"
-                >
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#F0B429]/15">
-                    <Icon className="size-5 text-[#F0B429]" />
-                  </span>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-white/40">
-                      {label}
-                    </p>
-                    <p className="mt-1 text-lg font-bold text-white">
-                      {detail}
-                    </p>
-                    <p className="mt-0.5 text-sm text-white/50">{note}</p>
-                  </div>
+                <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  {VENUE_TILES.map(({ icon: Icon, label, detail, note }) => (
+                    <div
+                      key={label}
+                      className="flex items-start gap-5 rounded-2xl border border-border p-6 transition-colors duration-300 hover:bg-muted/40"
+                    >
+                      <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#F0B429]/15">
+                        <Icon className="size-5 text-[#a9791a]" />
+                      </span>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                          {label}
+                        </p>
+                        <p className="mt-1 text-lg font-bold text-foreground">
+                          {detail}
+                        </p>
+                        <p className="mt-0.5 text-sm text-muted-foreground">
+                          {note}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -291,7 +297,7 @@ export default function ContactPage() {
       <section className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Head Office
+            Find Our Office
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
             Visit our office at Swargate, Pune. We&apos;re easily accessible

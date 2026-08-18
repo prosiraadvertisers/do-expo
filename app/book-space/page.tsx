@@ -15,7 +15,6 @@ export default function BookSpacePage() {
       <PageHero
         eyebrow="Booth Packages"
         title="Book Your Exhibition Space"
-        subtitle="Choose the booth size that fits your brand and budget. All packages include prime floor placement, high-traffic visibility, and full access to networking events."
       >
         <CtaButton variant="cta" size="lg">
           Inquire Now

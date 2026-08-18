@@ -24,7 +24,6 @@ export default function WhydoeximExpoPage() {
       <PageHero
         eyebrow="Why Exhibit"
         title="Why doexim Expo 2026?"
-        subtitle="Connect with 40,000+ qualified buyers across India and abroad. Three days. Six dedicated export & trade zones. Unlimited business potential."
       >
         <CtaButton variant="cta" size="lg">
           Book Your Booth

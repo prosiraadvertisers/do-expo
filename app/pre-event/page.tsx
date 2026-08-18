@@ -67,7 +67,7 @@ export default function PreEventPage() {
       <PageHero
         eyebrow="Complete Event Schedule"
         title="doexim Expo 2024"
-        subtitle="India's Gateway to Global Trade"
+        
       >
         <p className="text-white/75 max-w-2xl mx-auto font-body">
           A comprehensive 3-day international trade exhibition featuring 500+ exhibitors,
