@@ -59,7 +59,7 @@ export default function ExhibitorPage() {
             Your Brand Belongs Here
           </h2>
           <p className="mt-4 text-lg text-white/75">
-            Reach 40,000+ qualified buyers and connect with industry leaders across India and the globe. Secure your booth today.
+            Reach 25,000+ qualified buyers and connect with industry leaders across India and the globe. Secure your booth today.
           </p>
           <div className="mt-8">
             <CtaButton variant="gold" size="lg">

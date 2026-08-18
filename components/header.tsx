@@ -116,16 +116,17 @@ export function Header() {
 
             {visitorOpen && <VisitorsDropdown />}
           </div>
-          <NavLink href="/layout" color={linkColor}>
-            <span className="flex items-center gap-2">Layout</span>
+          <NavLink href="/partners" color={linkColor}>
+            Partners
           </NavLink>
 
           <NavLink href="/seminar" color={linkColor}>
             Seminar
           </NavLink>
 
-          <NavLink href="/partners" color={linkColor}>
-            Partners
+          
+          <NavLink href="/layout" color={linkColor}>
+            <span className="flex items-center gap-2">Layout</span>
           </NavLink>
 
           <NavLink href="/media" color={linkColor}>
@@ -175,19 +176,10 @@ function VisitorsDropdown() {
 
           <li>
             <Link
-              href="/visitors#who-attend"
+              href="/visitors#why-attend"
               className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
             >
               Who Should Attend
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/visitors#visitor-profile"
-              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
-            >
-              Visitor Profile
             </Link>
           </li>
 
@@ -199,7 +191,23 @@ function VisitorsDropdown() {
               Visitor Registration
             </Link>
           </li>
-
+<li>
+            <Link
+              href="/visitors#zones"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Category Wise Zones
+              
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/exhibitor"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Exhibitors List
+            </Link>
+          </li>
           <li>
             <Link
               href="/visitors#visitor-faq"
@@ -266,23 +274,7 @@ function AboutDropdown() {
             </Link>
           </li>
 
-          <li>
-            <Link
-              href="/about#why-doexim"
-              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
-            >
-              Why doexim Expo
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/about#why-attend"
-              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
-            >
-              Why Should Attend
-            </Link>
-          </li>
+          
 
           <li>
             <Link
@@ -295,10 +287,27 @@ function AboutDropdown() {
 
           <li>
             <Link
-              href="/about#zones"
+              href="/event"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Event Flow
+            </Link>
+          </li>
+
+            <li>
+          <Link
+              href=""
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              doexim Awards
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about#board-advisory"
               className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
             >
-              Zones
+               Board of Commitee
             </Link>
           </li>
 
@@ -356,6 +365,16 @@ function ExhibitDropdown() {
               Why doexim expo
             </Link>
           </li>
+
+          <li>
+            <Link
+                  href="/exhibitors#visitor-profile"
+              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
+            >
+              Visitor Profile
+            </Link>
+          </li>
+
           <li>
             <Link
               href="/book-space"
@@ -374,22 +393,8 @@ function ExhibitDropdown() {
             </Link>
           </li>
 
-          <li>
-            <Link
-              href="/event"
-              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
-            >
-              Event Flow
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/exhibitors"
-              className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
-            >
-              Exhibitors List
-            </Link>
-          </li>
+          
+          
           <li>
             <Link
               href="/exhibitors"
@@ -427,7 +432,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           Visitors
         </MobileLink>
         <MobileLink href="/layout" onClose={onClose}>
-           Layout
+          Layout
         </MobileLink>
         <MobileLink href="/seminar" onClose={onClose}>
           Seminar

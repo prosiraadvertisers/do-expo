@@ -114,7 +114,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* why doexim */}
-      <section
+      {/* <section
         id="why-doexim"
         className="relative overflow-hidden bg-[#f8fafc] py-28 scroll-mt-24"
       >
@@ -163,97 +163,9 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* why should attend */}
-      <section
-        id="why-attend"
-        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-24"
-      >
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              WHY SHOULD ATTEND
-            </span>
-
-            <h2 className="mt-5 text-5xl font-bold text-slate-900">
-              Meet the Right People.
-              <span className="block text-primary">Grow Your Business.</span>
-            </h2>
-
-            <p className="mt-6 text-lg text-slate-600">
-              doexim Expo connects businesses, buyers and innovators from across
-              the world to create meaningful trade opportunities.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: "🏭",
-                title: "Manufacturers",
-                color: "bg-blue-100",
-              },
-              {
-                icon: "🚢",
-                title: "Exporters",
-                color: "bg-emerald-100",
-              },
-              {
-                icon: "📦",
-                title: "Importers",
-                color: "bg-orange-100",
-              },
-              {
-                icon: "🏢",
-                title: "MSMEs",
-                color: "bg-purple-100",
-              },
-              {
-                icon: "🚀",
-                title: "Startups",
-                color: "bg-pink-100",
-              },
-              {
-                icon: "🚛",
-                title: "Logistics",
-                color: "bg-cyan-100",
-              },
-              {
-                icon: "🏦",
-                title: "Banks",
-                color: "bg-yellow-100",
-              },
-              {
-                icon: "🤝",
-                title: "Consultants",
-                color: "bg-red-100",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl"
-              >
-                <div
-                  className={`mx-auto flex h-20 w-20 items-center justify-center rounded-3xl text-4xl ${item.color}`}
-                >
-                  {item.icon}
-                </div>
-
-                <h3 className="mt-6 text-center text-xl font-bold text-slate-900">
-                  {item.title}
-                </h3>
-
-                <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24" />
-
-                <p className="mt-5 text-center text-sm leading-7 text-slate-600">
-                  Connect, collaborate and discover new business opportunities
-                  with global trade professionals.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* event highlights */}
 
@@ -498,31 +410,7 @@ export default function AboutPage() {
 
       {/* ================= EXHIBITION ZONES ================= */}
 
-      <section
-        id="zones"
-        className="scroll-mt-24 bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              Exhibition Zones
-            </span>
-
-            <h2 className="mt-5 text-4xl font-bold text-slate-900">
-              Explore Every Business Zone
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Discover dedicated exhibition zones designed for manufacturers,
-              exporters, importers, logistics providers, financial institutions,
-              technology companies and international trade partners.
-            </p>
-          </div>
-
-          <ZonesGrid withImages />
-        </div>
-      </section>
-
+      
       
 
       {/* ================= FAQ ================= */}

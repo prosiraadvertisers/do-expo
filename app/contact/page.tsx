@@ -7,12 +7,17 @@ import {
   Clock,
   Globe,
   ArrowRight,
+  Plane,
+  TrainFront,
+  TramFront,
+  Building2,
+  SquareParking,
 } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with the doexim Global Trade Expo team. Office address, East & West zone contacts, and inquiry form.",
+    "Get in touch with the doexim Global Trade Expo team. Office address, East & West zone contacts, expo venue details and inquiry form.",
 }
 
 const ZONE_CONTACTS = [
@@ -32,6 +37,46 @@ const ZONE_CONTACTS = [
   },
 ]
 
+/**
+ * TODO: confirm distances and station names against the final venue fact
+ * sheet before launch — pulled from the brief as placeholders.
+ */
+const JOURNEY = [
+  {
+    icon: Plane,
+    label: "Airport",
+    place: "Chhatrapati Shivaji Maharaj International Airport",
+    distance: "9 km",
+  },
+  {
+    icon: TrainFront,
+    label: "Railway",
+    place: "Goregaon & Andheri (Western Line)",
+    distance: "2–4 km",
+  },
+  {
+    icon: TramFront,
+    label: "Metro",
+    place: "Bangur Nagar Metro Station, Goregaon",
+    distance: "Nearby",
+  },
+]
+
+const VENUE_TILES = [
+  {
+    icon: Building2,
+    label: "Exhibition Halls",
+    detail: "Hall No.6",
+    note: "Bombay Exhibition Centre (BEC), Goregaon",
+  },
+  {
+    icon: SquareParking,
+    label: "Visitor Parking",
+    detail: "Dedicated Parking",
+    note: "Available inside BEC premises",
+  },
+]
+
 export default function ContactPage() {
   return (
     <>
@@ -41,7 +86,7 @@ export default function ContactPage() {
         subtitle="Have a question about exhibiting, visiting, or partnerships? Our team is ready to help you."
       />
 
-      {/* Contact Cards */}
+      {/* ================= OFFICE + ZONE CONTACT CARDS ================= */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -74,7 +119,6 @@ export default function ContactPage() {
                 key={contact.zone}
                 className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${contact.gradient} p-8 text-white shadow-lg`}
               >
-                {/* Decorative circles */}
                 <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10" />
                 <div className="pointer-events-none absolute -bottom-20 -left-16 h-48 w-48 rounded-full bg-black/10" />
 
@@ -151,14 +195,107 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* ================= EXPO VENUE (Bombay Exhibition Centre) ================= */}
+      <section className="bg-[#1c3db7] px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white/70">
+              Expo Venue
+            </span>
+            <h2 className="mt-4 font-heading text-3xl font-bold text-white sm:text-4xl">
+              Bombay Exhibition Centre, Goregaon
+            </h2>
+            <p className="mt-3 text-white/60">
+              15, 16 &amp; 17 Dec 2027 — plan your travel and arrival with the
+              details below.
+            </p>
+          </div>
+
+          <div className="mt-10 overflow-hidden rounded-2xl shadow-2xl">
+            <iframe
+              title="Bombay Exhibition Centre Location"
+              src="https://www.google.com/maps?q=Bombay+Exhibition+Centre,+NESCO,+Goregaon+East,+Mumbai,+Maharashtra+400063&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
+            />
+          </div>
+
+          {/* Getting there — connected journey strip */}
+          <div className="mt-12">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
+              Getting There
+            </p>
+
+            <div className="relative mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {/* connecting line — desktop only */}
+              <div className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-white/15 to-transparent sm:block" />
+
+              {JOURNEY.map(({ icon: Icon, label, place, distance }) => (
+                <div key={label} className="relative flex flex-col items-start gap-3">
+                  <span className="relative z-10 flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-sm">
+                    <Icon className="size-6 text-[#F0B429]" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold uppercase tracking-wide text-white/50">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-base font-semibold text-white">
+                      {place}
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-[#F0B429]">
+                      {distance} from venue
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* At the venue — icon tiles */}
+          <div className="mt-12">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
+              At the Venue
+            </p>
+
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {VENUE_TILES.map(({ icon: Icon, label, detail, note }) => (
+                <div
+                  key={label}
+                  className="flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-colors duration-300 hover:bg-white/[0.07]"
+                >
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#F0B429]/15">
+                    <Icon className="size-5 text-[#F0B429]" />
+                  </span>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wide text-white/40">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-lg font-bold text-white">
+                      {detail}
+                    </p>
+                    <p className="mt-0.5 text-sm text-white/50">{note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= OFFICE MAP ================= */}
       <section className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Find Us
+            Head Office
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            Visit our office at Swargate, Pune. We&apos;re easily accessible by road and public transport.
+            Visit our office at Swargate, Pune. We&apos;re easily accessible
+            by road and public transport.
           </p>
           <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-lg">
             <iframe
