@@ -109,15 +109,7 @@ export function Hero() {
               on a short phone screen without scrolling, so everything is
               condensed into a single horizontally-scrollable strip. */}
           <div className="lg:hidden">
-            <div className="hide-scrollbar flex items-center gap-2 overflow-x-auto pb-1">
-              <div className="shrink-0">
-                <LogoChip
-                  logo={ORGANISERS[0].logo}
-                  alt={ORGANISERS[0].alt}
-                  size="sm"
-                />
-              </div>
-            </div>
+            
 
             {/* TEMP: replaces sponsor logo strip until real logos exist */}
             <div className="-mt-4 text-right ">
