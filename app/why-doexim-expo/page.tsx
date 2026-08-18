@@ -21,21 +21,21 @@ export const metadata: Metadata = {
 export default function WhydoeximExpoPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Why Exhibit"
-        title="Why doexim Expo 2026?"
-      >
-        <CtaButton variant="cta" size="lg">
-          Book Your Booth
-        </CtaButton>
-      </PageHero>
+  <div className="pt-14">
+    <PageHero
+      
+      title="Why doexim Expo 2026?"
+    >
+      <CtaButton variant="cta" size="lg">
+        Book Your Booth
+      </CtaButton>
+    </PageHero>
+  </div>
 
       {/* Why Exhibit Section */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Why Exhibit at doexim Expo 2026?
-          </h2>
+          
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {

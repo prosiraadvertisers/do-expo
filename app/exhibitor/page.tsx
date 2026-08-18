@@ -13,14 +13,15 @@ export const metadata: Metadata = {
 export default function ExhibitorPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Meet Our Exhibitors"
-        title="Meet Our Exhibitors"
-      >
-        <CtaButton variant="cta" size="lg">
-          Become an Exhibitor
-        </CtaButton>
-      </PageHero>
+  <div className="pt-14">
+    <PageHero
+      title="Meet Our Exhibitors"
+    >
+      <CtaButton variant="cta" size="lg">
+        Become an Exhibitor
+      </CtaButton>
+    </PageHero>
+  </div>
 
       <section className="w-full overflow-x-hidden px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-6xl">

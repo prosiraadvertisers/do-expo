@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Clock, MapPin, CalendarDays, Users } from "lucide-react";
 
+
 /**
  * TODO: swap for real sessions once confirmed. The whole schedule below is
  * driven off this array — add, remove, or reorder sessions/days here and
@@ -132,8 +133,7 @@ export default function SeminarPage() {
   return (
     <>
       {/* ================= HERO (compact) ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] py-14 text-white sm:py-16">
-        <div className="absolute inset-0 opacity-20">
+<section className="relative overflow-hidden bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] pt-24 pb-14 text-white sm:pt-28 sm:pb-16">        <div className="absolute inset-0 opacity-20">
           <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-blue-300 blur-3xl" />
         </div>

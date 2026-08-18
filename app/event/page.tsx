@@ -21,11 +21,12 @@ const keyDates = [
 export default function EventPage() {
   return (
     <>
-      <PageHero
-        
-        title={EVENT.tagline}
-        subtitle={`${EVENT.dateLabel} · ${EVENT.venue}`}
-      />
+  <div className="pt-14">
+    <PageHero
+      title={EVENT.tagline}
+      subtitle={`${EVENT.dateLabel} · ${EVENT.venue}`}
+    />
+  </div>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">

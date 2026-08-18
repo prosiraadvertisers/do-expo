@@ -56,11 +56,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About doexim Expo"
-        title="Connecting Global Import & Export Professionals"
-        subtitle="Building international trade relationships by bringing together exhibitors, buyers and industry professionals from over 50 countries."
-      />
+  <div className="pt-14">
+    <PageHero
+      
+      title="Connecting Global Export & Import Professionals"
+    />
+  </div>
       <section
         id="about"
         className="bg-white px-4 py-20 sm:px-6 lg:px-8 scroll-mt-24"

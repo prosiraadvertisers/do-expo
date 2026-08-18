@@ -74,11 +74,11 @@
 
     return (
       <>
-        <PageHero
-          eyebrow="Exhibitor Directory"
-          title="Discover 500+ Exhibitors"
-          subtitle="Explore our comprehensive directory of automation, export, and manufacturing leaders. Search by zone, category, or company name."
-        />
+  <div className="pt-14">
+    <PageHero
+      title="Discover 360+ Exhibitors"
+    />
+  </div>
 
         {/* Search & Filter Section */}
         <section className="border-b border-border bg-muted/30 px-4 py-12 sm:px-6 lg:px-8">

@@ -96,25 +96,25 @@ export default function VisitorsPage() {
     <>
       {/* ================= HERO ================= */}
 
-      <PageHero
-  eyebrow="Visitor Information"
-  title="Visit DO EXIM Expo"
->
-  <a
-    href="#visitor-registration"
-    className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
-  >
-    Register Now
-  </a>
+       <div className="pt-14">
+    <PageHero
+      title="Visit DO EXIM Expo"
+    >
+      <a
+        href="#visitor-registration"
+        className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
+      >
+        Register Now
+      </a>
 
-  <a
-    href="#why-visit"
-    className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20"
-  >
-    Explore More
-  </a>
-</PageHero>
-
+      <a
+        href="#why-visit"
+        className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20"
+      >
+        Explore More
+      </a>
+    </PageHero>
+  </div>
       {/* ================= WHY VISIT ================= */}
 
       <section id="why-visit" className="scroll-mt-24 bg-white py-24">

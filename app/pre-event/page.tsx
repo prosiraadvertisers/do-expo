@@ -64,16 +64,12 @@ export default function PreEventPage() {
         .font-body { font-family: 'Inter', sans-serif; }
       `}</style>
 
-      <PageHero
-        eyebrow="Complete Event Schedule"
-        title="doexim Expo 2024"
-        
-      >
-        <p className="text-white/75 max-w-2xl mx-auto font-body">
-          A comprehensive 3-day international trade exhibition featuring 500+ exhibitors,
-          international buyers, and government participation
-        </p>
-      </PageHero>
+      <div className="pt-14">
+    <PageHero
+      title="doexim Expo 2024"
+    >
+    </PageHero>
+  </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Section header */}

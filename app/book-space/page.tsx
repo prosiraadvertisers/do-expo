@@ -12,14 +12,15 @@ export const metadata: Metadata = {
 export default function BookSpacePage() {
   return (
     <>
-      <PageHero
-        eyebrow="Booth Packages"
-        title="Book Your Exhibition Space"
-      >
-        <CtaButton variant="cta" size="lg">
-          Inquire Now
-        </CtaButton>
-      </PageHero>
+  <div className="pt-14">
+    <PageHero
+      title="Book Your Exhibition Space"
+    >
+      <CtaButton variant="cta" size="lg">
+        Inquire Now
+      </CtaButton>
+    </PageHero>
+  </div>
 
       {/* Plan Your Expo */}
       <section id="plan" className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8">
