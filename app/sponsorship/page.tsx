@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, Sparkles, Megaphone, Users } from "lucide-rea
 export const metadata: Metadata = {
   title: "Sponsorship -doexim Expo",
   description:
-    "Amplify your brand atdoexim Expo 2026. Explore Gold, Silver, and Bronze sponsorship tiers with speaking slots, VIP access, and premium visibility.",
+    "Amplify your brand atdoexim Expo 2027. Explore Gold, Silver, and Bronze sponsorship tiers with speaking slots, VIP access, and premium visibility.",
 }
 
 export default function SponsorshipPage() {

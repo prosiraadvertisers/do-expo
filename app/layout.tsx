@@ -42,15 +42,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'doeximexpo | B2B Global Trade Expo 2027',
+    title: 'doexim | B2B Global Trade Expo 2027',
     description:
       'India\u2019s premier B2B international trade show. Exhibit, network in the Deal Room, and get your free visitor pass.',
-    siteName: 'doeximexpo',
-    images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2026' }],
+    siteName: 'doexim',
+    images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2027' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'doeximexpo | B2B global trade Expo 2026',
+    title: 'doexim | B2B global trade Expo 2027',
     description: 'India\u2019s premier B2B B2B global trade trade show.',
     images: ['/images/hero-expo.png'],
   },

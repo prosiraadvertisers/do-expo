@@ -260,7 +260,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
               </Select>
             </Field>
 
-            <Field label="How did you hear about B2B global trade Expo 2026?" hint="Select all that apply">
+            <Field label="How did you hear about B2B global trade Expo 2027?" hint="Select all that apply">
               <MultiChips options={SOURCES} values={sources} onChange={setSources} />
             </Field>
 

@@ -5,85 +5,22 @@ import {
   MapPin,
   CalendarDays,
   Clock,
-  Ticket,
   ArrowRight,
   Store,
   Globe,
   Users,
-  Map as MapIcon,
 } from "lucide-react";
 import { EVENT } from "@/lib/event-data";
 import { Countdown } from "@/components/countdown";
 import { CtaButton } from "@/components/ui/cta";
 import { useRegistration } from "@/components/registration/registration-context";
 
-/**
- * TODO: move these into `EVENT` in `@/lib/event-data` once real logo assets
- * exist, e.g. EVENT.organisers, EVENT.poweredBy, EVENT.coPoweredBy,
- * EVENT.associatePartners, EVENT.timeLabel.
- *
- * `logo` = path to the actual logo file (e.g. "/logos/acme.svg").
- * `alt`  = accessible name only — never rendered as visible text, so no
- *          sponsor name shows on the page unless their logo image does.
- * Drop each real logo file in place and update the `logo` path below;
- * nothing else needs to change.
- */
-// "Event Organised By" now supports multiple logos. Put the primary
-// organiser first — it renders larger than the rest.
-const ORGANISERS = [
-  { logo: "/herologo/plogo.png", alt: "Event organiser", big: true },
-  { logo: "/logo-white.png", alt: "Co-organiser", big: true },
-];
 const TIME_LABEL = "10:00 AM – 6:00 PM";
-
-function LogoChip({
-  logo,
-  alt,
-  size = "md",
-}: {
-  logo: string;
-  alt: string;
-  size?: "sm" | "md" | "lg";
-}) {
-  const heightClass = size === "sm" ? "h-10" : size === "lg" ? "h-28" : "h-14";
-  const dims =
-    size === "sm"
-      ? { width: 88, height: 32 }
-      : size === "lg"
-        ? { width: 260, height: 100 }
-        : { width: 120, height: 40 };
-
-  return (
-    <div
-      className={`flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] px-3 py-2 backdrop-blur-sm sm:px-4 ${heightClass}`}
-    >
-      <Image
-        src={logo}
-        alt={alt}
-        width={dims.width}
-        height={dims.height}
-        className="h-full w-auto max-w-full object-contain"
-      />
-    </div>
-  );
-}
 
 export function Hero() {
   const { open } = useRegistration();
 
   return (
-    // --nav-h below MUST match your actual fixed navbar's height. If your
-    // navbar isn't a fixed 5rem (80px) tall, change the fallback value (or
-    // better, set --nav-h on the navbar/layout so it's always in sync).
-    //
-    // Height strategy:
-    // - Mobile / tablet (< lg): NO fixed height. We use minHeight: 100dvh
-    //   instead, so if the stacked content (logos strip + countdown card)
-    //   is taller than one screen, the section simply grows and the page
-    //   scrolls — nothing gets clipped by overflow-hidden anymore.
-    // - Desktop (lg+): fixed to exactly 100dvh via the `lg:h-[100dvh]`
-    //   class, since the tiered layout there is designed to fit in one
-    //   screen without scrolling.
     <section
       className="relative flex w-full items-center overflow-hidden brand-gradient-radial pt-[var(--nav-h,5rem)] text-white lg:h-[100dvh]"
       style={{ minHeight: "100dvh" }}
@@ -99,57 +36,55 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/45" />
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#07152c]/80 via-[#07152c]/35 to-transparent" />
+
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-10 lg:grid-cols-12 lg:px-8">
-        {" "}
-        {/* LEFT — sponsor tiers (headline text removed per request) */}
-        <div className="order-2 flex items-center lg:order-1 lg:col-span-8">
-          {" "}
-          {/* Mobile / tablet (< lg): one combined row. Four separate
-              stacked rows plus the countdown card below simply cannot fit
-              on a short phone screen without scrolling, so everything is
-              condensed into a single horizontally-scrollable strip. */}
-          <div className="lg:hidden">
-            {/* TEMP: replaces sponsor logo strip until real logos exist */}
-            <div className="-mt-4 text-right ">
-              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
-                Connect. Collaborate.
+        {/* LEFT — content */}
+        <div className="order-2 flex w-full items-center lg:order-1 lg:col-span-8">
+          {/* Mobile / tablet (< lg) — ONLY THIS PART CHANGED */}
+          <div className="w-full lg:hidden">
+            <div className="text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/75">
+                Source. Connect. Collaborate.
               </p>
 
-              <h1 className="mt-2 text-6xl font-black leading-none">
-                GROW <span className="text-[#ff8a1e]">GLOBAL</span>
+              <h1 className="mt-3 text-4xl font-black leading-none sm:text-5xl">
+                GROW{" "}
+                <span className="text-[#3228ee]">GLOBAL</span>
               </h1>
 
-              <p className="mt-6 max-w-none text-lg xl:text-xl leading-relaxed text-white/90 lg:whitespace-nowrap">
+              <p className="mt-4 max-w-none text-base leading-relaxed text-white/90 sm:text-lg">
                 India&apos;s Premier B2B International Trade Expo for Exporters,
                 Importers, Manufacturers &amp; Global Trade Leaders
               </p>
             </div>
-          </div>
-          {/* Desktop (lg+): row-based layout matching the reference —
-              nothing is stacked in one tall column. Row 1: small logo +
-              "PRESENTS" inline. Row 2: big logo on the left, heading +
-              description on the right, both at the same vertical level.
-              Row 3: full-width stats strip. */}
-          <div className="hidden w-full flex-col items-start justify-center lg:flex">
-            {/* Row 1 — small logo + PRESENTS, inline */}
-            {/* <div className="flex items-center gap-3">
-              <LogoChip
-                logo={ORGANISERS[0].logo}
-                alt={ORGANISERS[0].alt}
-                size="sm"
-              />
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-                Presents
-              </p>
-            </div> */}
 
-            {/* Row 2 — big logo (left) + heading/description (right) */}
-<div className="grid w-full grid-cols-[auto_1fr] items-start gap-x-10 pt-8">              {" "}
-              {/* <LogoChip
-                logo={ORGANISERS[1].logo}
-                alt={ORGANISERS[1].alt}
-                size="lg"
-              /> */}
+            {/* Stats strip - mobile */}
+            <div className="mt-8 flex w-full items-center justify-center gap-4 sm:gap-6">
+              {[
+                { icon: Store, label: "Exhibitors", value: "360+" },
+                { icon: Globe, label: "Countries", value: "10+" },
+                { icon: Users, label: "Visitors", value: "25K+" },
+              ].map(({ icon: Icon, label, value }) => (
+                <span key={label} className="flex flex-col items-center text-center">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/10 sm:size-10">
+                    <Icon className="size-3 text-[#ff8a1e] sm:size-4" />
+                  </span>
+                  <span className="mt-1.5 leading-tight">
+                    <span className="block text-sm font-bold text-white sm:text-base">
+                      {value}
+                    </span>
+                    <span className="block text-[10px] text-white/60 sm:text-xs">
+                      {label}
+                    </span>
+                  </span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop (lg+) — EXACT SAME AS ORIGINAL, NO CHANGES */}
+          <div className="hidden w-full flex-col items-start justify-center lg:flex">
+            <div className="grid w-full grid-cols-[auto_1fr] items-start gap-x-10 pt-8">
               <div className="-mt-4 text-left">
                 <p className="ml-[4px] text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
                   Source. Connect. Collaborate.
@@ -167,8 +102,9 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Row 3 — full-width stats strip, placeholder numbers */}
-<div className="mt-16 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">              {[
+            {/* Row 3 — full-width stats strip */}
+            <div className="mt-16 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
+              {[
                 { icon: Store, label: "Exhibitors", value: "360+" },
                 { icon: Globe, label: "Countries", value: "10+" },
                 { icon: Users, label: "Visitors", value: "25K+" },
@@ -188,10 +124,10 @@ export function Hero() {
             </div>
           </div>
         </div>
+
         {/* RIGHT — countdown, key details, CTAs */}
         <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-0 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
           <div className="rounded-3xl border border-white/40 bg-white/18 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:p-4 sm:space-y-4">
-            {" "}
             <div className="min-w-0">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
                 Doors open in

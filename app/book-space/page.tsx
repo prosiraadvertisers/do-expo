@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 export const metadata: Metadata = {
   title: "Book Space -doexim Expo",
   description:
-    "Reserve your booth atdoexim Expo 2026. Choose from Standard, Premium, or Island booth packages with flexible pricing and complete support.",
+    "Reserve your booth atdoexim Expo 2027. Choose from Standard, Premium, or Island booth packages with flexible pricing and complete support.",
 }
 
 export default function BookSpacePage() {
@@ -148,7 +148,7 @@ export default function BookSpacePage() {
             Ready to Book Your Space?
           </h2>
           <p className="mt-4 text-lg text-white/75">
-            Limited booths available. Secure your spot atdoexim Expo 2026 today.
+            Limited booths available. Secure your spot atdoexim Expo 2027 today.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <CtaButton variant="gold" size="lg">

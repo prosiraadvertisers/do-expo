@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Whydoexim Expo",
   description:
-    "Discover whydoexim Expo 2026 is India's premier platform for exhibitors. Reach 40,000+ qualified buyers, generate high-quality leads, and establish industry credibility.",
+    "Discover whydoexim Expo 2027 is India's premier platform for exhibitors. Reach 40,000+ qualified buyers, generate high-quality leads, and establish industry credibility.",
 }
 
 export default function WhydoeximExpoPage() {
@@ -24,7 +24,7 @@ export default function WhydoeximExpoPage() {
   <div className="pt-14">
     <PageHero
       
-      title="Why doexim Expo 2026?"
+      title="Why doexim Expo 2027?"
     >
       <CtaButton variant="cta" size="lg">
         Book Your Booth

@@ -7,7 +7,7 @@ import { Ticket, MapPin, Users, Zap, Award } from "lucide-react"
 export const metadata: Metadata = {
   title: "Free Visitor Registration",
   description:
-    "Get your free visitor pass to B2B global trade Expo 2026. Personalized recommendations, priority entry and access to all five technology zones.",
+    "Get your free visitor pass to B2B global trade Expo 2027. Personalized recommendations, priority entry and access to all five technology zones.",
 }
 
 export default function FreeVisitorRegistrationPage() {
@@ -87,7 +87,7 @@ export default function FreeVisitorRegistrationPage() {
 
                 <div className="glass-card rounded-lg bg-primary/5 p-4 ring-1 ring-primary/20">
                   <p className="text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">📅 Event Dates:</span> 18-20 March 2026 • {new Date().getFullYear() > 2025 ? 'Past edition' : 'In a few months'}
+                    <span className="font-semibold text-foreground">📅 Event Dates:</span> 18-20 March 2027 • {new Date().getFullYear() > 2025 ? 'Past edition' : 'In a few months'}
                   </p>
                 </div>
 

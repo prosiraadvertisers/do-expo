@@ -46,10 +46,10 @@ const RECS: Record<string, { zone: string; hall: string; sessions: string; day: 
 }
 
 function icsDownload(name: string) {
-  const dt = '20260318T093000'
+  const dt = '20270318T093000'
   const ics = [
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//doeximexpo//EN', 'BEGIN:VEVENT',
-    `SUMMARY:${EVENT.name}`, `DTSTART:${dt}`, 'DTEND:20260320T170000',
+    `SUMMARY:${EVENT.name}`, `DTSTART:${dt}`, 'DTEND:20270320T170000',
     `LOCATION:${EVENT.venue}`, `DESCRIPTION:Your free visitor pass for ${EVENT.name}. Attendee: ${name}`,
     'END:VEVENT', 'END:VCALENDAR',
   ].join('\r\n')
@@ -57,13 +57,13 @@ function icsDownload(name: string) {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'B2B global trade-expo-2026.ics'
+  a.download = 'B2B global trade-expo-2027.ics'
   a.click()
   URL.revokeObjectURL(url)
 }
 
 function epassDownload(name: string, id: string) {
-  const text = `B2B global trade EXPO 2026 — FREE VISITOR E-PASS
+  const text = `B2B global trade EXPO 2027 — FREE VISITOR E-PASS
 -------------------------------------------
 Attendee : ${name}
 Pass ID  : ${id}
@@ -74,7 +74,7 @@ Present this pass at the registration desk for fast-track entry.`
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'B2B global trade-expo-2026-epass.txt'
+  a.download = 'B2B global trade-expo-2027-epass.txt'
   a.click()
   URL.revokeObjectURL(url)
 }

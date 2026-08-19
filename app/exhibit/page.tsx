@@ -18,14 +18,14 @@ import {
 export const metadata: Metadata = {
   title: "Exhibit",
   description:
-    "Showcase your B2B global trade solutions at B2B global trade Expo 2026. Explore booth packages, sponsorship tiers, five tech zones, and our gallery from past editions.",
+    "Showcase your B2B global trade solutions at B2B global trade Expo 2027. Explore booth packages, sponsorship tiers, five tech zones, and our gallery from past editions.",
 }
 
 export default function ExhibitPage() {
   return (
     <>
       <PageHero
-        eyebrow="Exhibit at B2B global trade Expo 2026"
+        eyebrow="Exhibit at B2B global trade Expo 2027"
         title="Connect with 40,000+ Qualified Buyers"
         subtitle="Three days. Five tech zones. Unlimited business potential. Secure your booth and generate qualified leads in India's biggest B2B global trade showcase."
       >
@@ -38,7 +38,7 @@ export default function ExhibitPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Why Exhibit at B2B global trade Expo 2026?
+            Why Exhibit at B2B global trade Expo 2027?
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -274,7 +274,7 @@ export default function ExhibitPage() {
             Gallery — From Past Editions
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            See the energy, the crowds, the innovation. This is what awaits at B2B global trade Expo 2026.
+            See the energy, the crowds, the innovation. This is what awaits at B2B global trade Expo 2027.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

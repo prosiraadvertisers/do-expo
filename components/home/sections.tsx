@@ -191,41 +191,34 @@ export function HomeSections() {
               WHY SHOULD ATTEND
             </span>
 
-            {/* <h2 className="mt-5 text-5xl font-bold text-slate-900">
+            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap">
               Meet the Right People.
-              <span className="block text-primary">Grow Your Business.</span>
-            </h2> */}
-
-            <div className="mx-auto flex justify-center px-4">
-              <h2 className="mt-5 whitespace-nowrap text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
-                Meet the Right People.
-                <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                  {" "}
-                  Grow Your Business
-                </span>
-              </h2>
-            </div>
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                {" "}
+                Grow Your Business
+              </span>
+            </h2>
           </div>
 
-          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {attendeeTypes.map((item) => (
               <div
                 key={item.title}
-                className="group rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl"
+                className="group rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl sm:p-8"
               >
                 <div
-                  className={`mx-auto flex h-20 w-20 items-center justify-center rounded-3xl text-4xl ${item.color}`}
+                  className={`mx-auto flex h-16 w-16 items-center justify-center rounded-3xl text-3xl ${item.color} sm:h-20 sm:w-20 sm:text-4xl`}
                 >
                   {item.icon}
                 </div>
 
-                <h3 className="mt-6 text-center text-xl font-bold text-slate-900">
+                <h3 className="mt-5 text-center text-lg font-bold text-slate-900 sm:mt-6 sm:text-xl">
                   {item.title}
                 </h3>
 
-                <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24" />
+                <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24 sm:mt-4" />
 
-                <p className="mt-5 text-center text-sm leading-7 text-slate-600">
+                <p className="mt-4 text-center text-sm leading-7 text-slate-600 sm:mt-5">
                   {item.desc}
                 </p>
               </div>
