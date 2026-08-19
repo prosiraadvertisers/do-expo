@@ -7,7 +7,7 @@ import { Ticket, MapPin, Users, Zap, Award } from "lucide-react"
 export const metadata: Metadata = {
   title: "Free Visitor Registration",
   description:
-    "Get your free visitor pass to B2B global trade Expo 2027. Personalized recommendations, priority entry and access to all five technology zones.",
+    "Get your  visitor pass to B2B global trade Expo 2027. Personalized recommendations, priority entry and access to all five technology zones.",
 }
 
 export default function FreeVisitorRegistrationPage() {

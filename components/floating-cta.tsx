@@ -5,7 +5,7 @@ import { Store, Handshake, Ticket, Plus, X } from 'lucide-react'
 import { useRegistration, type RegistrationType } from '@/components/registration/registration-context'
 
 const ACTIONS: { type: RegistrationType; label: string; icon: typeof Store; variant: string }[] = [
-  { type: 'visitor', label: 'Free Visitor Pass', icon: Ticket, variant: 'bg-gold text-gold-foreground' },
+  { type: 'visitor', label: ' Visitor Registraion', icon: Ticket, variant: 'bg-gold text-gold-foreground' },
   { type: 'buyer-seller', label: 'Buyer Seller Meet', icon: Handshake, variant: 'bg-primary text-primary-foreground' },
   { type: 'exhibitor', label: 'Become an Exhibitor', icon: Store, variant: 'bg-cta text-cta-foreground' },
 ]

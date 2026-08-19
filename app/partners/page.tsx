@@ -263,7 +263,7 @@ export default function PartnerPage() {
             Sponsorship
           </span>
           <h2 className="mt-6 text-4xl font-bold text-slate-900 sm:text-5xl">
-            Partner With doexim Trade Expo 2027
+            Partner With doexim  Expo 2027
           </h2>
           
         </div>

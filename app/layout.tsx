@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'doexim | B2B Global Trade Expo 2027',
     description:
-      'India\u2019s premier B2B international trade show. Exhibit, network in the Deal Room, and get your free visitor pass.',
+      'India\u2019s premier B2B international trade show. Exhibit, network in the Deal Room, and get your  visitor pass.',
     siteName: 'doexim',
     images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2027' }],
   },

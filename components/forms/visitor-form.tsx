@@ -50,7 +50,7 @@ function icsDownload(name: string) {
   const ics = [
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//doeximexpo//EN', 'BEGIN:VEVENT',
     `SUMMARY:${EVENT.name}`, `DTSTART:${dt}`, 'DTEND:20270320T170000',
-    `LOCATION:${EVENT.venue}`, `DESCRIPTION:Your free visitor pass for ${EVENT.name}. Attendee: ${name}`,
+    `LOCATION:${EVENT.venue}`, `DESCRIPTION:Your visitor pass for ${EVENT.name}. Attendee: ${name}`,
     'END:VEVENT', 'END:VCALENDAR',
   ].join('\r\n')
   const blob = new Blob([ics], { type: 'text/calendar' })
@@ -103,11 +103,11 @@ export function VisitorForm() {
     return (
       <div className="flex flex-col items-center gap-4 px-6 py-10 text-center sm:py-14">
         <span className="inline-flex items-center gap-2 rounded-full bg-cta/15 px-4 py-1.5 text-sm font-bold text-cta">
-          <Ticket className="size-4" /> FREE PASS CONFIRMED
+          <Ticket className="size-4" /> VISITOR PASS CONFIRMED
         </span>
         <h3 className="font-heading text-2xl font-bold text-balance">You&apos;re in, {form.name.split(' ')[0]}!</h3>
         <p className="max-w-md text-pretty text-muted-foreground">
-          Your free visitor pass <span className="font-semibold text-foreground">{passId}</span> has been emailed to {form.email}. See you at {EVENT.venueShort}!
+          Your visitor pass <span className="font-semibold text-foreground">{passId}</span> has been emailed to {form.email}. See you at {EVENT.venueShort}!
         </p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
           <CtaButton type="button" variant="primary" onClick={() => icsDownload(form.name)}>
@@ -191,7 +191,7 @@ export function VisitorForm() {
 
       <div className="mt-5">
         <CtaButton type="submit" variant="cta" size="lg" className="w-full">
-          <Ticket className="size-5" /> Claim my FREE visitor pass <ArrowRight className="size-4" />
+          <Ticket className="size-5" /> Claim my visitor pass <ArrowRight className="size-4" />
         </CtaButton>
       </div>
     </form>
