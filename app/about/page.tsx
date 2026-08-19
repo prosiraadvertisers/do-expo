@@ -71,9 +71,18 @@ export default function AboutPage() {
               About doexim Expo
             </span>
 
-            <h2 className="mt-5 text-4xl font-bold whitespace-nowrap text-slate-900">
+            {/* <h2 className="mt-5 text-4xl font-bold whitespace-nowrap text-slate-900">
               Where Indian Business Meets Global Opportunity
-            </h2>
+            </h2> */}
+
+            <div className="-ml-0 mt-5 w-full max-w-6xl">
+  <h2 className="whitespace-nowrap text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
+    Where Indian Business Meets{" "}
+    <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+      Global Opportunity
+    </span>
+  </h2>
+</div>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
               doexim expo is a next-generation B2B international trade platform
@@ -95,8 +104,6 @@ export default function AboutPage() {
               business opportunities.
             </p>
           </div>
-
-          
         </div>
       </section>
       {/* why doexim */}
@@ -152,19 +159,15 @@ export default function AboutPage() {
       </section> */}
       {/* why should attend */}
 
-      
-      
       {/* Vision & Mission */}
       {/* ================= VISION ================= */}
       <span className="relative left-6 inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
-  Our Vision & Mission
-</span>
+        Our Vision & Mission
+      </span>
 
       <div className="mt-16 overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-2xl">
-        
         <div className="grid lg:grid-cols-[120px_1fr]">
           {/* Left Icon */}
-          
 
           <div className="relative flex items-center justify-center bg-[#173FD6]">
             <div className="absolute inset-0 bg-gradient-to-b from-[#214fff] to-[#0d2ea5]" />
@@ -181,7 +184,7 @@ export default function AboutPage() {
           <div className="p-7 lg:p-8">
             <div className="flex items-center gap-4">
               <span className="font-bold uppercase tracking-[0.25em] text-[#173FD6]">
-                 VISION
+                VISION
               </span>
 
               <div className="h-[3px] flex-1 bg-[#173FD6]" />
@@ -226,7 +229,7 @@ export default function AboutPage() {
           <div className="p-10 lg:p-14">
             <div className="flex items-center gap-4">
               <span className="font-bold uppercase tracking-[0.25em] text-[#173FD6]">
-                 MISSION
+                MISSION
               </span>
 
               <div className="h-[3px] flex-1 bg-[#173FD6]" />
@@ -237,10 +240,7 @@ export default function AboutPage() {
               EXIM ecosystem together under one roof.
             </h3>
 
-            <p className="mt-4 max-w-3xl leading-8 text-slate-500">
-              Enabling businesses to connect, learn, collaborate and grow
-              globally.
-            </p>
+            
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -303,10 +303,9 @@ export default function AboutPage() {
         </div>
       </div>
 
-
       <section
         id="expo-highlights"
-        className="relative overflow-hidden bg-white py-24 scroll-mt-24"
+        className="relative overflow-hidden bg-white pt-24 pb-10 scroll-mt-24"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.08),transparent_30%)]" />
 
@@ -415,14 +414,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* ================= EXHIBITION ZONES ================= */}
 
       {/* ================= FAQ ================= */}
 
       <section
         id="faq"
-        className="scroll-mt-24 bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"
+        className="scroll-mt-24 bg-slate-50 px-4 pt-10 pb-20 sm:px-6 lg:px-8"
       >
         <div className="mx-auto max-w-5xl">
           <div className="mb-14 text-center">
@@ -434,9 +432,7 @@ export default function AboutPage() {
               Everything You Need to Know
             </h2>
 
-            <p className="mt-5 text-lg text-slate-600">
-              Common questions about doexim Expo.
-            </p>
+            
           </div>
 
           <div className="space-y-4">
@@ -446,8 +442,8 @@ export default function AboutPage() {
                 a: "Manufacturers, Exporters, Importers, MSMEs, Logistics Companies, Government Organizations, Buyers and Trade Professionals.",
               },
               {
-                q: "Is visitor registration free?",
-                a: "Yes. Visitor registration is completely free through our official website.",
+                q: "Why is there a registration fee for visitors?",
+                a: "The registration fee helps us maintain genuine participation and minimize non-business visitors.",
               },
               {
                 q: "Can international buyers participate?",

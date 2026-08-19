@@ -69,7 +69,7 @@
       name: `Exhibitor ${i + 1}`,
       zone: zones[Math.floor(Math.random() * (zones.length - 1)) + 1].id,
       category: exhibitorCategories[Math.floor(Math.random() * (exhibitorCategories.length - 1)) + 1].id,
-      description: "Premium exhibitor specializing in automation solutions",
+      description: "Premium exhibitor specializing in B2B global trade solutions",
     }))
 
     return (
@@ -291,7 +291,7 @@
                     {
                       icon: Laptop,
                       title: "Export Technology",
-                      desc: "Showcase digital tools for lead generation, CRM, documentation and trade automation.",
+                      desc: "Showcase digital tools for lead generation, CRM, documentation and trade B2B global trade.",
                     },
                   ],
                 },

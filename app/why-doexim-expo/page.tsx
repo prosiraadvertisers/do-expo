@@ -51,7 +51,7 @@ export default function WhydoeximExpoPage() {
               {
                 icon: Zap,
                 title: "Industry Credibility",
-                desc: "Showcase your brand among 500+ global automation leaders. Strengthen market positioning and industry recognition.",
+                desc: "Showcase your brand among 500+ global B2B global trade leaders. Strengthen market positioning and industry recognition.",
               },
               {
                 icon: Award,

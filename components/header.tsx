@@ -167,7 +167,7 @@ function VisitorsDropdown() {
         <ul className="space-y-1">
           <li>
             <Link
-              href="/visitors#why-visit"
+              href="/visitors"
               className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
             >
               Why Visit doexim Expo
@@ -267,7 +267,7 @@ function AboutDropdown() {
         <ul className="space-y-1">
           <li>
             <Link
-              href="/about#about"
+              href="/about"
               className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
             >
               About doexim Expo

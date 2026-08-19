@@ -57,13 +57,13 @@ function icsDownload(name: string) {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'automation-expo-2026.ics'
+  a.download = 'B2B global trade-expo-2026.ics'
   a.click()
   URL.revokeObjectURL(url)
 }
 
 function epassDownload(name: string, id: string) {
-  const text = `AUTOMATION EXPO 2026 — FREE VISITOR E-PASS
+  const text = `B2B global trade EXPO 2026 — FREE VISITOR E-PASS
 -------------------------------------------
 Attendee : ${name}
 Pass ID  : ${id}
@@ -74,7 +74,7 @@ Present this pass at the registration desk for fast-track entry.`
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'automation-expo-2026-epass.txt'
+  a.download = 'B2B global trade-expo-2026-epass.txt'
   a.click()
   URL.revokeObjectURL(url)
 }

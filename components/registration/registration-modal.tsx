@@ -15,18 +15,18 @@ const CONFIG: Record<
     icon: Store,
     eyebrow: 'Exhibitor Registration',
     title: 'Showcase your brand to 20,000+ buyers',
-    blurb: 'Secure your booth in India\u2019s biggest automation showcase and generate qualified leads across 3 high-energy days.',
+    blurb: 'Secure your booth in India\u2019s biggest B2B global trade showcase and generate qualified leads across 3 high-energy days.',
   },
   'buyer-seller': {
     icon: Handshake,
     eyebrow: 'Buyer Seller Meet',
-    title: 'Enter the Automation Deal Room',
+    title: 'Enter the B2B global trade Deal Room',
     blurb: 'Get matched with the right suppliers through curated 1:1 meetings tailored to your procurement needs.',
   },
   visitor: {
     icon: Ticket,
     eyebrow: 'Free Visitor Registration',
-    title: 'Your free pass to the future of automation',
+    title: 'Your free pass to the future of B2B global trade',
     blurb: 'Personalised recommendations, priority entry and access to every zone \u2014 completely free.',
   },
 }

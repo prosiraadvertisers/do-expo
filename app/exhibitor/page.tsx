@@ -7,7 +7,7 @@ import { ExhibitorGrid } from "@/components/exhibitor-grid"
 export const metadata: Metadata = {
   title: "Exhibitors",
   description:
-    "Meet the 500+ exhibitors showcasing automation solutions at doeximexpo 2026. Browse by category, search, and discover your next technology partner.",
+    "Meet the 500+ exhibitors showcasing B2B global trade solutions at doeximexpo 2026. Browse by category, search, and discover your next technology partner.",
 }
 
 export default function ExhibitorPage() {
@@ -63,7 +63,7 @@ export default function ExhibitorPage() {
           </p>
           <div className="mt-8">
             <CtaButton variant="gold" size="lg">
-              Exhibit at Automation Expo 2026
+              Exhibit at B2B global trade Expo 2026
             </CtaButton>
           </div>
         </div>

@@ -144,8 +144,7 @@ export function Hero() {
             </div> */}
 
             {/* Row 2 — big logo (left) + heading/description (right) */}
-            <div className="-mt-6 grid w-full grid-cols-[auto_1fr] items-center gap-x-10">
-              {" "}
+<div className="grid w-full grid-cols-[auto_1fr] items-start gap-x-10 pt-8">              {" "}
               {/* <LogoChip
                 logo={ORGANISERS[1].logo}
                 alt={ORGANISERS[1].alt}
@@ -153,7 +152,7 @@ export function Hero() {
               /> */}
               <div className="-mt-4 text-left">
                 <p className="ml-[4px] text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
-                  Connect. Collaborate.
+                  Source. Connect. Collaborate.
                 </p>
 
                 <p className="mt-3 text-5xl font-black leading-none">
@@ -169,7 +168,7 @@ export function Hero() {
             </div>
 
             {/* Row 3 — full-width stats strip, placeholder numbers */}
-<div className="mt-24 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">              {[
+<div className="mt-16 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">              {[
                 { icon: Store, label: "Exhibitors", value: "360+" },
                 { icon: Globe, label: "Countries", value: "10+" },
                 { icon: Users, label: "Visitors", value: "25K+" },

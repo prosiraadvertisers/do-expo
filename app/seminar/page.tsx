@@ -75,7 +75,7 @@ const SCHEDULE: Day[] = [
     sessions: [
       {
         time: "10:30 AM",
-        title: "AI & Automation in Modern Supply Chains",
+        title: "AI & B2B global trade in Modern Supply Chains",
         speaker: "Dr. Meera Iyer",
         speakerRole: "Head of Supply Chain Tech, Reliance Logistics",
         venue: "Main Hall",

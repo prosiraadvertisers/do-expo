@@ -136,7 +136,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
   if (submitted) {
     return (
       <FormSuccess
-        title="Welcome to the Automation Deal Room"
+        title="Welcome to the B2B global trade Deal Room"
         message={`Thank you, ${personal.name.split(' ')[0] || 'delegate'}! Your application is received. Our team will curate high-value meetings based on your profile and email your personalised schedule.`}
       >
         <CtaLink href="/event" variant="primary">View the agenda</CtaLink>
@@ -229,7 +229,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
             </Field>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <Field label="Annual automation purchase value" required error={errors.purchaseValue}>
+              <Field label="Annual B2B global trade purchase value" required error={errors.purchaseValue}>
                 <RadioCards
                   name="purchase"
                   value={purchaseValue}
@@ -260,7 +260,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
               </Select>
             </Field>
 
-            <Field label="How did you hear about Automation Expo 2026?" hint="Select all that apply">
+            <Field label="How did you hear about B2B global trade Expo 2026?" hint="Select all that apply">
               <MultiChips options={SOURCES} values={sources} onChange={setSources} />
             </Field>
 
@@ -269,7 +269,7 @@ export function BuyerSellerForm({ compact = false }: { compact?: boolean }) {
                 <ArrowLeft className="size-4" /> Previous
               </CtaButton>
               <CtaButton type="submit" variant="cta" size="lg">
-                <Handshake className="size-5" /> Apply for Automation Deal Room
+                <Handshake className="size-5" /> Apply for B2B global trade Deal Room
               </CtaButton>
             </div>
           </div>

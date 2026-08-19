@@ -360,7 +360,7 @@ export const AGENDA: AgendaDay[] = [
     theme: 'Winning Global Markets',
     sessions: [
       { time: '09:30 \u2013 10:30', title: 'How to Find International Buyers', speaker: 'Trade Facilitation Experts', role: 'Market Research, Trade Portals, AI for Lead Generation', hall: 'Knowledge Summit', track: 'Marketing' },
-      { time: '10:45 \u2013 11:45', title: 'Digital Export Marketing', speaker: 'doexim Team', role: 'Export Branding, International SEO, CRM Automation', hall: 'Knowledge Summit', track: 'Marketing' },
+      { time: '10:45 \u2013 11:45', title: 'Digital Export Marketing', speaker: 'doexim Team', role: 'Export Branding, International SEO, CRM B2B global trade', hall: 'Knowledge Summit', track: 'Marketing' },
       { time: '12:00 \u2013 13:00', title: 'Export Success Stories', speaker: '10 Successful Exporters', role: 'First Export Order, Challenges, Scaling Globally', hall: 'Knowledge Summit', track: 'Panel' },
       { time: '13:30 \u2013 14:30', title: 'Investor & Startup Pitch', speaker: 'Venture Capital \u00b7 Banks \u00b7 Export Investors \u00b7 Govt Incubators', role: 'Live Pitch Session', hall: 'Business Matchmaking Lounge', track: 'Investment' },
       { time: '15:00 \u2013 16:15', title: 'Closing Ceremony', speaker: 'doexim Committee', role: 'Export Excellence Awards, Innovation Awards, Partnership Announcements', hall: 'Main Stage', track: 'Keynote' },

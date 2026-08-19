@@ -22,7 +22,7 @@ const SITE_URL = 'https://doeximexpo.com'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'doeximexpo | Global B2B Trade & Export Show 2027',
+    default: 'doeximexpo | B2B Global Trade Expo 2027',
     template: '%s | doeximexpo',
   },
   description:
@@ -42,26 +42,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'doeximexpo | Automation Expo 2026',
+    title: 'doeximexpo | B2B Global Trade Expo 2027',
     description:
-      'India\u2019s premier B2B automation trade show. Exhibit, network in the Deal Room, and get your free visitor pass.',
+      'India\u2019s premier B2B international trade show. Exhibit, network in the Deal Room, and get your free visitor pass.',
     siteName: 'doeximexpo',
-    images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'Automation Expo 2026' }],
+    images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'doeximexpo | Automation Expo 2026',
-    description: 'India\u2019s premier B2B automation trade show.',
+    title: 'doeximexpo | B2B global trade Expo 2026',
+    description: 'India\u2019s premier B2B B2B global trade trade show.',
     images: ['/images/hero-expo.png'],
   },
-  icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
-  },
+  
 }
 
 export const viewport: Viewport = {

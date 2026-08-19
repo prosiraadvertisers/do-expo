@@ -1,29 +1,42 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Building2, TrendingUp, Handshake, Globe2, CheckCircle2, ArrowRight, Quote } from "lucide-react"
-import { ZonesGrid } from "@/components/zones-grid"
-import { CtaButton, CtaLink } from "@/components/ui/cta"
-import { useRegistration } from "@/components/registration/registration-context"
+import {
+  Building2,
+  TrendingUp,
+  Handshake,
+  Globe2,
+  CheckCircle2,
+  ArrowRight,
+  Quote,
+} from "lucide-react";
+import { ZonesGrid } from "@/components/zones-grid";
+import { CtaButton, CtaLink } from "@/components/ui/cta";
+import { useRegistration } from "@/components/registration/registration-context";
 
 function SectionHeading({
   eyebrow,
   title,
   desc,
 }: {
-  eyebrow: string
-  title: string
-  desc?: string
+  eyebrow: string;
+  title: string;
+  desc?: string;
 }) {
   return (
     <div className="mx-auto mb-10 max-w-2xl text-center">
       <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
         {eyebrow}
       </span>
-      <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">{title}</h2>
-      {desc && <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">{desc}</p>}
+      <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
+        {title}
+      </h2>
+      {desc && (
+        <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
+          {desc}
+        </p>
+      )}
     </div>
-  )
+  );
 }
 
 const stats = [
@@ -31,23 +44,14 @@ const stats = [
   { icon: Globe2, value: "50+", label: "Countries" },
   { icon: TrendingUp, value: "25,000+", label: "Trade Visitors" },
   { icon: Handshake, value: "5000+", label: "Business Meetings" },
-]
-
-const whyExhibit = [
-  "Connect with qualified importers and exporters from over 50 countries",
-  "Launch your products in international markets",
-  "Generate high-quality global trade leads",
-  "Build partnerships with distributors and sourcing companies",
-  "Participate in curated B2B matchmaking sessions",
-  "Increase your brand visibility in the international trade community",
-]
+];
 
 const testimonials = [
   {
     quote:
       "The Deal Room alone paid back our stand cost within the first morning. The quality of buyers was exceptional.",
     name: "Vikram Shah",
-    role: "Head of Automation, AxisRobo",
+    role: "Head of B2B global trade, AxisRobo",
   },
   {
     quote:
@@ -56,13 +60,23 @@ const testimonials = [
     role: "CEO, ForgeAI",
   },
   {
-    quote: "Best-organised industrial expo in the region. We closed three distribution deals across the three days.",
+    quote:
+      "Best-organised industrial expo in the region. We closed three distribution deals across the three days.",
     name: "Meera Iyer",
     role: "VP Engineering, NovaVision",
   },
-]
+];
 
-const partners = ["AxisRobo", "NovaVision", "ForgeAI", "AssembleX", "PrecisionMetric", "SenseGrid", "CoboWorks", "OptiScan"]
+const partners = [
+  "AxisRobo",
+  "NovaVision",
+  "ForgeAI",
+  "AssembleX",
+  "PrecisionMetric",
+  "SenseGrid",
+  "CoboWorks",
+  "OptiScan",
+];
 
 const news = [
   {
@@ -83,91 +97,142 @@ const news = [
     date: "05 Feb 2027",
     desc: "Pre-scheduled business meetings will help importers, exporters and manufacturers build valuable partnerships.",
   },
-]
+];
+
+const attendeeTypes = [
+  {
+    icon: "🏭",
+    title: "Manufacturers",
+    color: "bg-blue-100",
+    desc: "Showcase your production capabilities and connect with global buyers.",
+  },
+  {
+    icon: "🚢",
+    title: "Exporters",
+    color: "bg-emerald-100",
+    desc: "Expand your reach and find new international markets for your products.",
+  },
+  {
+    icon: "📦",
+    title: "Importers",
+    color: "bg-orange-100",
+    desc: "Source quality products directly from verified manufacturers and suppliers.",
+  },
+  {
+    icon: "🏢",
+    title: "MSMEs",
+    color: "bg-purple-100",
+    desc: "Grow your business with tailored support and networking opportunities.",
+  },
+  {
+    icon: "🚀",
+    title: "Startups",
+    color: "bg-pink-100",
+    desc: "Gain visibility, attract investors, and scale your innovative solutions.",
+  },
+  {
+    icon: "🏬",
+    title: "Wholesalers",
+    color: "bg-cyan-100",
+    desc: "Discover bulk sourcing options and build long-term supplier relationships.",
+  },
+  {
+    icon: "🛍️",
+    title: "Retail Chains",
+    color: "bg-indigo-100",
+    desc: "Find trending products and negotiate directly with manufacturers.",
+  },
+  {
+    icon: "🚚",
+    title: "Distributors",
+    color: "bg-lime-100",
+    desc: "Partner with brands and expand your distribution network across regions.",
+  },
+  {
+    icon: "🤝",
+    title: "Trade Associations",
+    color: "bg-red-100",
+    desc: "Collaborate with industry bodies and promote sector-wide growth.",
+  },
+  {
+    icon: "🏛️",
+    title: "Government Bodies",
+    color: "bg-yellow-100",
+    desc: "Support trade initiatives and connect with businesses for policy implementation.",
+  },
+  {
+    icon: "💰",
+    title: "Investors",
+    color: "bg-green-100",
+    desc: "Explore high-potential businesses and investment opportunities in global trade.",
+  },
+  {
+    icon: "🎓",
+    title: "Students",
+    color: "bg-sky-100",
+    desc: "Learn about international trade, network with professionals, and explore careers.",
+  },
+];
 
 export function HomeSections() {
-  const { open } = useRegistration()
+  const { open } = useRegistration();
   return (
     <>
       {/* About snapshot */}
-      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-6xl">
-          <div className="grid w-full items-center gap-8 sm:gap-10 lg:grid-cols-2">
-            <div>
-              <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                About the Expo
-              </span>
-              <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
-                Connecting Global Import & Export Professionals
-              </h2>
-              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-                doexim Expo is dedicated to fostering international trade and commerce by creating a premier platform where businesses can connect, learn and grow together. We bring together thousands of exhibitors, buyers and professionals from over 50 countries to explore new markets, establish partnerships and discover innovative import and export solutions.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <CtaLink href="/about" variant="outline">
-                  Learn more about us
-                </CtaLink>
-                <CtaButton onClick={() => open("exhibitor")}>Become an exhibitor</CtaButton>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((s) => (
-                <div key={s.label} className="glass-card rounded-2xl p-6 text-center">
-                  <s.icon className="mx-auto mb-2 h-7 w-7 text-accent " />
-                  <div className="font-heading text-3xl font-extrabold text-foreground">{s.value}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Zones overview */}
-      <section className="w-full overflow-x-hidden bg-secondary/40 px-4 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-6xl">
-          <SectionHeading
-            eyebrow="Explore the Floor"
-            title="Explore Global Trade Opportunities"
-            desc="Discover international exhibitors, sourcing partners, country pavilions, trade services and networking opportunities designed to help your business grow globally."
-          />
-          <ZonesGrid />
-        </div>
-      </section>
-
-      {/* Why exhibit */}
-      <section className="w-full overflow-x-hidden px-4 py-16 sm:py-20">
-        <div className="mx-auto w-full grid max-w-6xl items-center gap-8 sm:gap-10 lg:grid-cols-2">
-          <div className="order-2 lg:order-1">
-            <div className="glass-card rounded-2xl p-8">
-              <ul className="space-y-4">
-                {whyExhibit.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                    <span className="leading-relaxed text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-              Why Exhibit
+      {/* Why Attend */}
+      <section
+        id="why-attend"
+        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-24"
+      >
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              WHY SHOULD ATTEND
             </span>
-            <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
-              Expand Your Business Beyond Borders
-            </h2>
-            <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Exhibiting at doexim Expo gives your business direct access to importers, exporters, wholesalers, manufacturers and international buyers looking for trusted trade partners.
-            </p>
-            <div className="mt-6">
-              <CtaButton onClick={() => open("exhibitor")}>Reserve your stand</CtaButton>
+
+            {/* <h2 className="mt-5 text-5xl font-bold text-slate-900">
+              Meet the Right People.
+              <span className="block text-primary">Grow Your Business.</span>
+            </h2> */}
+
+            <div className="mx-auto flex justify-center px-4">
+              <h2 className="mt-5 whitespace-nowrap text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
+                Meet the Right People.
+                <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                  {" "}
+                  Grow Your Business
+                </span>
+              </h2>
             </div>
+          </div>
+
+          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
+            {attendeeTypes.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl"
+              >
+                <div
+                  className={`mx-auto flex h-20 w-20 items-center justify-center rounded-3xl text-4xl ${item.color}`}
+                >
+                  {item.icon}
+                </div>
+
+                <h3 className="mt-6 text-center text-xl font-bold text-slate-900">
+                  {item.title}
+                </h3>
+
+                <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24" />
+
+                <p className="mt-5 text-center text-sm leading-7 text-slate-600">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-      
     </>
-  )
+  );
 }

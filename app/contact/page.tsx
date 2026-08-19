@@ -297,7 +297,7 @@ export default function ContactPage() {
       <section className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Find Our Office
+           Head Office
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
             Visit our office at Swargate, Pune. We&apos;re easily accessible

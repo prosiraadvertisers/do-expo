@@ -7,7 +7,7 @@ import { Ticket, MapPin, Users, Zap, Award } from "lucide-react"
 export const metadata: Metadata = {
   title: "Free Visitor Registration",
   description:
-    "Get your free visitor pass to Automation Expo 2026. Personalized recommendations, priority entry and access to all five technology zones.",
+    "Get your free visitor pass to B2B global trade Expo 2026. Personalized recommendations, priority entry and access to all five technology zones.",
 }
 
 export default function FreeVisitorRegistrationPage() {
@@ -15,8 +15,8 @@ export default function FreeVisitorRegistrationPage() {
     <>
       <PageHero
         eyebrow="Free Visitor Registration"
-        title="Your Free Pass to the Future of Automation"
-        subtitle="Get personalized recommendations, priority entry and access to every zone — completely free. Register now and explore India's biggest automation showcase."
+        title="Your Free Pass to the Future of B2B global trade"
+        subtitle="Get personalized recommendations, priority entry and access to every zone — completely free. Register now and explore India's biggest B2B global trade showcase."
       />
 
       <section className="px-4 py-12 sm:px-6 lg:px-8">

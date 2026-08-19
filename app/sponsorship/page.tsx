@@ -33,7 +33,7 @@ export default function SponsorshipPage() {
               {
                 icon: Megaphone,
                 title: "Massive Reach",
-                desc: "40,000+ qualified professionals from manufacturing, automation, and export sectors.",
+                desc: "40,000+ qualified professionals from manufacturing, B2B global trade, and export sectors.",
               },
               {
                 icon: Users,

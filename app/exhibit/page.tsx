@@ -18,16 +18,16 @@ import {
 export const metadata: Metadata = {
   title: "Exhibit",
   description:
-    "Showcase your automation solutions at Automation Expo 2026. Explore booth packages, sponsorship tiers, five tech zones, and our gallery from past editions.",
+    "Showcase your B2B global trade solutions at B2B global trade Expo 2026. Explore booth packages, sponsorship tiers, five tech zones, and our gallery from past editions.",
 }
 
 export default function ExhibitPage() {
   return (
     <>
       <PageHero
-        eyebrow="Exhibit at Automation Expo 2026"
+        eyebrow="Exhibit at B2B global trade Expo 2026"
         title="Connect with 40,000+ Qualified Buyers"
-        subtitle="Three days. Five tech zones. Unlimited business potential. Secure your booth and generate qualified leads in India's biggest automation showcase."
+        subtitle="Three days. Five tech zones. Unlimited business potential. Secure your booth and generate qualified leads in India's biggest B2B global trade showcase."
       >
         <CtaButton variant="cta" size="lg">
           Book Your Booth
@@ -38,7 +38,7 @@ export default function ExhibitPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Why Exhibit at Automation Expo 2026?
+            Why Exhibit at B2B global trade Expo 2026?
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -55,7 +55,7 @@ export default function ExhibitPage() {
               {
                 icon: Zap,
                 title: "Industry Credibility",
-                desc: "Showcase your brand among 500+ global automation leaders. Strengthen market positioning and industry recognition.",
+                desc: "Showcase your brand among 500+ global B2B global trade leaders. Strengthen market positioning and industry recognition.",
               },
               {
                 icon: Award,
@@ -274,7 +274,7 @@ export default function ExhibitPage() {
             Gallery — From Past Editions
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            See the energy, the crowds, the innovation. This is what awaits at Automation Expo 2026.
+            See the energy, the crowds, the innovation. This is what awaits at B2B global trade Expo 2026.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -319,7 +319,7 @@ export default function ExhibitPage() {
             Ready to Exhibit?
           </h2>
           <p className="mt-4 text-lg text-white/75">
-            Booth applications are open. Secure your spot in India's premier automation showcase.
+            Booth applications are open. Secure your spot in India's premier B2B global trade showcase.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <CtaButton variant="gold" size="lg">
