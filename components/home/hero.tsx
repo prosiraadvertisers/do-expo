@@ -26,17 +26,16 @@ export function Hero() {
       style={{ minHeight: "100dvh" }}
     >
       <Image
-        src="/herobg/hero.webp"
+        src="/herobg/herobggg.jpeg"
         alt="Mumbai Skyline"
         fill
         priority
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-black/15" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#07152c]/80 via-[#07152c]/35 to-transparent" />
-
+<div className="absolute inset-0 bg-gradient-to-r from-[#07152c]/30 via-[#07152c]/10 to-transparent" />
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-10 lg:grid-cols-12 lg:px-8">
         {/* LEFT — content */}
         <div className="order-2 flex w-full items-center lg:order-1 lg:col-span-8">
@@ -48,8 +47,7 @@ export function Hero() {
               </p>
 
               <h1 className="mt-3 text-4xl font-black leading-none sm:text-5xl">
-                GROW{" "}
-                <span className="text-[#3228ee]">GLOBAL</span>
+                GROW <span className="text-[#3228ee]">GLOBAL</span>
               </h1>
 
               <p className="mt-4 max-w-none text-base leading-relaxed text-white/90 sm:text-lg">
@@ -65,7 +63,10 @@ export function Hero() {
                 { icon: Globe, label: "Countries", value: "10+" },
                 { icon: Users, label: "Visitors", value: "25K+" },
               ].map(({ icon: Icon, label, value }) => (
-                <span key={label} className="flex flex-col items-center text-center">
+                <span
+                  key={label}
+                  className="flex flex-col items-center text-center"
+                >
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/10 sm:size-10">
                     <Icon className="size-3 text-[#ff8a1e] sm:size-4" />
                   </span>
@@ -91,7 +92,9 @@ export function Hero() {
                 </p>
 
                 <p className="mt-3 text-5xl font-black leading-none">
-                  GROW <span className="text-[#3228ee]">GLOBAL</span>
+                  India’s Most Focused
+                  <br />
+                  Export–Import Trade Expo
                 </p>
                 <p className="mt-3 max-w-2xl text-base leading-7 text-white/90">
                   India&apos;s Premier B2B International Trade Expo for
