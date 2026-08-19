@@ -16,7 +16,6 @@ const CARDS: {
   type: RegistrationType;
   icon: typeof Store;
   title: string;
-  desc: string;
   badge: string;
   accent: string;
   cardBg: string;
@@ -30,7 +29,6 @@ const CARDS: {
     type: "exhibitor",
     icon: Store,
     title: "Exhibitor Registration",
-    desc: "Showcase your products and services to global importers, exporters, distributors and buyers.",
     badge: "Exhibition Open",
     accent: "bg-purple-100 text-purple-700",
     cardBg: "bg-purple-100",
@@ -44,7 +42,6 @@ const CARDS: {
     type: "buyer-seller",
     icon: Handshake,
     title: "Buyer Seller Meet",
-    desc: "Connect with verified international buyers and suppliers through scheduled B2B meetings.",
     badge: "Global Networking",
     accent: "bg-blue-100 text-blue-700",
     cardBg: "bg-blue-100",
@@ -58,8 +55,7 @@ const CARDS: {
     type: "visitor",
     icon: Ticket,
     title: "Visitor Registration",
-    desc: "Register free and meet international exhibitors, buyers and exporters under one roof.",
-    badge: "Free Pass",
+    badge: "Exhibition Entry",
     accent: "bg-emerald-100 text-emerald-700",
     cardBg: "bg-emerald-100",
     cardBorder: "border-emerald-300",
@@ -71,8 +67,7 @@ const CARDS: {
   {
     type: "seminar",
     icon: GraduationCap,
-    title: "Seminar Pass",
-    desc: "Attend export policy masterclasses, banking summits, and global market panels with top experts.",
+    title: "Seminar Registration",
     badge: "Knowledge Summit",
     accent: "bg-orange-100 text-orange-700",
     cardBg: "bg-orange-100",
@@ -122,10 +117,6 @@ export function PriorityCards() {
               >
                 {c.title}
               </h3>
-
-              <p className="relative z-10 text-sm leading-6 text-slate-600 sm:text-[15px] sm:leading-7">
-                {c.desc}
-              </p>
 
               <span className="relative z-10 mt-2 inline-flex items-center gap-2 text-xs font-semibold text-[#061AC9] sm:mt-3 sm:text-sm">
                 Register now{" "}
