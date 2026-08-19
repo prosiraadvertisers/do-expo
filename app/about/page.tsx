@@ -66,8 +66,7 @@ export default function AboutPage() {
         className="bg-white px-4 py-20 sm:px-6 lg:px-8 scroll-mt-24"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
+<div className="text-center lg:text-left">  <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
               About doexim Expo
             </span>
 
