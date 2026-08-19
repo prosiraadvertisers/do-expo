@@ -29,10 +29,10 @@ export function Footer() {
               <Image
                 src="/logo-white.png"
                 alt="doexim Expo"
-                width={180}
-                height={38}
+                width={150}
+                height={32}
                 priority
-                className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+                className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm text-white/70 text-pretty">

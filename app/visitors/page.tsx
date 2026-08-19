@@ -56,7 +56,7 @@ const whyVisit = [
   },
   {
     icon: "📦",
-    title: "Product Showcase",
+    title: "Product Sourcing",
     subtitle: "Discover the latest products and innovations.",
   },
   {

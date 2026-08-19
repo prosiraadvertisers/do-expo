@@ -41,7 +41,7 @@ export function Hero() {
 <div className="order-1 flex w-full items-center lg:order-1 lg:col-span-8">          {/* Mobile / tablet (< lg) — ONLY THIS PART CHANGED */}
           <div className="w-full lg:hidden">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-black/90">
+              <p className="text-sm font-bold uppercase tracking-[0.35em] text-black/90">
                 Source. Connect. Collaborate.
               </p>
 
@@ -59,20 +59,20 @@ export function Hero() {
               {[
                 { icon: Store, label: "Exhibitors", value: "360+" },
                 { icon: Globe, label: "Countries", value: "10+" },
-                { icon: Users, label: "Visitors", value: "25K+" },
+                { icon: Users, label: "Visitors", value: "25k+" },
               ].map(({ icon: Icon, label, value }) => (
                 <span
                   key={label}
                   className="flex flex-col items-center text-center"
                 >
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/10 sm:size-10">
-                    <Icon className="size-3 text-blue-500 sm:size-4" />
+                    <Icon className="size-4 text-blue-500 sm:size-4" />
                   </span>
                   <span className="mt-1.5 leading-tight">
-                    <span className="block text-sm font-bold text-white sm:text-base">
+                    <span className="block text-lg font-bold text-black sm:text-base">
                       {value}
                     </span>
-                    <span className="block text-[10px] text-white/60 sm:text-xs">
+                    <span className="block text-[10px] text-black/60 sm:text-xs">
                       {label}
                     </span>
                   </span>
@@ -99,11 +99,11 @@ export function Hero() {
             </div>
 
             {/* Row 3 — full-width stats strip */}
-            <div className="mt-16 flex w-full max-w-[400px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
+            <div className="mt-16 flex w-full max-w-[450px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
               {[
                 { icon: Store, label: "Exhibitors", value: "360+" },
                 { icon: Globe, label: "Countries", value: "10+" },
-                { icon: Users, label: "Visitors", value: "25K+" },
+                { icon: Users, label: "Expected Visitors", value: "25k+" },
               ].map(({ icon: Icon, label, value }) => (
                 <span key={label} className="flex items-center gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">

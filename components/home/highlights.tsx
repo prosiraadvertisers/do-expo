@@ -19,7 +19,7 @@ const expoHighlights = [
     icon: Handshake,
   },
   {
-    title: "Product Showcase",
+    title: "Product Sourcing",
     subtitle: "Discover new products & innovations.",
     icon: Package,
   },

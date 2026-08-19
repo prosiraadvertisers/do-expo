@@ -235,8 +235,7 @@ function Logo({ onDark }: { onDark: boolean }) {
         width={180}
         height={38}
         priority
-        className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300"
-      />
+className="h-8 sm:h-10 lg:h-10 w-auto object-contain transition-all duration-300"      />
     </Link>
   );
 }
