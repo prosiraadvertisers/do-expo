@@ -421,24 +421,200 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
   const { open } = useRegistration();
   const [eventOpen, setEventOpen] = useState(false);
   const [exhibitOpen, setExhibitOpen] = useState(false);
+  const [visitorOpen, setVisitorOpen] = useState(false);
 
   return (
     <div className="lg:hidden">
       <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-4 pb-8 pt-2">
-        <MobileLink href="/about" onClose={onClose}>
-          About
-        </MobileLink>
-        <MobileLink href="/attend-do-exim-visitors" onClose={onClose}>
-          Visitors
-        </MobileLink>
-        <MobileLink href="/layout" onClose={onClose}>
-          Layout
+        {/* About Dropdown */}
+        <div className="border-b border-border">
+          <button
+            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
+            onClick={() => setEventOpen((v) => !v)}
+            aria-expanded={eventOpen}
+          >
+            About
+            <ChevronDown
+              className={`size-5 transition-transform ${eventOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          {eventOpen && (
+            <div className="pb-3">
+              <Link
+                href="/about"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                About doexim Expo
+              </Link>
+              <Link
+                href="/about#expo-highlights"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Expo Highlights
+              </Link>
+              <Link
+                href="/event"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Event Flow
+              </Link>
+              <Link
+                href=""
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                doexim Awards
+              </Link>
+              <Link
+                href="/about#board-advisory"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Board of Commitee
+              </Link>
+              <Link
+                href="/about#faq"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                FAQ
+              </Link>
+            </div>
+          )}
+        </div>
+
+        {/* Exhibitors Dropdown */}
+        <div className="border-b border-border">
+          <button
+            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
+            onClick={() => setExhibitOpen((v) => !v)}
+            aria-expanded={exhibitOpen}
+          >
+            Exhibitors
+            <ChevronDown
+              className={`size-5 transition-transform ${exhibitOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          {exhibitOpen && (
+            <div className="pb-3">
+              <Link
+                href="/why-doexim-expo"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Why doexim expo
+              </Link>
+              <Link
+                href="/exhibitors#visitor-profile"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Visitor Profile
+              </Link>
+              <Link
+                href="/book-space"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Book Your Space
+              </Link>
+              <Link
+                href="/pre-event"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Pre-Event Schedule
+              </Link>
+              <Link
+                href="/exhibitors"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Exhibitors Manual
+              </Link>
+              <Link
+                href="/exhibitors"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Exhibitors brochure
+              </Link>
+            </div>
+          )}
+        </div>
+
+        {/* Visitors Dropdown */}
+        <div className="border-b border-border">
+          <button
+            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
+            onClick={() => setVisitorOpen((v) => !v)}
+            aria-expanded={visitorOpen}
+          >
+            Visitors
+            <ChevronDown
+              className={`size-5 transition-transform ${visitorOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          {visitorOpen && (
+            <div className="pb-3">
+              <Link
+                href="/visitors"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Why Visit doexim Expo
+              </Link>
+              <Link
+                href="/visitors#why-attend"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Who Should Attend
+              </Link>
+              <Link
+                href="/visitors#visitor-registration"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Visitor Registration
+              </Link>
+              <Link
+                href="/visitors#zones"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Category Wise Zones
+              </Link>
+              <Link
+                href="/exhibitor"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Exhibitors List
+              </Link>
+              <Link
+                href="/visitors#visitor-faq"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                FAQ
+              </Link>
+            </div>
+          )}
+        </div>
+
+        {/* Regular Links */}
+        <MobileLink href="/partners" onClose={onClose}>
+          Partners
         </MobileLink>
         <MobileLink href="/seminar" onClose={onClose}>
           Seminar
         </MobileLink>
-        <MobileLink href="/partners" onClose={onClose}>
-          Partners
+        <MobileLink href="/layout" onClose={onClose}>
+          Layout
         </MobileLink>
         <MobileLink href="/media" onClose={onClose}>
           Media
@@ -446,82 +622,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <MobileLink href="/contact" onClose={onClose}>
           Contact Us
         </MobileLink>
-
-        <div className="border-b border-border">
-          <button
-            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
-            onClick={() => setEventOpen((v) => !v)}
-            aria-expanded={eventOpen}
-          >
-            Event
-            <ChevronDown
-              className={`size-5 transition-transform ${eventOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-          {eventOpen && (
-            <div className="pb-3 pl-3">
-              <Link
-                href="/pre-event"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Complete Event Schedule
-              </Link>
-              <Link
-                href="/event"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Main Event
-              </Link>
-            </div>
-          )}
-        </div>
-
-        <div className="border-b border-border">
-          <button
-            className="flex w-full items-center justify-between py-3.5 text-left text-base font-semibold"
-            onClick={() => setExhibitOpen((v) => !v)}
-            aria-expanded={exhibitOpen}
-          >
-            Exhibit
-            <ChevronDown
-              className={`size-5 transition-transform ${exhibitOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-          {exhibitOpen && (
-            <div className="pb-3 pl-3">
-              <Link
-                href="/why-doexim-expo"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Whydoexim Expo
-              </Link>
-              <Link
-                href="/book-space"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Book Space
-              </Link>
-              <Link
-                href="/sponsorship"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Sponsorship
-              </Link>
-              <Link
-                href="/exhibitors"
-                onClick={onClose}
-                className="block py-2 text-sm text-foreground/80"
-              >
-                Exhibitors List
-              </Link>
-            </div>
-          )}
-        </div>
 
         <div className="mt-5 flex flex-col gap-3"></div>
       </nav>

@@ -354,10 +354,7 @@ export default function PartnerPage() {
           </div>
         </div>
 
-        <p className="mt-4 text-xs text-slate-400">
-          *Delegate Database access is subject to data-privacy terms —
-          update this note once the exact condition is confirmed.
-        </p>
+        
 
         {/* CTA */}
         <div className="mt-14 flex flex-col items-center justify-center gap-5 rounded-[28px] bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] px-8 py-12 text-center text-white sm:flex-row sm:justify-between sm:text-left">

@@ -50,14 +50,14 @@ const ROUTE_STOPS = [
 
 const METRICS = [
   { value: "500+", label: "Exhibitors", icon: Building2 },
-  { value: "1000+", label: "B2B Meetings", icon: Handshake },
+  { value: "300+", label: "B2B Meetings", icon: Handshake },
   { value: "3", label: "Event Days", icon: Calendar },
   { value: "50+", label: "Int'l Buyers", icon: Globe },
 ]
 
 export default function PreEventPage() {
   return (
-    <div className="min-h-screen bg-[#F4F2EC]">
+    <div className="min-h-screen bg-white">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
         .font-display { font-family: 'Poppins', sans-serif; }
@@ -65,11 +65,11 @@ export default function PreEventPage() {
       `}</style>
 
       <div className="pt-14">
-    <PageHero
-      title="doexim Expo 2024"
-    >
-    </PageHero>
-  </div>
+        <PageHero
+          title="doexim Expo 2027"
+        >
+        </PageHero>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Section header */}
@@ -77,10 +77,10 @@ export default function PreEventPage() {
           <span className="inline-block font-body text-xs font-semibold tracking-[0.2em] text-[#E8912A] uppercase mb-4 px-4 py-1.5 rounded-full border border-[#E8912A]/30 bg-[#E8912A]/5">
             Pre-Event Route
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl font-extrabold text-[#191244] tracking-tight leading-[1.05]">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#191244] tracking-tight leading-[1.05]">
             The Road to the Expo
           </h2>
-          <p className="font-body text-lg text-[#5C6178] mt-4 max-w-2xl">
+          <p className="font-body text-base sm:text-lg text-[#5C6178] mt-4 max-w-2xl">
             Three cities, three days, one destination — a week of orientation and networking
             ahead of the main event floor.
           </p>
@@ -88,7 +88,7 @@ export default function PreEventPage() {
 
         {/* Route */}
         <section className="mb-24">
-          <div className="flex flex-col lg:flex-row lg:items-stretch gap-10 lg:gap-0">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-0">
             {ROUTE_STOPS.map((stop, idx) => (
               <div key={stop.code} className="flex flex-col lg:flex-row lg:flex-1 lg:items-stretch">
                 <div className="relative flex-1">
@@ -99,36 +99,36 @@ export default function PreEventPage() {
 
                   <div className="bg-white border border-[#191244]/8 rounded-3xl overflow-hidden shadow-sm h-full flex flex-col">
                     {/* card header */}
-                    <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] px-6 py-6">
+                    <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] px-5 py-5 sm:px-6 sm:py-6">
                       <div className="flex items-start justify-between">
                         <div>
-                          <p className="font-body text-white/50 text-xs font-medium tracking-[0.15em] uppercase mb-1">
+                          <p className="font-body text-white/50 text-[10px] sm:text-xs font-medium tracking-[0.15em] uppercase mb-1">
                             Stop {String(idx + 1).padStart(2, "0")}
                           </p>
-                          <p className="font-display text-3xl font-extrabold text-white tracking-tight">
+                          <p className="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                             {stop.code}
                           </p>
                         </div>
-                        <MapPin className="w-5 h-5 text-white/40 mt-1" />
+                        <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-white/40 mt-1" />
                       </div>
-                      <div className="mt-4 flex items-baseline justify-between">
-                        <h3 className="font-display text-white font-semibold text-lg">{stop.city}</h3>
-                        <span className="font-body text-xs text-[#F6C453] font-medium uppercase tracking-wide">
+                      <div className="mt-3 sm:mt-4 flex items-baseline justify-between">
+                        <h3 className="font-display text-white font-semibold text-base sm:text-lg">{stop.city}</h3>
+                        <span className="font-body text-[10px] sm:text-xs text-[#F6C453] font-medium uppercase tracking-wide">
                           {stop.day}
                         </span>
                       </div>
                     </div>
 
                     {/* activities */}
-                    <div className="px-6 py-6 flex-1 flex flex-col gap-4">
+                    <div className="px-5 py-5 flex-1 flex flex-col gap-3 sm:px-6 sm:py-6 sm:gap-4">
                       {stop.activities.map((a, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="w-9 h-9 rounded-full bg-[#F4F2EC] flex items-center justify-center shrink-0 mt-0.5">
-                            <a.icon className="w-4 h-4 text-[#1B4FA0]" />
+                        <div key={i} className="flex items-start gap-2.5 sm:gap-3">
+                          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#F4F2EC] flex items-center justify-center shrink-0 mt-0.5">
+                            <a.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1B4FA0]" />
                           </div>
                           <div>
-                            <p className="font-body text-sm font-semibold text-[#191244]">{a.title}</p>
-                            <p className="font-body text-xs text-[#5C6178] mt-0.5">{a.desc}</p>
+                            <p className="font-body text-xs sm:text-sm font-semibold text-[#191244]">{a.title}</p>
+                            <p className="font-body text-[10px] sm:text-xs text-[#5C6178] mt-0.5">{a.desc}</p>
                           </div>
                         </div>
                       ))}
@@ -137,27 +137,27 @@ export default function PreEventPage() {
                 </div>
 
                 {/* connector */}
-                <div className="flex items-center justify-center py-3 lg:py-0 lg:px-4">
-                  <ArrowRight className="w-5 h-5 text-[#191244]/20 rotate-90 lg:rotate-0" />
+                <div className="flex items-center justify-center py-2 lg:py-0 lg:px-4">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#191244]/20 rotate-90 lg:rotate-0" />
                 </div>
               </div>
             ))}
 
             {/* Destination */}
             <div className="lg:w-52 shrink-0">
-              <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] rounded-3xl p-6 h-full flex flex-col items-center justify-center text-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#F6C453] to-[#E8912A] flex items-center justify-center">
-                  <Plane className="w-5 h-5 text-[#191244] -rotate-45" />
+              <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] rounded-3xl p-5 sm:p-6 h-full flex flex-col items-center justify-center text-center gap-2.5 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-linear-to-br from-[#F6C453] to-[#E8912A] flex items-center justify-center">
+                  <Plane className="w-4 h-4 sm:w-5 sm:h-5 text-[#191244] -rotate-45" />
                 </div>
-                <p className="font-body text-[#F6C453] text-xs font-semibold tracking-[0.15em] uppercase">
+                <p className="font-body text-[#F6C453] text-[10px] sm:text-xs font-semibold tracking-[0.15em] uppercase">
                   Destination
                 </p>
-                <p className="font-display text-2xl font-extrabold text-white leading-tight">
+                <p className="font-display text-xl sm:text-2xl font-extrabold text-white leading-tight">
                   doexim
                   <br />
                   Expo Floor
                 </p>
-                <p className="font-body text-xs text-white/60">3 Days · Main Venue</p>
+                <p className="font-body text-[10px] sm:text-xs text-white/60">3 Days · Main Venue</p>
               </div>
             </div>
           </div>
@@ -165,24 +165,24 @@ export default function PreEventPage() {
 
         {/* Impact stats */}
         <section>
-          <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] rounded-3xl p-10 sm:p-14">
-            <div className="flex items-baseline justify-between mb-10 flex-wrap gap-2">
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] rounded-3xl p-8 sm:p-10 lg:p-14">
+            <div className="flex items-baseline justify-between mb-8 sm:mb-10 flex-wrap gap-2">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
                 Event Impact
               </h2>
-              <span className="font-body text-xs font-semibold text-[#F6C453] tracking-[0.15em] uppercase">
+              <span className="font-body text-[10px] sm:text-xs font-semibold text-[#F6C453] tracking-[0.15em] uppercase">
                 Expected Outcomes
               </span>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {METRICS.map((metric, idx) => (
-                <div key={idx} className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#F6C453] to-[#E8912A] flex items-center justify-center mb-4">
-                    <metric.icon className="w-5 h-5 text-[#191244]" />
+                <div key={idx} className="bg-white/5 rounded-2xl p-5 sm:p-6 border border-white/10">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-[#F6C453] to-[#E8912A] flex items-center justify-center mb-4">
+                    <metric.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#191244]" />
                   </div>
-                  <p className="font-display text-4xl font-extrabold text-white mb-1">{metric.value}</p>
-                  <p className="font-body text-sm text-white/60">{metric.label}</p>
+                  <p className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-1">{metric.value}</p>
+                  <p className="font-body text-xs sm:text-sm text-white/60">{metric.label}</p>
                 </div>
               ))}
             </div>

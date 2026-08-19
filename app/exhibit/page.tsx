@@ -190,9 +190,7 @@ export default function ExhibitPage() {
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
             Six Dedicated Export &amp; Trade Zones
           </h2>
-          <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            Choose your zone based on your industry focus. Click on any zone to view its complete product and service categories.
-          </p>
+          <br/>
           <ZonesGrid />
         </div>
       </section>

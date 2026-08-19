@@ -42,18 +42,17 @@ export function Hero() {
           {/* Mobile / tablet (< lg) — ONLY THIS PART CHANGED */}
           <div className="w-full lg:hidden">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/75">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-black/90">
                 Source. Connect. Collaborate.
               </p>
 
-              <h1 className="mt-3 text-4xl font-black leading-none sm:text-5xl">
-                GROW <span className="text-[#3228ee]">GLOBAL</span>
-              </h1>
+              <p className="mt-3 text-5xl font-black leading-none ">
+                  India’s Most Focused
+                <br />
+                  Export–Import Trade Expo
+                </p>
 
-              <p className="mt-4 max-w-none text-base leading-relaxed text-white/90 sm:text-lg">
-                India&apos;s Premier B2B International Trade Expo for Exporters,
-                Importers, Manufacturers &amp; Global Trade Leaders
-              </p>
+             
             </div>
 
             {/* Stats strip - mobile */}
@@ -68,7 +67,7 @@ export function Hero() {
                   className="flex flex-col items-center text-center"
                 >
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/10 sm:size-10">
-                    <Icon className="size-3 text-[#ff8a1e] sm:size-4" />
+                    <Icon className="size-3 text-blue-500 sm:size-4" />
                   </span>
                   <span className="mt-1.5 leading-tight">
                     <span className="block text-sm font-bold text-white sm:text-base">
@@ -87,21 +86,16 @@ export function Hero() {
           <div className="hidden w-full flex-col items-start justify-center lg:flex">
             <div className="grid w-full grid-cols-[auto_1fr] items-start gap-x-10 pt-8">
               <div className="-mt-4 text-left">
-                <p className="ml-[4px] text-sm font-semibold uppercase tracking-[0.45em] text-white/75">
+                <p className="ml-[4px] text-sm font-semibold uppercase tracking-[0.45em] text-black/75">
                   Source. Connect. Collaborate.
                 </p>
 
-                <p className="mt-3 text-5xl font-black leading-none">
+                <p className="mt-3 text-5xl font-black leading-none ">
                   India’s Most Focused
                   <br />
                   Export–Import Trade Expo
                 </p>
-                <p className="mt-3 max-w-2xl text-base leading-7 text-white/90">
-                  India&apos;s Premier B2B International Trade Expo for
-                  Exporters, Importers
-                  <br />
-                  Manufacturers &amp; Global Trade Leaders
-                </p>
+               
               </div>
             </div>
 
@@ -114,7 +108,7 @@ export function Hero() {
               ].map(({ icon: Icon, label, value }) => (
                 <span key={label} className="flex items-center gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
-                    <Icon className="size-4 text-gold" />
+                    <Icon className="size-4 text-blue-500" />
                   </span>
                   <span className="leading-tight">
                     <span className="block text-base font-bold text-white">
@@ -132,22 +126,22 @@ export function Hero() {
         <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-0 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
           <div className="rounded-3xl border border-white/40 bg-white/18 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:p-4 sm:space-y-4">
             <div className="min-w-0">
-              <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-black/90">
                 Doors open in
               </p>
               <Countdown variant="dark" />
             </div>
-            <div className="space-y-2 border-t border-white/10 pt-3 text-sm font-medium text-white/90">
+            <div className="space-y-2 border-t border-white/10 pt-3 text-sm font-medium text-black/90">
               <span className="flex items-start gap-2.5">
-                <CalendarDays className="mt-0.5 size-4 shrink-0 text-gold" />
+                <CalendarDays className="mt-0.5 size-4 shrink-0 text-blue-500" />
                 <span>{EVENT.dateLabel}</span>
               </span>
               <span className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-gold" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-blue-500" />
                 <span>{EVENT.venue}</span>
               </span>
               <span className="flex items-start gap-2.5">
-                <Clock className="mt-0.5 size-4 shrink-0 text-gold" />
+                <Clock className="mt-0.5 size-4 shrink-0 text-blue-500" />
                 <span>{TIME_LABEL}</span>
               </span>
             </div>
