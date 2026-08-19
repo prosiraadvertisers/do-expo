@@ -68,7 +68,7 @@ export function PriorityCards() {
   const { open } = useRegistration();
 
   return (
-    <section className="relative z-20 mt-8 px-4 pb-16 sm:-mt-28 sm:px-6 sm:pb-20 lg:-mt-10 lg:px-8">
+    <section className="relative z-20 mt-8 px-4 pb-0 sm:-mt-28 sm:px-6 sm:pb-0 lg:-mt-10 lg:px-8">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {CARDS.map((c) => {
           const Icon = c.icon;

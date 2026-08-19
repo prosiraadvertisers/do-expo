@@ -259,17 +259,13 @@ export default function PartnerPage() {
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#191456]/10 px-4 py-2 text-sm font-semibold text-[#191456]">
-            <Sparkles className="size-4" />
+            
             Sponsorship
           </span>
           <h2 className="mt-6 text-4xl font-bold text-slate-900 sm:text-5xl">
             Partner With doexim Trade Expo 2027
           </h2>
-          <p className="mt-5 text-lg leading-7 text-slate-600">
-            Compare sponsorship tiers and the exact benefits each one
-            unlocks — from headline branding to booth space, speaking
-            slots and media reach.
-          </p>
+          
         </div>
 
         {/* Comparison table */}

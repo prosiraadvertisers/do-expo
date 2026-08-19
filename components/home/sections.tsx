@@ -183,15 +183,15 @@ export function HomeSections() {
       {/* Why Attend */}
       <section
         id="why-attend"
-        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-24"
+        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-24"
       >
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              WHY SHOULD ATTEND
+              Who Should Attend
             </span>
 
-            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap">
+            <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
               Meet the Right People.
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                 {" "}

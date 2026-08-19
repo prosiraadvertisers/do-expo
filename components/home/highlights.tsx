@@ -12,29 +12,6 @@ import {
   Building2,
 } from "lucide-react"
 
-const items = [
-  {
-    icon: BookOpen,
-    title: "Importer & Exporter Guide",
-    desc: "Everything you need to plan successful meetings and discover global trade opportunities.",
-  },
-  {
-    icon: Plane,
-    title: "International Delegates",
-    desc: "Travel assistance, hotel partners and visa support for overseas visitors.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Trade Opportunities",
-    desc: "Explore innovative products, sourcing solutions and emerging international markets.",
-  },
-  {
-    icon: Users,
-    title: "B2B Matchmaking",
-    desc: "Pre-scheduled meetings connecting manufacturers, exporters, importers and global buyers.",
-  },
-]
-
 const expoHighlights = [
   {
     title: "B2B Meetings",
@@ -81,52 +58,21 @@ const bottomFeatures = [
 export function Highlights() {
   return (
     <>
-      {/* Existing Highlights */}
-      <section className="relative z-10 -mt-10 px-4 pb-8">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-2xl bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-            >
-              {/* Icon */}
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30 transition-all duration-300 group-hover:scale-110">
-                <item.icon
-                  className="h-7 w-7 opacity-100"
-                  strokeWidth={2.5}
-                />
-              </div>
-
-              {/* Title */}
-              <h3 className="mb-3 text-3xl font-bold text-slate-900">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-base leading-8 text-slate-600">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* New Expo Highlights Section */}
       <section
         id="expo-highlights"
-        className="relative overflow-hidden bg-white pt-10 pb-24 scroll-mt-24"
-      >
+      className="relative overflow-hidden bg-white pt-10 pb-10 scroll-mt-24"      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.08),transparent_30%)]" />
 
         <div className="relative mx-auto max-w-7xl px-4">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+              
               Expo Highlights
             </span>
 
             <div className="mx-auto w-full max-w-[1800px] px-4 text-center">
-              <h2 className="mt-5 whitespace-nowrap text-center text-3xl font-black tracking-tight text-slate-900 lg:text-4xl xl:text-5xl">
+              <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-4xl xl:text-5xl">
                 Everything That Makes{" "}
                 <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                   doexim Expo Exceptional

@@ -72,11 +72,11 @@ export default function AboutPage() {
             </span>
 
             <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-left lg:text-5xl lg:whitespace-nowrap">
-  Where Indian Business Meets{" "}
-  <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-    Global Opportunity
-  </span>
-</h2>
+              Where Indian Business Meets{" "}
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                Global Opportunity
+              </span>
+            </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
               doexim expo is a next-generation B2B international trade platform
@@ -141,11 +141,11 @@ export default function AboutPage() {
               </p>
 
               <p className="mt-4 max-w-3xl leading-7 text-slate-500 lg:text-base lg:leading-8">
-                doexim Trade Expo envisions a future where every Indian exporter,
-                manufacturer, merchant exporter, service provider and trade
-                professional can access global markets, build meaningful business
-                relationships and discover new opportunities through one
-                integrated platform.
+                doexim Trade Expo envisions a future where every Indian
+                exporter, manufacturer, merchant exporter, service provider and
+                trade professional can access global markets, build meaningful
+                business relationships and discover new opportunities through
+                one integrated platform.
               </p>
             </div>
           </div>
@@ -251,7 +251,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+              
               Expo Highlights
             </span>
 

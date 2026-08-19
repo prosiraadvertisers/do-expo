@@ -164,7 +164,7 @@ export default function VisitorsPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              WHY SHOULD ATTEND
+              Who Should Attend
             </span>
 
             <h2 className="mt-5 text-5xl font-bold text-slate-900">

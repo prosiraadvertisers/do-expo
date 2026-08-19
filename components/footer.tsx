@@ -74,6 +74,7 @@ export function Footer() {
               <FooterLink href="/">Volunteer's</FooterLink>
               <FooterLink href="/">Become Media Partner</FooterLink>
               <FooterLink href="/">Join doexim Network</FooterLink>
+              <FooterLink href="/">International Delegates</FooterLink>
             </ul>
           </div>
 

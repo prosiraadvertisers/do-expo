@@ -38,8 +38,7 @@ export function Hero() {
 <div className="absolute inset-0 bg-gradient-to-r from-[#07152c]/30 via-[#07152c]/10 to-transparent" />
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-10 lg:grid-cols-12 lg:px-8">
         {/* LEFT — content */}
-        <div className="order-2 flex w-full items-center lg:order-1 lg:col-span-8">
-          {/* Mobile / tablet (< lg) — ONLY THIS PART CHANGED */}
+<div className="order-1 flex w-full items-center lg:order-1 lg:col-span-8">          {/* Mobile / tablet (< lg) — ONLY THIS PART CHANGED */}
           <div className="w-full lg:hidden">
             <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-black/90">
@@ -123,8 +122,7 @@ export function Hero() {
         </div>
 
         {/* RIGHT — countdown, key details, CTAs */}
-        <div className="order-1 mx-auto w-full max-w-md lg:sticky lg:top-0 lg:order-2 lg:col-span-4 lg:mx-0 lg:max-w-none">
-          <div className="rounded-3xl border border-white/40 bg-white/18 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:p-4 sm:space-y-4">
+<div className="order-2 mx-auto mt-8 w-full max-w-md lg:sticky lg:top-0 lg:order-2 lg:mt-0 lg:col-span-4 lg:mx-0 lg:max-w-none">          <div className="rounded-3xl border border-white/40 bg-white/18 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:p-4 sm:space-y-4">
             <div className="min-w-0">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-black/90">
                 Doors open in
