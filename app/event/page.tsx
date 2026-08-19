@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 }
 
 const keyDates = [
-  { icon: Ticket, label: "Registration Opens", value: "12 Jan 2027" },
+  { icon: Ticket, label: "Registration Opens", value: "15 Jun 2027" },
   { icon: Users, label: "Buyer-Seller Matching", value: "01 Mar 2027" },
   { icon: CalendarDays, label: "Expo Days", value: EVENT.dateLabel },
-  { icon: Trophy, label: "Export Excellence Awards", value: "23 Apr 2027" },
+  { icon: Trophy, label: "Export Excellence Awards", value: "17 Dec 2027" },
 ]
 
 export default function EventPage() {

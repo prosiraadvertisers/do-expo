@@ -396,10 +396,10 @@ function ExhibitDropdown() {
           
           <li>
             <Link
-              href="/exhibitors"
+              href="/exhibitor-manual"
               className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
             >
-              Exhibitors Manual
+              Exhibitor Manual & Rules
             </Link>
           </li>
           <li>
@@ -528,11 +528,11 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                 Pre-Event Schedule
               </Link>
               <Link
-                href="/exhibitors"
+                href="/exhibitor-manual"
                 onClick={onClose}
                 className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
               >
-                Exhibitors Manual
+                Exhibitor Manual & Rules
               </Link>
               <Link
                 href="/exhibitors"

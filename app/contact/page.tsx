@@ -100,9 +100,13 @@ export default function ContactPage() {
                   Office Address
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  3rd Floor, Patil Plaza,
+                  308, Patil Plaza,
+                  <br/>
+                  Mitra Mandal Chowk,         
                   <br />
-                  Swargate, Pune – 411037
+                  Parvati Paytha, Swargate,
+                  <br/>
+                   Pune – 411037
                   <br />
                   Maharashtra, India
                 </p>

@@ -51,7 +51,7 @@ export function Footer() {
                 connect@prosira.in
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="size-4 shrink-0 text-gold" /> +91 97652 59272
+                <Phone className="size-4 shrink-0 text-gold" /> +91 90288 15714
               </li>
             </ul>
           </div>
