@@ -1,6 +1,12 @@
 "use client";
 
-import { Store, Handshake, Ticket, ArrowRight } from "lucide-react";
+import {
+  Store,
+  Handshake,
+  Ticket,
+  GraduationCap,
+  ArrowRight,
+} from "lucide-react";
 import {
   useRegistration,
   type RegistrationType,
@@ -26,13 +32,13 @@ const CARDS: {
     title: "Exhibitor Registration",
     desc: "Showcase your products and services to global importers, exporters, distributors and buyers.",
     badge: "Exhibition Open",
-    accent: "bg-orange-100 text-orange-700",
-    cardBg: "bg-orange-100",
-    cardBorder: "border-orange-300",
-    iconBg: "from-orange-500 to-amber-500",
-    titleColor: "text-orange-950",
-    hoverBorder: "hover:border-orange-300",
-    hoverShadow: "hover:shadow-[0_20px_60px_rgba(249,115,22,0.18)]",
+    accent: "bg-purple-100 text-purple-700",
+    cardBg: "bg-purple-100",
+    cardBorder: "border-purple-300",
+    iconBg: "from-purple-600 to-indigo-600",
+    titleColor: "text-purple-950",
+    hoverBorder: "hover:border-purple-300",
+    hoverShadow: "hover:shadow-[0_20px_60px_rgba(147,51,234,0.18)]",
   },
   {
     type: "buyer-seller",
@@ -53,7 +59,7 @@ const CARDS: {
     icon: Ticket,
     title: "Visitor Registration",
     desc: "Register free and meet international exhibitors, buyers and exporters under one roof.",
-    badge: "Pass",
+    badge: "Free Pass",
     accent: "bg-emerald-100 text-emerald-700",
     cardBg: "bg-emerald-100",
     cardBorder: "border-emerald-300",
@@ -62,6 +68,20 @@ const CARDS: {
     hoverBorder: "hover:border-emerald-300",
     hoverShadow: "hover:shadow-[0_20px_60px_rgba(16,185,129,0.18)]",
   },
+  {
+    type: "seminar",
+    icon: GraduationCap,
+    title: "Seminar Pass",
+    desc: "Attend export policy masterclasses, banking summits, and global market panels with top experts.",
+    badge: "Knowledge Summit",
+    accent: "bg-orange-100 text-orange-700",
+    cardBg: "bg-orange-100",
+    cardBorder: "border-orange-300",
+    iconBg: "from-orange-500 to-amber-500",
+    titleColor: "text-orange-950",
+    hoverBorder: "hover:border-orange-300",
+    hoverShadow: "hover:shadow-[0_20px_60px_rgba(249,115,22,0.18)]",
+  },
 ];
 
 export function PriorityCards() {
@@ -69,7 +89,7 @@ export function PriorityCards() {
 
   return (
     <section className="relative z-20 mt-8 px-4 pb-0 sm:-mt-28 sm:px-6 sm:pb-0 lg:-mt-10 lg:px-8">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {CARDS.map((c) => {
           const Icon = c.icon;
 

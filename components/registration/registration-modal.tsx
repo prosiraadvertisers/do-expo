@@ -1,11 +1,12 @@
 'use client'
 
-import { Store, Handshake, Ticket } from 'lucide-react'
+import { Store, Handshake, Ticket, GraduationCap } from 'lucide-react'
 import { Modal } from '@/components/ui/modal'
 import { useRegistration, type RegistrationType } from './registration-context'
 import { ExhibitorForm } from '@/components/forms/exhibitor-form'
 import { BuyerSellerForm } from '@/components/forms/buyer-seller-form'
 import { VisitorForm } from '@/components/forms/visitor-form'
+import { SeminarForm } from '@/components/forms/seminar-form'
 
 const CONFIG: Record<
   RegistrationType,
@@ -28,6 +29,12 @@ const CONFIG: Record<
     eyebrow: 'Free Visitor Registration',
     title: 'Your free pass to the future of B2B global trade',
     blurb: 'Personalised recommendations, priority entry and access to every zone \u2014 completely free.',
+  },
+  seminar: {
+    icon: GraduationCap,
+    eyebrow: 'Seminar & Knowledge Summit Pass',
+    title: 'Learn, Connect & Master Global Trade',
+    blurb: 'Gain priority access to keynote sessions, export masterclasses, industry panels, and certified policy workshops.',
   },
 }
 
@@ -67,6 +74,7 @@ function ModalBody({ type }: { type: RegistrationType }) {
         {type === 'exhibitor' && <ExhibitorForm />}
         {type === 'buyer-seller' && <BuyerSellerForm compact />}
         {type === 'visitor' && <VisitorForm />}
+        {type === 'seminar' && <SeminarForm />}
       </div>
     </>
   )

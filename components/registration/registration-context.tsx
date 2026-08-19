@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
 
-export type RegistrationType = 'exhibitor' | 'buyer-seller' | 'visitor'
+export type RegistrationType = 'exhibitor' | 'buyer-seller' | 'visitor' | 'seminar'
 
 type RegistrationContextValue = {
   active: RegistrationType | null

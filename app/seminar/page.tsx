@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Clock, MapPin, CalendarDays, Users } from "lucide-react";
-
+import { Clock, MapPin, CalendarDays, Users, GraduationCap, ArrowRight, Sparkles, CheckCircle2, Ticket } from "lucide-react";
+import { useRegistration } from "@/components/registration/registration-context";
+import { SeminarForm } from "@/components/forms/seminar-form";
+import { CtaButton } from "@/components/ui/cta";
 
 /**
  * TODO: swap for real sessions once confirmed. The whole schedule below is
@@ -127,19 +129,24 @@ function initials(name: string) {
 }
 
 export default function SeminarPage() {
+  const { open } = useRegistration();
   const [activeDay, setActiveDay] = useState(SCHEDULE[0].id);
   const day = SCHEDULE.find((d) => d.id === activeDay) ?? SCHEDULE[0];
 
   return (
     <>
       {/* ================= HERO (compact) ================= */}
-<section className="relative overflow-hidden bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] pt-24 pb-14 text-white sm:pt-28 sm:pb-16">        <div className="absolute inset-0 opacity-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] pt-24 pb-14 text-white sm:pt-28 sm:pb-16">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-blue-300 blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 text-center">
-          
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold backdrop-blur">
+            <GraduationCap className="size-4" /> DO EXIM Knowledge Summit
+          </span>
+
           <h1 className="mt-6 text-4xl font-extrabold leading-tight lg:text-5xl">
             Learn. Connect. Grow Globally.
           </h1>
@@ -151,17 +158,23 @@ export default function SeminarPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="#registration"
-              className="rounded-xl bg-white px-7 py-3.5 text-base font-semibold text-[#191456] transition hover:scale-105"
+            <button
+              onClick={() => open("seminar")}
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-base font-semibold text-[#191456] shadow-lg transition hover:scale-105 hover:bg-slate-100"
             >
-              Register for Seminar
-            </Link>
+              <GraduationCap className="size-5" /> Get Seminar Pass
+            </button>
             <Link
               href="#schedule"
               className="rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold backdrop-blur transition hover:bg-white/20"
             >
               View Schedule
+            </Link>
+            <Link
+              href="/seminar-registration"
+              className="rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold backdrop-blur transition hover:bg-white/20"
+            >
+              Dedicated Registration Page
             </Link>
           </div>
 
@@ -288,6 +301,27 @@ export default function SeminarPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= INLINE REGISTRATION SECTION ================= */}
+      <section id="registration" className="bg-white px-4 py-16 sm:px-6 lg:px-8 border-t border-slate-200">
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-3xl text-center mb-10">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/15 px-3.5 py-1 text-xs font-bold text-purple-700 dark:text-purple-400">
+              <GraduationCap className="size-4" /> Priority Knowledge Summit Access
+            </span>
+            <h2 className="mt-4 font-heading text-3xl font-bold text-slate-900 sm:text-4xl">
+              Register for Your Seminar Pass
+            </h2>
+            <p className="mt-3 text-base text-slate-600">
+              Complete your registration below to reserve your delegate seat for keynote addresses, export policy panels, and practical trade workshops.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-slate-50/50 p-6 sm:p-8 shadow-sm">
+            <SeminarForm />
           </div>
         </div>
       </section>

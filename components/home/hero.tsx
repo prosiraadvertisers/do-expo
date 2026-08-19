@@ -59,7 +59,7 @@ export function Hero() {
               {[
                 { icon: Store, label: "Exhibitors", value: "360+" },
                 { icon: Globe, label: "Countries", value: "10+" },
-                { icon: Users, label: "Visitors", value: "25k+" },
+                { icon: Users, label: "Expected Visitors", value: "25k+" },
               ].map(({ icon: Icon, label, value }) => (
                 <span
                   key={label}
@@ -113,7 +113,7 @@ export function Hero() {
                     <span className="block text-base font-bold text-white">
                       {value}
                     </span>
-                    <span className="block text-xs text-white/60">{label}</span>
+                    <span className="block text-xs text-white/80">{label}</span>
                   </span>
                 </span>
               ))}
