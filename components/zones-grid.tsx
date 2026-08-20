@@ -4,7 +4,6 @@ import { Tag } from "lucide-react";
 import { useState } from "react";
 import { ZONES } from "@/lib/event-data";
 
-
 export function ZonesGrid({ withImages }: { withImages?: boolean }) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -161,20 +160,12 @@ export function ZonesGrid({ withImages }: { withImages?: boolean }) {
               `}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Categories Heading */}
+              {/* Zone Heading */}
               <div className="mb-4 flex shrink-0 items-center gap-2">
-                <Tag className="h-4 w-4 shrink-0 text-white" />
+                <zone.icon className="h-5 w-5 shrink-0 text-white" />
 
-                <span
-                  className="
-                    text-xs
-                    font-bold
-                    uppercase
-                    tracking-[0.18em]
-                    text-white
-                  "
-                >
-                  Categories
+                <span className="text-sm font-bold text-white">
+                  Zone {idx + 1} – {zone.name}
                 </span>
               </div>
 

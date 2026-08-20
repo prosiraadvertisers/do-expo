@@ -103,73 +103,61 @@ const attendeeTypes = [
   {
     icon: "🏭",
     title: "Manufacturers",
-    color: "bg-blue-100",
     desc: "Showcase your production capabilities and connect with global buyers.",
   },
   {
     icon: "🚢",
     title: "Exporters",
-    color: "bg-emerald-100",
     desc: "Expand your reach and find new international markets for your products.",
   },
   {
     icon: "📦",
     title: "Importers",
-    color: "bg-orange-100",
     desc: "Source quality products directly from verified manufacturers and suppliers.",
   },
   {
     icon: "🏢",
     title: "MSMEs",
-    color: "bg-purple-100",
     desc: "Grow your business with tailored support and networking opportunities.",
   },
   {
     icon: "🚀",
     title: "Startups",
-    color: "bg-pink-100",
     desc: "Gain visibility, attract investors, and scale your innovative solutions.",
   },
   {
     icon: "🏬",
     title: "Wholesalers",
-    color: "bg-cyan-100",
     desc: "Discover bulk sourcing options and build long-term supplier relationships.",
   },
   {
     icon: "🛍️",
     title: "Retail Chains",
-    color: "bg-indigo-100",
     desc: "Find trending products and negotiate directly with manufacturers.",
   },
   {
     icon: "🚚",
     title: "Distributors",
-    color: "bg-lime-100",
     desc: "Partner with brands and expand your distribution network across regions.",
   },
   {
     icon: "🤝",
     title: "Trade Associations",
-    color: "bg-red-100",
     desc: "Collaborate with industry bodies and promote sector-wide growth.",
   },
   {
     icon: "🏛️",
     title: "Government Bodies",
-    color: "bg-yellow-100",
     desc: "Support trade initiatives and connect with businesses for policy implementation.",
   },
   {
     icon: "💰",
     title: "Investors",
-    color: "bg-green-100",
     desc: "Explore high-potential businesses and investment opportunities in global trade.",
   },
   {
     icon: "🎓",
     title: "Students",
-    color: "bg-sky-100",
     desc: "Learn about international trade, network with professionals, and explore careers.",
   },
 ];
@@ -200,30 +188,73 @@ export function HomeSections() {
             </h2>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {attendeeTypes.map((item) => (
-              <div
-                key={item.title}
-                className="group rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl sm:p-8"
-              >
-                <div
-                  className={`mx-auto flex h-16 w-16 items-center justify-center rounded-3xl text-3xl ${item.color} sm:h-20 sm:w-20 sm:text-4xl`}
-                >
-                  {item.icon}
-                </div>
-
-                <h3 className="mt-5 text-center text-lg font-bold text-slate-900 sm:mt-6 sm:text-xl">
-                  {item.title}
-                </h3>
-
-                <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24 sm:mt-4" />
-
-                <p className="mt-4 text-center text-sm leading-7 text-slate-600 sm:mt-5">
-                  {item.desc}
-                </p>
+          <div className="mt-16">
+            {/* Two infinite marquee rows, scrolling opposite directions.
+                Purely decorative/motion-driven — no cards, no boxes. */}
+            <div className="-mx-4 space-y-4 overflow-hidden sm:-mx-6">
+              <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
+                {[...attendeeTypes, ...attendeeTypes].map((item, i) => (
+                  <span
+                    key={`row1-${i}`}
+                    className="flex items-center gap-3 text-2xl font-bold text-slate-800 sm:text-3xl"
+                  >
+                    <span className="text-xl sm:text-2xl">{item.icon}</span>
+                    {item.title}
+                    <span className="text-slate-300">•</span>
+                  </span>
+                ))}
               </div>
-            ))}
+
+              <div className="marquee-track-reverse flex w-max gap-10 whitespace-nowrap">
+                {[...attendeeTypes, ...attendeeTypes].reverse().map((item, i) => (
+                  <span
+                    key={`row2-${i}`}
+                    className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
+                  >
+                    <span className="text-xl sm:text-2xl">{item.icon}</span>
+                    {item.title}
+                    <span className="text-slate-200">•</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Plain row-list with descriptions — dividers only, no card
+                background, no border-radius boxes */}
+            <div className="mx-auto mt-16 max-w-4xl divide-y divide-slate-200 border-y border-slate-200">
+              {attendeeTypes.map((item) => (
+                <div
+                  key={item.title}
+                  className="flex flex-col gap-1.5 py-5 sm:flex-row sm:items-baseline sm:gap-8 sm:py-6"
+                >
+                  <span className="flex shrink-0 items-center gap-2 text-base font-bold text-slate-900 sm:w-56">
+                    <span className="text-lg">{item.icon}</span>
+                    {item.title}
+                  </span>
+                  <span className="text-sm leading-6 text-muted-foreground sm:text-base">
+                    {item.desc}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          <style>{`
+            .marquee-track {
+              animation: marquee-left 32s linear infinite;
+            }
+            .marquee-track-reverse {
+              animation: marquee-right 32s linear infinite;
+            }
+            @keyframes marquee-left {
+              from { transform: translateX(0); }
+              to { transform: translateX(-50%); }
+            }
+            @keyframes marquee-right {
+              from { transform: translateX(-50%); }
+              to { transform: translateX(0); }
+            }
+          `}</style>
         </div>
       </section>
     </>

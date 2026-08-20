@@ -306,7 +306,7 @@ export default function VisitorsPage() {
             <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap">
               Six Dedicated{" "}
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                Export &amp; Trade Zones
+                Trade Zones
               </span>
             </h2>
           </div>

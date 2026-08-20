@@ -9,6 +9,7 @@ import {
   Store,
   Globe,
   Users,
+  Package,
 } from "lucide-react";
 import { EVENT } from "@/lib/event-data";
 import { Countdown } from "@/components/countdown";
@@ -57,9 +58,10 @@ export function Hero() {
             {/* Stats strip - mobile */}
             <div className="mt-8 flex w-full items-center justify-center gap-4 sm:gap-6">
               {[
-                { icon: Store, label: "Exhibitors", value: "360+" },
-                { icon: Globe, label: "Countries", value: "10+" },
                 { icon: Users, label: "Expected Visitors", value: "25k+" },
+                { icon: Store, label: "Exhibitors", value: "360+" },        
+                { icon: Package, label: "Product", value: "5k+" },
+                 { icon: Globe, label: "Countries", value: "10+" },
               ].map(({ icon: Icon, label, value }) => (
                 <span
                   key={label}
@@ -99,11 +101,13 @@ export function Hero() {
             </div>
 
             {/* Row 3 — full-width stats strip */}
-            <div className="mt-16 flex w-full max-w-[450px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
+            <div className="mt-16 flex w-full max-w-[600px] items-center gap-6 rounded-2xl border border-white/10 bg-[#07152c]/60 px-6 py-4 backdrop-blur-md">
               {[
-                { icon: Store, label: "Exhibitors", value: "360+" },
-                { icon: Globe, label: "Countries", value: "10+" },
                 { icon: Users, label: "Expected Visitors", value: "25k+" },
+                { icon: Store, label: "Exhibitors", value: "360+" },        
+                { icon: Package, label: "Product", value: "5k+" },
+                 { icon: Globe, label: "Countries", value: "10+" },
+                
               ].map(({ icon: Icon, label, value }) => (
                 <span key={label} className="flex items-center gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
