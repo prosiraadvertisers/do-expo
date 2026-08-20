@@ -8,10 +8,11 @@ export default function HomePage() {
     <>
       <Hero />
       <PriorityCards />
+      <HomeSections />
       <div className="pt-14">
         <Highlights />
       </div>
-      <HomeSections />
+      
     </>
   )
 }

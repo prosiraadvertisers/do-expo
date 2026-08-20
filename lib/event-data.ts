@@ -223,7 +223,7 @@ export const ZONES: Zone[] = [
   {
     id: 'export-services-startup',
     slug: 'export-services-startup',
-    name: 'Export Services & Startup Pavilion',
+    name: 'Exim Services & Startup Pavilion',
     icon: Rocket,
     hall: 'Hall 6',
     image: '/images/zone-startup.png',
@@ -260,7 +260,7 @@ export const PRIMARY_NAV: NavItem[] = [
   { label: 'Exhibit', href: '/exhibit' },
   { label: 'Exhibitor', href: '/exhibitor' },
   { label: 'Buyer Seller Meet', href: '/buyer-seller-meet', action: 'buyer-seller' },
-  { label: 'Free Visitor Registration', href: '/free-visitor-registration', action: 'visitor' },
+  { label: 'Visitor Registration', href: '/free-visitor-registration', action: 'visitor' },
 ]
 
 export const EXHIBIT_MENU = {

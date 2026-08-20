@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: '%s | doeximexpo',
   },
   description:
-    'doeximexpo presents Global Trade Expo — India’s premier B2B export exhibition across 6 zones: Agriculture, FMCG, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services. Register free pass.',
+    'doeximexpo presents Global Trade Expo — India’s premier B2B export exhibition across 6 zones: Agriculture, FMCG, Consumer Goods, Manufacturing, Textiles, Healthcare & Export Services. Register pass.',
   keywords: [
     'doeximexpo',
     'B2B trade show',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'doexim | B2B global trade Expo 2027',
-    description: 'India\u2019s premier B2B B2B global trade trade show.',
+    description: 'premier B2B global trade expo.',
     images: ['/og-image.jpeg'],
   },
   

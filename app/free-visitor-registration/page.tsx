@@ -5,7 +5,7 @@ import { CtaLink } from "@/components/ui/cta"
 import { Ticket, MapPin, Users, Zap, Award } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Free Visitor Registration",
+  title: "Visitor Registration",
   description:
     "Get your  visitor pass to B2B global trade Expo 2027. Personalized recommendations, priority entry and access to all five technology zones.",
 }
@@ -14,8 +14,8 @@ export default function FreeVisitorRegistrationPage() {
   return (
     <>
       <PageHero
-        eyebrow="Free Visitor Registration"
-        title="Your Free Pass to the Future of B2B global trade"
+        eyebrow="Visitor Registration"
+        title="Your Pass to the Future of B2B global trade"
         subtitle="Get personalized recommendations, priority entry and access to every zone — completely free. Register now and explore India's biggest B2B global trade showcase."
       />
 
@@ -41,7 +41,7 @@ export default function FreeVisitorRegistrationPage() {
                     What&apos;s Included?
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Your free pass gives you full access to all the action happening across three days.
+                    Your pass gives you full access to all the action happening across three days.
                   </p>
                 </div>
 
@@ -104,7 +104,7 @@ export default function FreeVisitorRegistrationPage() {
       <section className="bg-muted/40 px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground">
-            Why Register Your Free Pass?
+            Why Register Your Pass?
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             {[
@@ -201,10 +201,7 @@ export default function FreeVisitorRegistrationPage() {
           </h2>
           <div className="mt-10 space-y-6">
             {[
-              {
-                q: "Is the visitor pass really free?",
-                a: "Yes, 100% free. You pay nothing. No registration fees, no hidden charges. Just register and get your pass.",
-              },
+              
               {
                 q: "What does the visitor pass include?",
                 a: "Full access to all six trade zones, all keynotes and sessions, networking events, exhibition floor, and the deal room (if invited).",

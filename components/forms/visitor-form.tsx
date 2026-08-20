@@ -63,7 +63,7 @@ function icsDownload(name: string) {
 }
 
 function epassDownload(name: string, id: string) {
-  const text = `B2B global trade EXPO 2027 — FREE VISITOR E-PASS
+  const text = `B2B global trade EXPO 2027 — VISITOR E-PASS
 -------------------------------------------
 Attendee : ${name}
 Pass ID  : ${id}

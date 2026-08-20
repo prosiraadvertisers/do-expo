@@ -11,7 +11,6 @@ import {
   Briefcase,
   Building2,
 } from "lucide-react";
-import { ZonesGrid } from "@/components/zones-grid";
 
 const expoHighlights = [
   {
@@ -65,24 +64,11 @@ const bottomFeatures = [
 export function Highlights() {
   return (
     <>
-      {/* Zones */}
-      <section className="px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
-            Six Dedicated{" "}
-            <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-              Trade Zones
-            </span>
-          </h2>
-          <div className="mt-12">
-            <ZonesGrid />
-          </div>
-        </div>
-      </section>
+      
       {/* New Expo Highlights Section */}
       <section
         id="expo-highlights"
-        className="relative overflow-hidden bg-white pt-10 pb-10 scroll-mt-24"
+        className="relative overflow-hidden bg-white pt-10 pb-10 scroll-mt-14"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.08),transparent_30%)]" />
 

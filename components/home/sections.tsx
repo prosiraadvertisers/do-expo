@@ -171,12 +171,25 @@ export function HomeSections() {
   const { open } = useRegistration();
   return (
     <>
-      {/* About snapshot */}
+      {/* Zones */}
+      <section className="px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
+            Six Dedicated{" "}
+            <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+              Trade Zones
+            </span>
+          </h2>
+          <div className="mt-12">
+            <ZonesGrid />
+          </div>
+        </div>
+      </section>
 
       {/* Why Attend */}
       <section
         id="why-attend"
-        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-24"
+        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-4"
       >
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-3xl text-center">
