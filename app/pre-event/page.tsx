@@ -77,7 +77,7 @@ export default function PreEventPage() {
           <span className="inline-block font-body text-xs font-semibold tracking-[0.2em] text-[#E8912A] uppercase mb-4 px-4 py-1.5 rounded-full border border-[#E8912A]/30 bg-[#E8912A]/5">
             Pre-Event Route
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#191244] tracking-tight leading-[1.05]">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-4xl  text-[#191244] tracking-tight leading-[1.05]">
             The Road to the Expo
           </h2>
           <p className="font-body text-base sm:text-lg text-[#5C6178] mt-4 max-w-2xl">

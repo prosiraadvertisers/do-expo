@@ -1,7 +1,7 @@
-import type { Metadata } from "next"
-import { PageHero } from "@/components/page-hero"
-import { CtaButton, CtaLink } from "@/components/ui/cta"
-import { ZonesGrid } from "@/components/zones-grid"
+import type { Metadata } from "next";
+import { PageHero } from "@/components/page-hero";
+import { CtaButton, CtaLink } from "@/components/ui/cta";
+import { ZonesGrid } from "@/components/zones-grid";
 import {
   TrendingUp,
   Award,
@@ -10,32 +10,28 @@ import {
   Star,
   Zap,
   ArrowRight,
-} from "lucide-react"
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Whydoexim Expo",
   description:
     "Discover whydoexim Expo 2027 is India's premier platform for exhibitors. Reach 40,000+ qualified buyers, generate high-quality leads, and establish industry credibility.",
-}
+};
 
 export default function WhydoeximExpoPage() {
   return (
     <>
-  <div className="pt-14">
-    <PageHero
-      
-      title="Why doexim Expo 2027?"
-    >
-      <CtaButton variant="cta" size="lg">
-        Book Your Booth
-      </CtaButton>
-    </PageHero>
-  </div>
+      <div className="pt-14">
+        <PageHero title="Why doexim Expo 2027?">
+          <CtaButton variant="cta" size="lg">
+            Book Your Booth
+          </CtaButton>
+        </PageHero>
+      </div>
 
       {/* Why Exhibit Section */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
@@ -69,28 +65,33 @@ export default function WhydoeximExpoPage() {
                 desc: "Previous exhibitors report 3x pipeline growth, 20+ qualified meetings and 2-3 deal conversions per expo.",
               },
             ].map((benefit) => {
-              const Icon = benefit.icon
+              const Icon = benefit.icon;
               return (
                 <div key={benefit.title} className="glass-card rounded-2xl p-6">
                   <Icon className="mb-4 size-8 text-primary" />
                   <h3 className="font-heading text-lg font-bold text-foreground">
                     {benefit.title}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{benefit.desc}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {benefit.desc}
+                  </p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </section>
 
       {/* Zones */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Six Dedicated Export &amp; Trade Zones
+          <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
+            Six Dedicated{" "}
+            <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+              Export &amp; Trade Zones
+            </span>
           </h2>
-          <br/>
+          <br />
           <ZonesGrid />
         </div>
       </section>
@@ -115,5 +116,5 @@ export default function WhydoeximExpoPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

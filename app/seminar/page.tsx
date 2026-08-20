@@ -2,7 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Clock, MapPin, CalendarDays, Users, GraduationCap, ArrowRight, Sparkles, CheckCircle2, Ticket } from "lucide-react";
+import {
+  Clock,
+  MapPin,
+  CalendarDays,
+  Users,
+  GraduationCap,
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  Ticket,
+} from "lucide-react";
 import { useRegistration } from "@/components/registration/registration-context";
 import { SeminarForm } from "@/components/forms/seminar-form";
 import { CtaButton } from "@/components/ui/cta";
@@ -199,14 +209,12 @@ export default function SeminarPage() {
       <section id="schedule" className="scroll-mt-24 bg-slate-50  pt-14 pb-24">
         <div className="mx-auto max-w-5xl px-4">
           <div className="mx-auto max-w-3xl text-center">
-            
-            <h2 className="mt-6 text-4xl font-bold text-slate-900">
-              Two Days of Sessions, Speakers &amp; Networking
+            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-4xl">
+              Two Days of{" "}
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                Sessions, Speakers &amp; Networking
+              </span>
             </h2>
-            <p className="mt-5 text-lg text-slate-600">
-              Pick a day to see keynotes, panels, workshops and networking
-              slots — with speaker, category and venue for each.
-            </p>
           </div>
 
           {/* Day tabs */}
@@ -233,9 +241,7 @@ export default function SeminarPage() {
                     />
                   </span>
                   <span>
-                    <span className="block text-sm font-bold">
-                      {d.label}
-                    </span>
+                    <span className="block text-sm font-bold">{d.label}</span>
                     <span
                       className={`block text-xs ${active ? "text-white/70" : "text-slate-500"}`}
                     >
@@ -306,17 +312,23 @@ export default function SeminarPage() {
       </section>
 
       {/* ================= INLINE REGISTRATION SECTION ================= */}
-      <section id="registration" className="bg-white px-4 py-16 sm:px-6 lg:px-8 border-t border-slate-200">
+      <section
+        id="registration"
+        className="bg-white px-4 py-16 sm:px-6 lg:px-8 border-t border-slate-200"
+      >
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-3xl text-center mb-10">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/15 px-3.5 py-1 text-xs font-bold text-purple-700 dark:text-purple-400">
-              <GraduationCap className="size-4" /> Priority Knowledge Summit Access
+              <GraduationCap className="size-4" /> Priority Knowledge Summit
+              Access
             </span>
             <h2 className="mt-4 font-heading text-3xl font-bold text-slate-900 sm:text-4xl">
               Register for Your Seminar Pass
             </h2>
             <p className="mt-3 text-base text-slate-600">
-              Complete your registration below to reserve your delegate seat for keynote addresses, export policy panels, and practical trade workshops.
+              Complete your registration below to reserve your delegate seat for
+              keynote addresses, export policy panels, and practical trade
+              workshops.
             </p>
           </div>
 

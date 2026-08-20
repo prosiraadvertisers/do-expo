@@ -96,42 +96,38 @@ export default function VisitorsPage() {
     <>
       {/* ================= HERO ================= */}
 
-       <div className="pt-14">
-    <PageHero
-      title="Visit DO EXIM Expo"
-    >
-      <a
-        href="#visitor-registration"
-        className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
-      >
-        Register Now
-      </a>
+      <div className="pt-14">
+        <PageHero title="Visit DO EXIM Expo">
+          <a
+            href="#visitor-registration"
+            className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
+          >
+            Register Now
+          </a>
 
-      <a
-        href="#why-visit"
-        className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20"
-      >
-        Explore More
-      </a>
-    </PageHero>
-  </div>
+          <a
+            href="#why-visit"
+            className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20"
+          >
+            Explore More
+          </a>
+        </PageHero>
+      </div>
       {/* ================= WHY VISIT ================= */}
 
-      <section id="why-visit" className="scroll-mt-24 bg-white py-24">
+      <section id="why-visit" className="scroll-mt-24 bg-white py-16">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-3xl text-center">
             <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
               Why Visit
             </span>
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900">
-              Everything You Need Under One Roof
+            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap">
+              Everything You Need{" "}
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                Under One Roof
+              </span>
             </h2>
-
-            <p className="mt-5 text-lg text-slate-600">
-              Discover products, connect with businesses and explore global
-              opportunities through one powerful trade platform.
-            </p>
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -159,7 +155,7 @@ export default function VisitorsPage() {
 
       <section
         id="why-attend"
-        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-24"
+        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-12"
       >
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-3xl text-center">
@@ -174,11 +170,6 @@ export default function VisitorsPage() {
                 Grow Your Business
               </span>
             </h2>
-
-            <p className="mt-6 text-lg text-slate-600">
-              doexim Expo connects businesses, buyers and innovators from across
-              the world to create meaningful trade opportunities.
-            </p>
           </div>
 
           <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
@@ -270,7 +261,7 @@ export default function VisitorsPage() {
         </div>
       </section>
 
-      <section id="visitor-registration" className="scroll-mt-24 py-24">
+      <section id="visitor-registration" className="scroll-mt-24 py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="overflow-hidden rounded-[36px] bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] px-10 py-16 text-center text-white shadow-2xl">
             <span className="inline-flex rounded-full bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur">
@@ -304,7 +295,7 @@ export default function VisitorsPage() {
 
       <section
         id="zones"
-        className="scroll-mt-24 bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"
+        className="scroll-mt-24 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
@@ -312,15 +303,12 @@ export default function VisitorsPage() {
               Exhibition Zones
             </span>
 
-            <h2 className="mt-5 text-4xl font-bold text-slate-900">
-              Explore Every Business Zone
+            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap">
+              Six Dedicated{" "}
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                Export &amp; Trade Zones
+              </span>
             </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Discover dedicated exhibition zones designed for manufacturers,
-              exporters, importers, logistics providers, financial institutions,
-              technology companies and international trade partners.
-            </p>
           </div>
 
           <ZonesGrid withImages />

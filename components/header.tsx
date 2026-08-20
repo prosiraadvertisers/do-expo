@@ -208,14 +208,7 @@ function VisitorsDropdown() {
               Exhibitors List
             </Link>
           </li>
-          <li>
-            <Link
-              href="/visitors#visitor-faq"
-              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
-            >
-              FAQ
-            </Link>
-          </li>
+          
         </ul>
       </div>
     </div>

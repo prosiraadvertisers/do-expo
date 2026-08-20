@@ -46,19 +46,39 @@ const BENEFITS: Benefit[] = [
   {
     label: "Event Naming Rights",
     exclusive: true,
-    tiers: { title: "Exclusive", powered: false, coPowered: false, associate: false },
+    tiers: {
+      title: "Exclusive",
+      powered: false,
+      coPowered: false,
+      associate: false,
+    },
   },
   {
     label: "Logo on Event Identity",
-    tiers: { title: "Largest", powered: "Large", coPowered: "Medium", associate: "Standard" },
+    tiers: {
+      title: "Largest",
+      powered: "Large",
+      coPowered: "Medium",
+      associate: "Standard",
+    },
   },
   {
     label: "Main Stage Branding",
-    tiers: { title: "Exclusive", powered: "Prominent", coPowered: "Shared", associate: "Limited" },
+    tiers: {
+      title: "Exclusive",
+      powered: "Prominent",
+      coPowered: "Shared",
+      associate: "Limited",
+    },
   },
   {
     label: "Inauguration Recognition",
-    tiers: { title: "Chief Guest Level", powered: "VIP", coPowered: "VIP", associate: "Invitation" },
+    tiers: {
+      title: "Chief Guest Level",
+      powered: "VIP",
+      coPowered: "VIP",
+      associate: "Invitation",
+    },
   },
   {
     label: "Speaking Opportunity",
@@ -80,7 +100,12 @@ const BENEFITS: Benefit[] = [
   },
   {
     label: "Product Launch",
-    tiers: { title: "Exclusive", powered: "Shared", coPowered: "Shared", associate: "Shared" },
+    tiers: {
+      title: "Exclusive",
+      powered: "Shared",
+      coPowered: "Shared",
+      associate: "Shared",
+    },
   },
   {
     label: "Buyer Meetings",
@@ -102,15 +127,30 @@ const BENEFITS: Benefit[] = [
   },
   {
     label: "Mobile App Branding",
-    tiers: { title: "Exclusive", powered: "Shared", coPowered: "Logo", associate: "Mention" },
+    tiers: {
+      title: "Exclusive",
+      powered: "Shared",
+      coPowered: "Logo",
+      associate: "Mention",
+    },
   },
   {
     label: "Website Branding",
-    tiers: { title: "Homepage", powered: "Premium", coPowered: "Standard", associate: "Logo" },
+    tiers: {
+      title: "Homepage",
+      powered: "Premium",
+      coPowered: "Standard",
+      associate: "Logo",
+    },
   },
   {
     label: "Email Campaigns",
-    tiers: { title: "Dedicated", powered: "Co-branded", coPowered: "Mention", associate: "Logo" },
+    tiers: {
+      title: "Dedicated",
+      powered: "Co-branded",
+      coPowered: "Mention",
+      associate: "Logo",
+    },
   },
   {
     label: "Social Media Campaign",
@@ -123,11 +163,21 @@ const BENEFITS: Benefit[] = [
   },
   {
     label: "Press Conference",
-    tiers: { title: "Lead Brand", powered: "Co-host", coPowered: "Mention", associate: "Mention" },
+    tiers: {
+      title: "Lead Brand",
+      powered: "Co-host",
+      coPowered: "Mention",
+      associate: "Mention",
+    },
   },
   {
     label: "Media Interviews",
-    tiers: { title: "Exclusive", powered: "Priority", coPowered: "Limited", associate: false },
+    tiers: {
+      title: "Exclusive",
+      powered: "Priority",
+      coPowered: "Limited",
+      associate: false,
+    },
   },
   {
     label: "Award Ceremony",
@@ -149,15 +199,30 @@ const BENEFITS: Benefit[] = [
   },
   {
     label: "Networking Dinner",
-    tiers: { title: "Host", powered: "VIP", coPowered: "VIP", associate: "VIP" },
+    tiers: {
+      title: "Host",
+      powered: "VIP",
+      coPowered: "VIP",
+      associate: "VIP",
+    },
   },
   {
     label: "Digital Screens",
-    tiers: { title: "Maximum", powered: "High", coPowered: "Medium", associate: "Limited" },
+    tiers: {
+      title: "Maximum",
+      powered: "High",
+      coPowered: "Medium",
+      associate: "Limited",
+    },
   },
   {
     label: "Printed Collateral",
-    tiers: { title: "Front Cover", powered: "Premium", coPowered: "Standard", associate: "Standard" },
+    tiers: {
+      title: "Front Cover",
+      powered: "Premium",
+      coPowered: "Standard",
+      associate: "Standard",
+    },
   },
   {
     label: "Brand Film",
@@ -195,7 +260,8 @@ const TIER_ACCENT_BAR: Record<Tier, string> = {
 };
 
 const TIER_BODY_STYLES: Record<Tier, string> = {
-  title: "bg-gradient-to-b from-[#191456]/[0.04] to-[#F0B429]/[0.05] group-hover:from-[#191456]/[0.08] group-hover:to-[#F0B429]/[0.1]",
+  title:
+    "bg-gradient-to-b from-[#191456]/[0.04] to-[#F0B429]/[0.05] group-hover:from-[#191456]/[0.08] group-hover:to-[#F0B429]/[0.1]",
   powered: "bg-[#191B65]/[0.025] group-hover:bg-[#191B65]/[0.06]",
   coPowered: "bg-[#172977]/[0.02] group-hover:bg-[#172977]/[0.05]",
   associate: "bg-slate-50/60 group-hover:bg-slate-100",
@@ -259,13 +325,14 @@ export default function PartnerPage() {
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#191456]/10 px-4 py-2 text-sm font-semibold text-[#191456]">
-            
             Sponsorship
           </span>
-          <h2 className="mt-6 text-4xl font-bold text-slate-900 sm:text-5xl">
-            Partner With doexim  Expo 2027
+          <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl">
+            Partner With{" "}
+            <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+              doexim Expo 2027
+            </span>
           </h2>
-          
         </div>
 
         {/* Comparison table */}
@@ -300,9 +367,7 @@ export default function PartnerPage() {
                     <p className="font-heading text-lg font-bold">
                       {tier.name}
                     </p>
-                    <p
-                      className={`mt-1 text-xs ${TIER_BLURB_STYLES[tier.id]}`}
-                    >
+                    <p className={`mt-1 text-xs ${TIER_BLURB_STYLES[tier.id]}`}>
                       {tier.blurb}
                     </p>
                   </div>
@@ -350,8 +415,6 @@ export default function PartnerPage() {
           </div>
         </div>
 
-        
-
         {/* CTA */}
         <div className="mt-14 flex flex-col items-center justify-center gap-5 rounded-[28px] bg-gradient-to-r from-[#191456] via-[#191B65] to-[#172977] px-8 py-12 text-center text-white sm:flex-row sm:justify-between sm:text-left">
           <div>
@@ -359,8 +422,8 @@ export default function PartnerPage() {
               Ready to put your brand in front of global buyers?
             </h3>
             <p className="mt-2 max-w-xl text-white/75">
-              Limited sponsorship slots available for DO EXIM Trade Expo
-              2027. Lock in your tier before booths sell out.
+              Limited sponsorship slots available for DO EXIM Trade Expo 2027.
+              Lock in your tier before booths sell out.
             </p>
           </div>
           <Link
