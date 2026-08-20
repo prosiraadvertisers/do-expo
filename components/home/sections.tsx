@@ -101,11 +101,6 @@ const news = [
 
 const attendeeTypes = [
   {
-    icon: "🏭",
-    title: "Manufacturers",
-    desc: "Showcase your production capabilities and connect with global buyers.",
-  },
-  {
     icon: "🚢",
     title: "Exporters",
     desc: "Expand your reach and find new international markets for your products.",
@@ -114,6 +109,16 @@ const attendeeTypes = [
     icon: "📦",
     title: "Importers",
     desc: "Source quality products directly from verified manufacturers and suppliers.",
+  },
+  {
+    icon: "🌍",
+    title: "Merchant Exporters",
+    desc: "Expand exports through trusted global partnerships.",
+  },
+  {
+    icon: "🏭",
+    title: "Manufacturers",
+    desc: "Showcase your production capabilities and connect with global buyers.",
   },
   {
     icon: "🏢",
@@ -206,16 +211,18 @@ export function HomeSections() {
               </div>
 
               <div className="marquee-track-reverse flex w-max gap-10 whitespace-nowrap">
-                {[...attendeeTypes, ...attendeeTypes].reverse().map((item, i) => (
-                  <span
-                    key={`row2-${i}`}
-                    className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
-                  >
-                    <span className="text-xl sm:text-2xl">{item.icon}</span>
-                    {item.title}
-                    <span className="text-slate-200">•</span>
-                  </span>
-                ))}
+                {[...attendeeTypes, ...attendeeTypes]
+                  .reverse()
+                  .map((item, i) => (
+                    <span
+                      key={`row2-${i}`}
+                      className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
+                    >
+                      <span className="text-xl sm:text-2xl">{item.icon}</span>
+                      {item.title}
+                      <span className="text-slate-200">•</span>
+                    </span>
+                  ))}
               </div>
             </div>
 
