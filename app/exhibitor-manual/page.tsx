@@ -84,7 +84,7 @@ export default function ExhibitorManualPage() {
               </div>
               <div className="min-w-0">
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Venue</p>
-                <p className="truncate text-xs font-bold sm:text-sm text-foreground">Halls6, BEC Mumbai</p>
+                <p className="truncate text-xs font-bold sm:text-sm text-foreground">Hall 6, BEC Mumbai</p>
               </div>
             </div>
 

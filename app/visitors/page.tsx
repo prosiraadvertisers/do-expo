@@ -167,9 +167,12 @@ export default function VisitorsPage() {
               Who Should Attend
             </span>
 
-            <h2 className="mt-5 text-5xl font-bold text-slate-900">
+            <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
               Meet the Right People.
-              <span className="block text-primary">Grow Your Business.</span>
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                {" "}
+                Grow Your Business
+              </span>
             </h2>
 
             <p className="mt-6 text-lg text-slate-600">
