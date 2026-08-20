@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     description:
       'India\u2019s premier B2B international trade show. Exhibit, network in the Deal Room, and get your  visitor pass.',
     siteName: 'doexim',
-    images: [{ url: '/images/hero-expo.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2027' }],
+    images: [{ url: '/logo-dark.png', width: 1200, height: 630, alt: 'B2B global trade Expo 2027' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'doexim | B2B global trade Expo 2027',
     description: 'India\u2019s premier B2B B2B global trade trade show.',
-    images: ['/images/hero-expo.png'],
+    images: ['/logo-dark.png'],
   },
   
 }
