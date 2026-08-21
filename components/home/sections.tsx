@@ -160,11 +160,7 @@ const attendeeTypes = [
     title: "Investors",
     desc: "Explore high-potential businesses and investment opportunities in global trade.",
   },
-  {
-    icon: "🎓",
-    title: "Students",
-    desc: "Learn about international trade, network with professionals, and explore careers.",
-  },
+ 
 ];
 
 export function HomeSections() {
