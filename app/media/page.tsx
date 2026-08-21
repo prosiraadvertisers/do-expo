@@ -76,13 +76,13 @@ const NEWS_ITEMS = [
   {
     category: "Announcement",
     date: "21 Apr 2027",
-    title: "DO EXIM Expo 2027 registrations are now open",
+    title: "doexim Expo 2027 registrations are now open",
     desc: "Visitor registrations and exhibitor bookings are now available for the upcoming international trade exhibition.",
   },
   {
     category: "International Trade",
     date: "28 Jan 2027",
-    title: "50+ countries confirm participation",
+    title: "10+ countries confirm participation",
     desc: "Global buyers, exporters and trade organizations are preparing to showcase opportunities from around the world.",
   },
   {
@@ -113,26 +113,26 @@ const NEWS_ITEMS = [
 
 const PRESS_RELEASES = [
   {
-    title: "DO EXIM Expo 2027 Media Fact Sheet Released",
+    title: "doexim Expo 2027 Media Fact Sheet Released",
     date: "10 Apr 2027",
     summary:
       "Official fact sheet covering exhibitor numbers, hall layout, visitor projections and international delegations.",
   },
   {
-    title: "Trade Delegations from 50+ Countries Confirmed",
+    title: "Trade Delegations from 10+ Countries Confirmed",
     date: "28 Jan 2027",
     summary:
       "A detailed breakdown of confirmed international buyer delegations and their sectors of interest.",
   },
   {
-    title: "DO EXIM Expo Announces Sponsorship Tiers for 2027",
-    date: "15 Dec 2026",
+    title: "doexim Expo Announces Sponsorship Tiers for 2027",
+    date: "15 Dec 2027",
     summary:
       "Title, Powered By, Co-Powered By and Associate sponsorship packages now open for the 2027 edition.",
   },
   {
     title: "Bombay Exhibition Centre Confirmed as Official Venue",
-    date: "20 Nov 2026",
+    date: "20 Nov 2027",
     summary:
       "The 2027 edition returns to BEC, Goregaon with expanded hall space across Halls 2, 3, 4 and 6.",
   },
@@ -153,11 +153,11 @@ const GALLERY_ITEMS: {
   title: string
   tone: string
 }[] = [
-  { category: "Expo Highlights", title: "Opening Ceremony 2026", tone: "from-[#061AC9] to-[#3B82F6]" },
-  { category: "B2B Meetings", title: "Buyer-Seller Meet Hall A", tone: "from-blue-500 to-cyan-500" },
+  { category: "Expo Highlights", title: "Opening Ceremony 2027", tone: "from-[#061AC9] to-[#3B82F6]" },
+  { category: "B2B Meetings", title: "Buyer-Seller Meet Hall 6", tone: "from-blue-500 to-cyan-500" },
   { category: "Trade Zones", title: "Manufacturing Zone Walkthrough", tone: "from-slate-700 to-slate-900" },
   { category: "Networking", title: "Evening Networking Dinner", tone: "from-indigo-500 to-blue-700" },
-  { category: "Product Showcase", title: "Live Product Demo — Hall 3", tone: "from-sky-500 to-blue-600" },
+  { category: "Product Showcase", title: "Live Product Demo — Hall 6", tone: "from-sky-500 to-blue-600" },
   { category: "Conference Sessions", title: "Keynote: Global Export Trends", tone: "from-blue-700 to-indigo-900" },
   { category: "Expo Highlights", title: "Exhibitor Floor, Day 2", tone: "from-blue-600 to-sky-400" },
   { category: "B2B Meetings", title: "One-on-One Buyer Sessions", tone: "from-cyan-600 to-blue-800" },
@@ -168,9 +168,9 @@ const GALLERY_ITEMS: {
 ]
 
 const VIDEOS = [
-  { title: "DO EXIM Expo 2026 — Highlights Reel", duration: "3:24", category: "Recap" },
-  { title: "Why Exhibit at DO EXIM Expo?", duration: "1:58", category: "Promo" },
-  { title: "Buyer Testimonials — 2026 Edition", duration: "4:12", category: "Testimonials" },
+  { title: "doexim Expo 2027 — Highlights Reel", duration: "3:24", category: "Recap" },
+  { title: "Why Exhibit at doexim Expo?", duration: "1:58", category: "Promo" },
+  { title: "Buyer Testimonials — 2027 Edition", duration: "4:12", category: "Testimonials" },
   { title: "Walking the Show Floor", duration: "2:47", category: "Recap" },
   { title: "Keynote: The Future of Indian Exports", duration: "18:36", category: "Seminar" },
   { title: "Behind the Scenes — Setup Week", duration: "2:05", category: "Behind the Scenes" },
@@ -187,9 +187,9 @@ const MEDIA_KIT = [
 
 const SOCIALS = [
   { platform: "Instagram", handle: "@doeximexpo", followers: "18.2K", icon: InstagramIcon, tone: "from-pink-500 via-red-500 to-yellow-500" },
-  { platform: "LinkedIn", handle: "DO EXIM Trade Expo", followers: "24.5K", icon: LinkedinIcon, tone: "from-sky-600 to-blue-700" },
-  { platform: "Facebook", handle: "DO EXIM Expo", followers: "31.7K", icon: FacebookIcon, tone: "from-blue-500 to-blue-700" },
-  { platform: "YouTube", handle: "DO EXIM Expo", followers: "9.4K", icon: YoutubeIcon, tone: "from-red-500 to-red-700" },
+  { platform: "LinkedIn", handle: "doexim Trade Expo", followers: "24.5K", icon: LinkedinIcon, tone: "from-sky-600 to-blue-700" },
+  { platform: "Facebook", handle: "doexim Expo", followers: "31.7K", icon: FacebookIcon, tone: "from-blue-500 to-blue-700" },
+  { platform: "YouTube", handle: "doexim Expo", followers: "9.4K", icon: YoutubeIcon, tone: "from-red-500 to-red-700" },
 ]
 
 const fadeUp = {
