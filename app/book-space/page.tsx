@@ -1,26 +1,24 @@
-import type { Metadata } from "next"
-import { PageHero } from "@/components/page-hero"
-import { CtaButton, CtaLink } from "@/components/ui/cta"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import type { Metadata } from "next";
+import { PageHero } from "@/components/page-hero";
+import { CtaButton, CtaLink } from "@/components/ui/cta";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Book Space -doexim Expo",
   description:
     "Reserve your booth atdoexim Expo 2027. Choose from Standard, Premium, or Island booth packages with flexible pricing and complete support.",
-}
+};
 
 export default function BookSpacePage() {
   return (
     <>
-  <div className="pt-14">
-    <PageHero
-      title="Book Your Exhibition Space"
-    >
-      <CtaButton variant="cta" size="lg">
-        Inquire Now
-      </CtaButton>
-    </PageHero>
-  </div>
+      <div className="pt-14">
+        <PageHero title="Book Your Exhibition Space">
+          <CtaButton variant="cta" size="lg">
+            Inquire Now
+          </CtaButton>
+        </PageHero>
+      </div>
 
       {/* Plan Your Expo */}
       <section id="plan" className="bg-muted/40 px-4 py-16 sm:px-6 lg:px-8">
@@ -29,7 +27,8 @@ export default function BookSpacePage() {
             Booth Packages
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-center text-muted-foreground">
-            All packages include prime floor placement, high-traffic visibility and full access to networking events.
+            All packages include prime floor placement, high-traffic visibility
+            and full access to networking events.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -51,10 +50,10 @@ export default function BookSpacePage() {
                 size: "6m × 3m (18 sqm)",
                 price: "₹2.70L",
                 highlights: [
-                  "Shell scheme booth", 
+                  "Shell scheme booth",
                   "Basic furnishing",
-                  "4 visitor passes",                
-                  "Priority placement",                
+                  "4 visitor passes",
+                  "Priority placement",
                   "Electricity (5 kW)",
                 ],
                 featured: true,
@@ -64,12 +63,11 @@ export default function BookSpacePage() {
                 size: "6m × 6m (36 sqm)",
                 price: "₹5.40L",
                 highlights: [
-                   "Bare space booth", 
+                  "Bare space booth",
                   "Basic furnishing",
                   "6 visitor passes",
-                  "Priority placement",                
+                  "Priority placement",
                   "Electricity (10kW)",
-                 
                 ],
               },
             ].map((pkg) => (
@@ -90,7 +88,9 @@ export default function BookSpacePage() {
                   <h3 className="font-heading text-xl font-bold text-foreground">
                     {pkg.name}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{pkg.size}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {pkg.size}
+                  </p>
                   <p className="mt-3 font-heading text-2xl font-bold text-primary">
                     {pkg.price}
                   </p>
@@ -132,7 +132,10 @@ export default function BookSpacePage() {
               "Parking facilities for vehicles and equipment",
               "Complimentary pre-event promotional support",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-lg bg-muted/50 p-4">
+              <div
+                key={item}
+                className="flex items-start gap-3 rounded-lg bg-muted/50 p-4"
+              >
                 <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" />
                 <span className="text-foreground/80">{item}</span>
               </div>
@@ -161,5 +164,5 @@ export default function BookSpacePage() {
         </div>
       </section>
     </>
-  )
+  );
 }
