@@ -6,9 +6,9 @@ import { GraduationCap, MapPin, Users, Award, BookOpen, Clock, CalendarDays } fr
 import { EVENT } from "@/lib/event-data";
 
 export const metadata: Metadata = {
-  title: "Seminar & Knowledge Summit Registration - DO EXIM Expo 2027",
+  title: "Seminar & Knowledge Summit Registration - doexim Expo 2027",
   description:
-    "Register for the DO EXIM Expo 2027 Seminar & Knowledge Summit. Access keynotes, policy masterclasses, and international trade workshops at Bombay Exhibition Centre, Mumbai.",
+    "Register for the doexim Expo 2027 Seminar & Knowledge Summit. Access keynotes, policy masterclasses, and international trade workshops at Bombay Exhibition Centre, Mumbai.",
 };
 
 export default function SeminarRegistrationPage() {
@@ -107,7 +107,7 @@ export default function SeminarRegistrationPage() {
       <section className="bg-muted/40 px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-balance text-center font-heading text-3xl font-bold text-foreground">
-            Why Attend the DO EXIM Knowledge Summit?
+            Why Attend the doexim Knowledge Summit?
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             {[

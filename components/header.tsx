@@ -458,7 +458,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                 onClick={onClose}
                 className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
               >
-                doexim Awards
+                doexim Excellence Awards
               </Link>
               <Link
                 href="/about#board-advisory"

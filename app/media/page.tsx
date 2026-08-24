@@ -119,7 +119,7 @@ const PRESS_RELEASES = [
       "Official fact sheet covering exhibitor numbers, hall layout, visitor projections and international delegations.",
   },
   {
-    title: "Trade Delegations from 10+ Countries Confirmed",
+    title: "Trade Delegations from 10+ Countries in Process",
     date: "28 Jan 2027",
     summary:
       "A detailed breakdown of confirmed international buyer delegations and their sectors of interest.",
@@ -134,7 +134,7 @@ const PRESS_RELEASES = [
     title: "Bombay Exhibition Centre Confirmed as Official Venue",
     date: "20 Nov 2027",
     summary:
-      "The 2027 edition returns to BEC, Goregaon with expanded hall space across Halls 2, 3, 4 and 6.",
+      "The 2027 edition returns to BEC, Goregaon with expanded hall space across Hall 6.",
   },
 ]
 
@@ -153,7 +153,7 @@ const GALLERY_ITEMS: {
   title: string
   tone: string
 }[] = [
-  { category: "Expo Highlights", title: "Opening Ceremony 2027", tone: "from-[#061AC9] to-[#3B82F6]" },
+  { category: "Expo Highlights", title: "Opening Ceremony 15 Dec 2027", tone: "from-[#061AC9] to-[#3B82F6]" },
   { category: "B2B Meetings", title: "Buyer-Seller Meet Hall 6", tone: "from-blue-500 to-cyan-500" },
   { category: "Trade Zones", title: "Manufacturing Zone Walkthrough", tone: "from-slate-700 to-slate-900" },
   { category: "Networking", title: "Evening Networking Dinner", tone: "from-indigo-500 to-blue-700" },
@@ -186,10 +186,10 @@ const MEDIA_KIT = [
 ]
 
 const SOCIALS = [
-  { platform: "Instagram", handle: "@doeximexpo", followers: "18.2K", icon: InstagramIcon, tone: "from-pink-500 via-red-500 to-yellow-500" },
-  { platform: "LinkedIn", handle: "doexim Trade Expo", followers: "24.5K", icon: LinkedinIcon, tone: "from-sky-600 to-blue-700" },
-  { platform: "Facebook", handle: "doexim Expo", followers: "31.7K", icon: FacebookIcon, tone: "from-blue-500 to-blue-700" },
-  { platform: "YouTube", handle: "doexim Expo", followers: "9.4K", icon: YoutubeIcon, tone: "from-red-500 to-red-700" },
+  { platform: "Instagram", handle: "@doeximexpo", icon: InstagramIcon, tone: "from-pink-500 via-red-500 to-yellow-500" },
+  { platform: "LinkedIn", handle: "doexim Trade Expo",  icon: LinkedinIcon, tone: "from-sky-600 to-blue-700" },
+  { platform: "Facebook", handle: "doexim Expo", icon: FacebookIcon, tone: "from-blue-500 to-blue-700" },
+  { platform: "YouTube", handle: "doexim Expo", icon: YoutubeIcon, tone: "from-red-500 to-red-700" },
 ]
 
 const fadeUp = {
@@ -269,10 +269,10 @@ export default function MediaCenterPage() {
                   <span className="inline-flex items-center rounded-full bg-[#061AC9]/10 px-3 py-1 text-xs font-bold text-[#061AC9]">
                     {item.category}
                   </span>
-                  <span className="flex items-center gap-1.5 text-xs text-slate-400">
+                  {/* <span className="flex items-center gap-1.5 text-xs text-slate-400">
                     <Calendar className="size-3.5" />
                     {item.date}
-                  </span>
+                  </span> */}
                 </div>
 
                 <h3 className="mt-4 font-heading text-lg font-bold leading-snug text-slate-900">
@@ -282,10 +282,10 @@ export default function MediaCenterPage() {
                   {item.desc}
                 </p>
 
-                <button className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-[#061AC9] transition-colors group-hover:text-[#1326CB]">
+                {/* <button className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-[#061AC9] transition-colors group-hover:text-[#1326CB]">
                   Read More
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                </button> */}
               </motion.article>
             ))}
           </div>
@@ -504,9 +504,9 @@ export default function MediaCenterPage() {
                   {social.platform}
                 </h3>
                 <p className="mt-1 text-sm text-slate-500">{social.handle}</p>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[#061AC9]">
+                {/* <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[#061AC9]">
                   {social.followers} Followers
-                </p>
+                </p> */}
               </motion.a>
             ))}
           </div>

@@ -37,7 +37,7 @@ export default function WhydoeximExpoPage() {
               {
                 icon: Users,
                 title: "Reach Qualified Buyers",
-                desc: "40,000+ trade visitors from manufacturing, OEMs, system integrators and end-user facilities across India and abroad.",
+                desc: "25,000+ trade visitors from manufacturing, OEMs, system integrators and end-user facilities across India and abroad.",
               },
               {
                 icon: TrendingUp,

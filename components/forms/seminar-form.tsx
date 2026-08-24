@@ -63,7 +63,7 @@ function icsDownload(name: string) {
 }
 
 function epassDownload(name: string, id: string) {
-  const text = `DO EXIM GLOBAL TRADE EXPO 2027 — SEMINAR & KNOWLEDGE SUMMIT PASS
+  const text = `doexim GLOBAL TRADE EXPO 2027 — SEMINAR & KNOWLEDGE SUMMIT PASS
 --------------------------------------------------------------
 Attendee : ${name}
 Pass ID  : ${id}

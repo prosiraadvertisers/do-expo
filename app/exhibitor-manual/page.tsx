@@ -419,7 +419,7 @@ export default function ExhibitorManualPage() {
                   <h4 className="font-heading text-base font-bold text-foreground">Move-In (13 Dec 2027)</h4>
                   <p className="text-xs leading-relaxed text-muted-foreground">
                     Heavy freight, industrial equipment, and large crated consignments must be coordinated through
-                    official DO EXIM cargo handlers. Advance slot booking is mandatory for cranes and forklifts.
+                    official doexim cargo handlers. Advance slot booking is mandatory for cranes and forklifts.
                   </p>
                 </div>
 
@@ -486,7 +486,7 @@ export default function ExhibitorManualPage() {
               </div>
 
               <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                All personnel entering the exhibition halls must carry designated credentials issued by the DO EXIM Expo
+                All personnel entering the exhibition halls must carry designated credentials issued by the doexim Expo
                 Organizing Secretariat:
               </p>
 
@@ -681,7 +681,7 @@ export default function ExhibitorManualPage() {
 
               <div className="rounded-2xl border border-border bg-muted/30 p-5 text-xs text-muted-foreground space-y-2.5 leading-relaxed">
                 <p>
-                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;DO EXIM EXPO PRIVATE LIMITED&quot;</strong>.
+                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;doexim EXPO PRIVATE LIMITED&quot;</strong>.
                 </p>
                 <p>
                   • <strong>Digital/Cash Policy:</strong> Direct Cash or UPI payments are strongly discouraged. Any unapproved cash handling requires a ₹5,000 processing surcharge.
@@ -962,7 +962,7 @@ export default function ExhibitorManualPage() {
                   <h4 className="font-heading text-sm font-bold text-foreground">Customs Clearance & ATA Carnet</h4>
                   <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                     International exhibitors selling or re-exporting overseas merchandise must obtain customs approval through the
-                    appointed official DO EXIM freight forwarder under standard trade protocols.
+                    appointed official doexim freight forwarder under standard trade protocols.
                   </p>
                 </div>
 
@@ -989,7 +989,7 @@ export default function ExhibitorManualPage() {
               <div className="max-w-3xl space-y-3">
                 <span className="text-xs font-bold uppercase tracking-widest text-primary">Need Assistance?</span>
                 <h2 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
-                  DO EXIM Exhibitor Operations Helpdesk
+                  doexim Exhibitor Operations Helpdesk
                 </h2>
                 <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
                   For stall approvals, electrical drawings submission, extra utility orders, or logistics gate-passes,

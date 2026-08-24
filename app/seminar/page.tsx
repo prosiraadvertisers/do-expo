@@ -154,7 +154,7 @@ export default function SeminarPage() {
 
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold backdrop-blur">
-            <GraduationCap className="size-4" /> DO EXIM Knowledge Summit
+            <GraduationCap className="size-4" /> doexim Knowledge Summit
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-tight lg:text-5xl">

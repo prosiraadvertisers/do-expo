@@ -38,9 +38,9 @@ import {
 import { CtaButton } from "@/components/ui/cta";
 
 export const metadata: Metadata = {
-  title: "Visitors | DO EXIM Expo",
+  title: "Visitors | doexim Expo",
   description:
-    "Visit DO EXIM Expo to connect with exhibitors, discover innovations, attend knowledge sessions and grow your business network.",
+    "Visit doexim Expo to connect with exhibitors, discover innovations, attend knowledge sessions and grow your business network.",
 };
 
 const whyVisit = [
@@ -97,7 +97,7 @@ export default function VisitorsPage() {
       {/* ================= HERO ================= */}
 
       <div className="pt-14">
-        <PageHero title="Visit DO EXIM Expo">
+        <PageHero title="Visit doexim Expo">
           <a
             href="#visitor-registration"
             className="rounded-xl bg-white px-6 py-3 font-semibold text-[#191456] transition hover:scale-105"
@@ -153,113 +153,379 @@ export default function VisitorsPage() {
 
       {/* ================= WHO SHOULD ATTEND ================= */}
 
-      <section
-        id="why-attend"
-        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white py-12"
-      >
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              Who Should Attend
-            </span>
+      {/* ================= WHO SHOULD ATTEND ================= */}
 
-            <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
-              Meet the Right People.
-              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                {" "}
-                Grow Your Business
-              </span>
-            </h2>
-          </div>
+<section
+  id="why-attend"
+  className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-4"
+>
+  <div className="mx-auto max-w-7xl px-4">
+    <div className="mx-auto max-w-3xl text-center">
+      <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+        Who Should Attend
+      </span>
 
-          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: "🏭",
-                title: "Manufacturers",
-                color: "bg-blue-100",
-              },
+      <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
+        Meet the Right People.
+        <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+          {" "}
+          Grow Your Business
+        </span>
+      </h2>
+    </div>
+
+    <div className="mt-16">
+      {/* Two infinite marquee rows */}
+      <div className="-mx-4 space-y-4 overflow-hidden sm:-mx-6">
+        {/* Row 1 */}
+        <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
+          {[
+            {
+              icon: "🚢",
+              title: "Exporters",
+            },
+            {
+              icon: "📦",
+              title: "Importers",
+            },
+            {
+              icon: "🌍",
+              title: "Merchant Exporters",
+            },
+            {
+              icon: "🏭",
+              title: "Manufacturers",
+            },
+            {
+              icon: "🏢",
+              title: "MSMEs",
+            },
+            {
+              icon: "🚀",
+              title: "Startups",
+            },
+            {
+              icon: "🏬",
+              title: "Wholesalers",
+            },
+            {
+              icon: "🛍️",
+              title: "Retail Chains",
+            },
+            {
+              icon: "🚚",
+              title: "Distributors",
+            },
+            {
+              icon: "🤝",
+              title: "Trade Associations",
+            },
+            {
+              icon: "🏛️",
+              title: "Government Bodies",
+            },
+            {
+              icon: "💰",
+              title: "Investors",
+            },
+          ]
+            .concat([
               {
                 icon: "🚢",
                 title: "Exporters",
-                color: "bg-emerald-100",
               },
               {
                 icon: "📦",
                 title: "Importers",
-                color: "bg-orange-100",
+              },
+              {
+                icon: "🌍",
+                title: "Merchant Exporters",
+              },
+              {
+                icon: "🏭",
+                title: "Manufacturers",
               },
               {
                 icon: "🏢",
                 title: "MSMEs",
-                color: "bg-purple-100",
               },
               {
                 icon: "🚀",
                 title: "Startups",
-                color: "bg-pink-100",
               },
               {
                 icon: "🏬",
                 title: "Wholesalers",
-                color: "bg-cyan-100",
               },
               {
                 icon: "🛍️",
                 title: "Retail Chains",
-                color: "bg-indigo-100",
               },
               {
                 icon: "🚚",
                 title: "Distributors",
-                color: "bg-lime-100",
               },
               {
                 icon: "🤝",
                 title: "Trade Associations",
-                color: "bg-red-100",
               },
               {
                 icon: "🏛️",
                 title: "Government Bodies",
-                color: "bg-yellow-100",
               },
               {
                 icon: "💰",
                 title: "Investors",
-                color: "bg-green-100",
+              },
+            ])
+            .map((item, i) => (
+              <span
+                key={`row1-${i}`}
+                className="flex items-center gap-3 text-2xl font-bold text-slate-800 sm:text-3xl"
+              >
+                <span className="text-xl sm:text-2xl">
+                  {item.icon}
+                </span>
+
+                {item.title}
+
+                <span className="text-slate-300">•</span>
+              </span>
+            ))}
+        </div>
+
+        {/* Row 2 */}
+        <div className="marquee-track-reverse flex w-max gap-10 whitespace-nowrap">
+          {[
+            {
+              icon: "🚢",
+              title: "Exporters",
+            },
+            {
+              icon: "📦",
+              title: "Importers",
+            },
+            {
+              icon: "🌍",
+              title: "Merchant Exporters",
+            },
+            {
+              icon: "🏭",
+              title: "Manufacturers",
+            },
+            {
+              icon: "🏢",
+              title: "MSMEs",
+            },
+            {
+              icon: "🚀",
+              title: "Startups",
+            },
+            {
+              icon: "🏬",
+              title: "Wholesalers",
+            },
+            {
+              icon: "🛍️",
+              title: "Retail Chains",
+            },
+            {
+              icon: "🚚",
+              title: "Distributors",
+            },
+            {
+              icon: "🤝",
+              title: "Trade Associations",
+            },
+            {
+              icon: "🏛️",
+              title: "Government Bodies",
+            },
+            {
+              icon: "💰",
+              title: "Investors",
+            },
+          ]
+            .concat([
+              {
+                icon: "🚢",
+                title: "Exporters",
               },
               {
-                icon: "🎓",
-                title: "Students",
-                color: "bg-sky-100",
+                icon: "📦",
+                title: "Importers",
               },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl"
+              {
+                icon: "🌍",
+                title: "Merchant Exporters",
+              },
+              {
+                icon: "🏭",
+                title: "Manufacturers",
+              },
+              {
+                icon: "🏢",
+                title: "MSMEs",
+              },
+              {
+                icon: "🚀",
+                title: "Startups",
+              },
+              {
+                icon: "🏬",
+                title: "Wholesalers",
+              },
+              {
+                icon: "🛍️",
+                title: "Retail Chains",
+              },
+              {
+                icon: "🚚",
+                title: "Distributors",
+              },
+              {
+                icon: "🤝",
+                title: "Trade Associations",
+              },
+              {
+                icon: "🏛️",
+                title: "Government Bodies",
+              },
+              {
+                icon: "💰",
+                title: "Investors",
+              },
+            ])
+            .reverse()
+            .map((item, i) => (
+              <span
+                key={`row2-${i}`}
+                className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
               >
-                <div
-                  className={`mx-auto flex h-20 w-20 items-center justify-center rounded-3xl text-4xl ${item.color}`}
-                >
+                <span className="text-xl sm:text-2xl">
                   {item.icon}
-                </div>
+                </span>
 
-                <h3 className="mt-6 text-center text-xl font-bold text-slate-900">
-                  {item.title}
-                </h3>
+                {item.title}
 
-                <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-primary transition-all duration-500 group-hover:w-24" />
-
-                <p className="mt-5 text-center text-sm leading-7 text-slate-600">
-                  Connect, collaborate and discover new business opportunities
-                  with global trade professionals.
-                </p>
-              </div>
+                <span className="text-slate-200">•</span>
+              </span>
             ))}
-          </div>
         </div>
-      </section>
+      </div>
+
+      {/* Plain list with descriptions */}
+      <div className="mx-auto mt-16 max-w-4xl divide-y divide-slate-200 border-y border-slate-200">
+        {[
+          {
+            icon: "🚢",
+            title: "Exporters",
+            desc: "Expand your reach and find new international markets for your products.",
+          },
+          {
+            icon: "📦",
+            title: "Importers",
+            desc: "Source quality products directly from verified manufacturers and suppliers.",
+          },
+          {
+            icon: "🌍",
+            title: "Merchant Exporters",
+            desc: "Expand exports through trusted global partnerships.",
+          },
+          {
+            icon: "🏭",
+            title: "Manufacturers",
+            desc: "Showcase your production capabilities and connect with global buyers.",
+          },
+          {
+            icon: "🏢",
+            title: "MSMEs",
+            desc: "Grow your business with tailored support and networking opportunities.",
+          },
+          {
+            icon: "🚀",
+            title: "Startups",
+            desc: "Gain visibility, attract investors, and scale your innovative solutions.",
+          },
+          {
+            icon: "🏬",
+            title: "Wholesalers",
+            desc: "Discover bulk sourcing options and build long-term supplier relationships.",
+          },
+          {
+            icon: "🛍️",
+            title: "Retail Chains",
+            desc: "Find trending products and negotiate directly with manufacturers.",
+          },
+          {
+            icon: "🚚",
+            title: "Distributors",
+            desc: "Partner with brands and expand your distribution network across regions.",
+          },
+          {
+            icon: "🤝",
+            title: "Trade Associations",
+            desc: "Collaborate with industry bodies and promote sector-wide growth.",
+          },
+          {
+            icon: "🏛️",
+            title: "Government Bodies",
+            desc: "Support trade initiatives and connect with businesses for policy implementation.",
+          },
+          {
+            icon: "💰",
+            title: "Investors",
+            desc: "Explore high-potential businesses and investment opportunities in global trade.",
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="flex flex-col gap-1.5 py-5 sm:flex-row sm:items-baseline sm:gap-8 sm:py-6"
+          >
+            <span className="flex shrink-0 items-center gap-2 text-base font-bold text-slate-900 sm:w-56">
+              <span className="text-lg">{item.icon}</span>
+              {item.title}
+            </span>
+
+            <span className="text-sm leading-6 text-muted-foreground sm:text-base">
+              {item.desc}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Marquee Animation */}
+    <style>{`
+      .marquee-track {
+        animation: marquee-left 32s linear infinite;
+      }
+
+      .marquee-track-reverse {
+        animation: marquee-right 32s linear infinite;
+      }
+
+      @keyframes marquee-left {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes marquee-right {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    `}</style>
+  </div>
+</section>
 
       <section id="visitor-registration" className="scroll-mt-24 py-16">
         <div className="mx-auto max-w-6xl px-4">
@@ -269,7 +535,7 @@ export default function VisitorsPage() {
             </span>
 
             <h2 className="mt-6 text-4xl font-bold">
-              Ready to Visit DO EXIM Expo?
+              Ready to Visit doexim Expo?
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">

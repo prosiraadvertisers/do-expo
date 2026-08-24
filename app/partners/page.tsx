@@ -234,7 +234,7 @@ const BENEFITS: Benefit[] = [
     },
   },
   {
-    label: "Year-round DoExim Digital Platform",
+    label: "Year-round doexim Digital Platform",
     tiers: {
       title: "Premium Visibility",
       powered: "Featured Listing",
@@ -422,7 +422,7 @@ export default function PartnerPage() {
               Ready to put your brand in front of global buyers?
             </h3>
             <p className="mt-2 max-w-xl text-white/75">
-              Limited sponsorship slots available for DO EXIM Trade Expo 2027.
+              Limited sponsorship slots available for doexim Trade Expo 2027.
               Lock in your tier before booths sell out.
             </p>
           </div>
