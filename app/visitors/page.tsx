@@ -155,349 +155,345 @@ export default function VisitorsPage() {
 
       {/* ================= WHO SHOULD ATTEND ================= */}
 
-<section
-  id="why-attend"
-  className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-4"
->
-  <div className="mx-auto max-w-7xl px-4">
-    <div className="mx-auto max-w-3xl text-center">
-      <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-        Who Should Attend
-      </span>
-
-      <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
-        Meet the Right People.
-        <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-          {" "}
-          Grow Your Business
-        </span>
-      </h2>
-    </div>
-
-    <div className="mt-16">
-      {/* Two infinite marquee rows */}
-      <div className="-mx-4 space-y-4 overflow-hidden sm:-mx-6">
-        {/* Row 1 */}
-        <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
-          {[
-            {
-              icon: "🚢",
-              title: "Exporters",
-            },
-            {
-              icon: "📦",
-              title: "Importers",
-            },
-            {
-              icon: "🌍",
-              title: "Merchant Exporters",
-            },
-            {
-              icon: "🏭",
-              title: "Manufacturers",
-            },
-            {
-              icon: "🏢",
-              title: "MSMEs",
-            },
-            {
-              icon: "🚀",
-              title: "Startups",
-            },
-            {
-              icon: "🏬",
-              title: "Wholesalers",
-            },
-            {
-              icon: "🛍️",
-              title: "Retail Chains",
-            },
-            {
-              icon: "🚚",
-              title: "Distributors",
-            },
-            {
-              icon: "🤝",
-              title: "Trade Associations",
-            },
-            {
-              icon: "🏛️",
-              title: "Government Bodies",
-            },
-            {
-              icon: "💰",
-              title: "Investors",
-            },
-          ]
-            .concat([
-              {
-                icon: "🚢",
-                title: "Exporters",
-              },
-              {
-                icon: "📦",
-                title: "Importers",
-              },
-              {
-                icon: "🌍",
-                title: "Merchant Exporters",
-              },
-              {
-                icon: "🏭",
-                title: "Manufacturers",
-              },
-              {
-                icon: "🏢",
-                title: "MSMEs",
-              },
-              {
-                icon: "🚀",
-                title: "Startups",
-              },
-              {
-                icon: "🏬",
-                title: "Wholesalers",
-              },
-              {
-                icon: "🛍️",
-                title: "Retail Chains",
-              },
-              {
-                icon: "🚚",
-                title: "Distributors",
-              },
-              {
-                icon: "🤝",
-                title: "Trade Associations",
-              },
-              {
-                icon: "🏛️",
-                title: "Government Bodies",
-              },
-              {
-                icon: "💰",
-                title: "Investors",
-              },
-            ])
-            .map((item, i) => (
-              <span
-                key={`row1-${i}`}
-                className="flex items-center gap-3 text-2xl font-bold text-slate-800 sm:text-3xl"
-              >
-                <span className="text-xl sm:text-2xl">
-                  {item.icon}
-                </span>
-
-                {item.title}
-
-                <span className="text-slate-300">•</span>
-              </span>
-            ))}
-        </div>
-
-        {/* Row 2 */}
-        <div className="marquee-track-reverse flex w-max gap-10 whitespace-nowrap">
-          {[
-            {
-              icon: "🚢",
-              title: "Exporters",
-            },
-            {
-              icon: "📦",
-              title: "Importers",
-            },
-            {
-              icon: "🌍",
-              title: "Merchant Exporters",
-            },
-            {
-              icon: "🏭",
-              title: "Manufacturers",
-            },
-            {
-              icon: "🏢",
-              title: "MSMEs",
-            },
-            {
-              icon: "🚀",
-              title: "Startups",
-            },
-            {
-              icon: "🏬",
-              title: "Wholesalers",
-            },
-            {
-              icon: "🛍️",
-              title: "Retail Chains",
-            },
-            {
-              icon: "🚚",
-              title: "Distributors",
-            },
-            {
-              icon: "🤝",
-              title: "Trade Associations",
-            },
-            {
-              icon: "🏛️",
-              title: "Government Bodies",
-            },
-            {
-              icon: "💰",
-              title: "Investors",
-            },
-          ]
-            .concat([
-              {
-                icon: "🚢",
-                title: "Exporters",
-              },
-              {
-                icon: "📦",
-                title: "Importers",
-              },
-              {
-                icon: "🌍",
-                title: "Merchant Exporters",
-              },
-              {
-                icon: "🏭",
-                title: "Manufacturers",
-              },
-              {
-                icon: "🏢",
-                title: "MSMEs",
-              },
-              {
-                icon: "🚀",
-                title: "Startups",
-              },
-              {
-                icon: "🏬",
-                title: "Wholesalers",
-              },
-              {
-                icon: "🛍️",
-                title: "Retail Chains",
-              },
-              {
-                icon: "🚚",
-                title: "Distributors",
-              },
-              {
-                icon: "🤝",
-                title: "Trade Associations",
-              },
-              {
-                icon: "🏛️",
-                title: "Government Bodies",
-              },
-              {
-                icon: "💰",
-                title: "Investors",
-              },
-            ])
-            .reverse()
-            .map((item, i) => (
-              <span
-                key={`row2-${i}`}
-                className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
-              >
-                <span className="text-xl sm:text-2xl">
-                  {item.icon}
-                </span>
-
-                {item.title}
-
-                <span className="text-slate-200">•</span>
-              </span>
-            ))}
-        </div>
-      </div>
-
-      {/* Plain list with descriptions */}
-      <div className="mx-auto mt-16 max-w-4xl divide-y divide-slate-200 border-y border-slate-200">
-        {[
-          {
-            icon: "🚢",
-            title: "Exporters",
-            desc: "Expand your reach and find new international markets for your products.",
-          },
-          {
-            icon: "📦",
-            title: "Importers",
-            desc: "Source quality products directly from verified manufacturers and suppliers.",
-          },
-          {
-            icon: "🌍",
-            title: "Merchant Exporters",
-            desc: "Expand exports through trusted global partnerships.",
-          },
-          {
-            icon: "🏭",
-            title: "Manufacturers",
-            desc: "Showcase your production capabilities and connect with global buyers.",
-          },
-          {
-            icon: "🏢",
-            title: "MSMEs",
-            desc: "Grow your business with tailored support and networking opportunities.",
-          },
-          {
-            icon: "🚀",
-            title: "Startups",
-            desc: "Gain visibility, attract investors, and scale your innovative solutions.",
-          },
-          {
-            icon: "🏬",
-            title: "Wholesalers",
-            desc: "Discover bulk sourcing options and build long-term supplier relationships.",
-          },
-          {
-            icon: "🛍️",
-            title: "Retail Chains",
-            desc: "Find trending products and negotiate directly with manufacturers.",
-          },
-          {
-            icon: "🚚",
-            title: "Distributors",
-            desc: "Partner with brands and expand your distribution network across regions.",
-          },
-          {
-            icon: "🤝",
-            title: "Trade Associations",
-            desc: "Collaborate with industry bodies and promote sector-wide growth.",
-          },
-          {
-            icon: "🏛️",
-            title: "Government Bodies",
-            desc: "Support trade initiatives and connect with businesses for policy implementation.",
-          },
-          {
-            icon: "💰",
-            title: "Investors",
-            desc: "Explore high-potential businesses and investment opportunities in global trade.",
-          },
-        ].map((item) => (
-          <div
-            key={item.title}
-            className="flex flex-col gap-1.5 py-5 sm:flex-row sm:items-baseline sm:gap-8 sm:py-6"
-          >
-            <span className="flex shrink-0 items-center gap-2 text-base font-bold text-slate-900 sm:w-56">
-              <span className="text-lg">{item.icon}</span>
-              {item.title}
+      <section
+        id="why-attend"
+        className="scroll-mt-24 bg-gradient-to-b from-white via-blue-50 to-white pt-10 pb-4"
+      >
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              Who Should Attend
             </span>
 
-            <span className="text-sm leading-6 text-muted-foreground sm:text-base">
-              {item.desc}
-            </span>
+            <h2 className="mt-5 w-full text-center text-3xl font-black tracking-tight text-slate-900 lg:text-5xl lg:whitespace-nowrap lg:-ml-22">
+              Meet the Right People.
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                {" "}
+                Grow Your Business
+              </span>
+            </h2>
           </div>
-        ))}
-      </div>
-    </div>
 
-    {/* Marquee Animation */}
-    <style>{`
+          <div className="mt-16">
+            {/* Two infinite marquee rows */}
+            <div className="-mx-4 space-y-4 overflow-hidden sm:-mx-6">
+              {/* Row 1 */}
+              <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
+                {[
+                  {
+                    icon: "🚢",
+                    title: "Exporters",
+                  },
+                  {
+                    icon: "📦",
+                    title: "Importers",
+                  },
+                  {
+                    icon: "🌍",
+                    title: "Merchant Exporters",
+                  },
+                  {
+                    icon: "🏭",
+                    title: "Manufacturers",
+                  },
+                  {
+                    icon: "🏢",
+                    title: "MSMEs",
+                  },
+                  {
+                    icon: "🚀",
+                    title: "Startups",
+                  },
+                  {
+                    icon: "🏬",
+                    title: "Wholesalers",
+                  },
+                  {
+                    icon: "🛍️",
+                    title: "Retail Chains",
+                  },
+                  {
+                    icon: "🚚",
+                    title: "Distributors",
+                  },
+                  {
+                    icon: "🤝",
+                    title: "Trade Associations",
+                  },
+                  {
+                    icon: "🏛️",
+                    title: "Government Bodies",
+                  },
+                  {
+                    icon: "💰",
+                    title: "Investors",
+                  },
+                ]
+                  .concat([
+                    {
+                      icon: "🚢",
+                      title: "Exporters",
+                    },
+                    {
+                      icon: "📦",
+                      title: "Importers",
+                    },
+                    {
+                      icon: "🌍",
+                      title: "Merchant Exporters",
+                    },
+                    {
+                      icon: "🏭",
+                      title: "Manufacturers",
+                    },
+                    {
+                      icon: "🏢",
+                      title: "MSMEs",
+                    },
+                    {
+                      icon: "🚀",
+                      title: "Startups",
+                    },
+                    {
+                      icon: "🏬",
+                      title: "Wholesalers",
+                    },
+                    {
+                      icon: "🛍️",
+                      title: "Retail Chains",
+                    },
+                    {
+                      icon: "🚚",
+                      title: "Distributors",
+                    },
+                    {
+                      icon: "🤝",
+                      title: "Trade Associations",
+                    },
+                    {
+                      icon: "🏛️",
+                      title: "Government Bodies",
+                    },
+                    {
+                      icon: "💰",
+                      title: "Investors",
+                    },
+                  ])
+                  .map((item, i) => (
+                    <span
+                      key={`row1-${i}`}
+                      className="flex items-center gap-3 text-2xl font-bold text-slate-800 sm:text-3xl"
+                    >
+                      <span className="text-xl sm:text-2xl">{item.icon}</span>
+
+                      {item.title}
+
+                      <span className="text-slate-300">•</span>
+                    </span>
+                  ))}
+              </div>
+
+              {/* Row 2 */}
+              <div className="marquee-track-reverse flex w-max gap-10 whitespace-nowrap">
+                {[
+                  {
+                    icon: "🚢",
+                    title: "Exporters",
+                  },
+                  {
+                    icon: "📦",
+                    title: "Importers",
+                  },
+                  {
+                    icon: "🌍",
+                    title: "Merchant Exporters",
+                  },
+                  {
+                    icon: "🏭",
+                    title: "Manufacturers",
+                  },
+                  {
+                    icon: "🏢",
+                    title: "MSMEs",
+                  },
+                  {
+                    icon: "🚀",
+                    title: "Startups",
+                  },
+                  {
+                    icon: "🏬",
+                    title: "Wholesalers",
+                  },
+                  {
+                    icon: "🛍️",
+                    title: "Retail Chains",
+                  },
+                  {
+                    icon: "🚚",
+                    title: "Distributors",
+                  },
+                  {
+                    icon: "🤝",
+                    title: "Trade Associations",
+                  },
+                  {
+                    icon: "🏛️",
+                    title: "Government Bodies",
+                  },
+                  {
+                    icon: "💰",
+                    title: "Investors",
+                  },
+                ]
+                  .concat([
+                    {
+                      icon: "🚢",
+                      title: "Exporters",
+                    },
+                    {
+                      icon: "📦",
+                      title: "Importers",
+                    },
+                    {
+                      icon: "🌍",
+                      title: "Merchant Exporters",
+                    },
+                    {
+                      icon: "🏭",
+                      title: "Manufacturers",
+                    },
+                    {
+                      icon: "🏢",
+                      title: "MSMEs",
+                    },
+                    {
+                      icon: "🚀",
+                      title: "Startups",
+                    },
+                    {
+                      icon: "🏬",
+                      title: "Wholesalers",
+                    },
+                    {
+                      icon: "🛍️",
+                      title: "Retail Chains",
+                    },
+                    {
+                      icon: "🚚",
+                      title: "Distributors",
+                    },
+                    {
+                      icon: "🤝",
+                      title: "Trade Associations",
+                    },
+                    {
+                      icon: "🏛️",
+                      title: "Government Bodies",
+                    },
+                    {
+                      icon: "💰",
+                      title: "Investors",
+                    },
+                  ])
+                  .reverse()
+                  .map((item, i) => (
+                    <span
+                      key={`row2-${i}`}
+                      className="flex items-center gap-3 text-2xl font-bold text-primary/40 sm:text-3xl"
+                    >
+                      <span className="text-xl sm:text-2xl">{item.icon}</span>
+
+                      {item.title}
+
+                      <span className="text-slate-200">•</span>
+                    </span>
+                  ))}
+              </div>
+            </div>
+
+            {/* Plain list with descriptions */}
+            <div className="mx-auto mt-16 max-w-4xl divide-y divide-slate-200 border-y border-slate-200">
+              {[
+                {
+                  icon: "🚢",
+                  title: "Exporters",
+                  desc: "Expand your reach and find new international markets for your products.",
+                },
+                {
+                  icon: "📦",
+                  title: "Importers",
+                  desc: "Source quality products directly from verified manufacturers and suppliers.",
+                },
+                {
+                  icon: "🌍",
+                  title: "Merchant Exporters",
+                  desc: "Expand exports through trusted global partnerships.",
+                },
+                {
+                  icon: "🏭",
+                  title: "Manufacturers",
+                  desc: "Showcase your production capabilities and connect with global buyers.",
+                },
+                {
+                  icon: "🏢",
+                  title: "MSMEs",
+                  desc: "Grow your business with tailored support and networking opportunities.",
+                },
+                {
+                  icon: "🚀",
+                  title: "Startups",
+                  desc: "Gain visibility, attract investors, and scale your innovative solutions.",
+                },
+                {
+                  icon: "🏬",
+                  title: "Wholesalers",
+                  desc: "Discover bulk sourcing options and build long-term supplier relationships.",
+                },
+                {
+                  icon: "🛍️",
+                  title: "Retail Chains",
+                  desc: "Find trending products and negotiate directly with manufacturers.",
+                },
+                {
+                  icon: "🚚",
+                  title: "Distributors",
+                  desc: "Partner with brands and expand your distribution network across regions.",
+                },
+                {
+                  icon: "🤝",
+                  title: "Trade Associations",
+                  desc: "Collaborate with industry bodies and promote sector-wide growth.",
+                },
+                {
+                  icon: "🏛️",
+                  title: "Government Bodies",
+                  desc: "Support trade initiatives and connect with businesses for policy implementation.",
+                },
+                {
+                  icon: "💰",
+                  title: "Investors",
+                  desc: "Explore high-potential businesses and investment opportunities in global trade.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="flex flex-col gap-1.5 py-5 sm:flex-row sm:items-baseline sm:gap-8 sm:py-6"
+                >
+                  <span className="flex shrink-0 items-center gap-2 text-base font-bold text-slate-900 sm:w-56">
+                    <span className="text-lg">{item.icon}</span>
+                    {item.title}
+                  </span>
+
+                  <span className="text-sm leading-6 text-muted-foreground sm:text-base">
+                    {item.desc}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Marquee Animation */}
+          <style>{`
       .marquee-track {
         animation: marquee-left 32s linear infinite;
       }
@@ -524,8 +520,8 @@ export default function VisitorsPage() {
         }
       }
     `}</style>
-  </div>
-</section>
+        </div>
+      </section>
 
       <section id="visitor-registration" className="scroll-mt-24 py-16">
         <div className="mx-auto max-w-6xl px-4">

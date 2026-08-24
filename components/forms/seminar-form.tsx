@@ -217,12 +217,12 @@ export function SeminarForm() {
         <Field label="Designation" htmlFor="s-desig">
           <TextInput id="s-desig" value={form.designation} onChange={(e) => set('designation', e.target.value)} placeholder="Your role / designation" />
         </Field>
-        <Field label="Primary Track Interest" htmlFor="s-int">
+        {/* <Field label="Primary Track Interest" htmlFor="s-int">
           <Select id="s-int" value={interest} onChange={(e) => setInterest(e.target.value)}>
             <option value="">Select a seminar track</option>
             {ZONES.map((z) => <option key={z.slug} value={z.slug}>{z.name}</option>)}
           </Select>
-        </Field>
+        </Field> */}
       </div>
 
       <div className="mt-5">

@@ -264,7 +264,7 @@ export default function ExhibitorManualPage() {
 
               <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 <p>
-                  <strong className="text-foreground">doexim Global Trade Expo 2027</strong> is India&apos;s premier
+                  <strong className="text-foreground">doexim Global Trade Expo 2027 </strong> is India&apos;s premier
                   international commerce, export-import, and manufacturing platform, uniting top exporters, MSMEs,
                   global procurement heads, trade financiers, logistics powerhouses, and government trade facilitation
                   councils under one roof.

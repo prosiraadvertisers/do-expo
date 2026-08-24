@@ -163,31 +163,8 @@ export default function PreEventPage() {
           </div>
         </section>
 
-        {/* Impact stats */}
-        <section>
-          <div className="bg-linear-to-br from-[#2E1A6B] via-[#22338C] to-[#1B4FA0] rounded-3xl p-8 sm:p-10 lg:p-14">
-            <div className="flex items-baseline justify-between mb-8 sm:mb-10 flex-wrap gap-2">
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-                Event Impact
-              </h2>
-              <span className="font-body text-[10px] sm:text-xs font-semibold text-[#F6C453] tracking-[0.15em] uppercase">
-                Expected Outcomes
-              </span>
-            </div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {METRICS.map((metric, idx) => (
-                <div key={idx} className="bg-white/5 rounded-2xl p-5 sm:p-6 border border-white/10">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-[#F6C453] to-[#E8912A] flex items-center justify-center mb-4">
-                    <metric.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#191244]" />
-                  </div>
-                  <p className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-1">{metric.value}</p>
-                  <p className="font-body text-xs sm:text-sm text-white/60">{metric.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+       
+        
       </div>
     </div>
   )

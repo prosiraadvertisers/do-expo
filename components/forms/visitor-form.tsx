@@ -181,12 +181,12 @@ export function VisitorForm() {
         <Field label="Designation" htmlFor="v-desig">
           <TextInput id="v-desig" value={form.designation} onChange={(e) => set('designation', e.target.value)} placeholder="Your role" />
         </Field>
-        <Field label="Primary Interest" htmlFor="v-int">
+        {/* <Field label="Primary Interest" htmlFor="v-int">
           <Select id="v-int" value={interest} onChange={(e) => setInterest(e.target.value)}>
             <option value="">Select an interest</option>
             {ZONES.map((z) => <option key={z.slug} value={z.slug}>{z.name}</option>)}
           </Select>
-        </Field>
+        </Field> */}
       </div>
 
       <div className="mt-5">

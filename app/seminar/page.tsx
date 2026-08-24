@@ -51,7 +51,7 @@ const SCHEDULE: Day[] = [
         title: "Navigating Global Export Opportunities in 2027",
         speaker: "Rajeev Malhotra",
         speakerRole: "Director General, FIEO",
-        venue: "Main Hall",
+        venue: "Hall 6",
         category: "Keynote",
       },
       {
@@ -59,7 +59,7 @@ const SCHEDULE: Day[] = [
         title: "De-risking Cross-Border Payments & Trade Finance",
         speaker: "Ananya Kapoor",
         speakerRole: "VP Trade Finance, HDFC Bank",
-        venue: "Hall A",
+        venue: "Hall 6",
         category: "Panel",
       },
       {
@@ -67,7 +67,7 @@ const SCHEDULE: Day[] = [
         title: "Hands-On: Structuring an LC-Backed Export Deal",
         speaker: "Priya Nair",
         speakerRole: "Trade Compliance Consultant",
-        venue: "Workshop Room 1",
+        venue: "Hall 6",
         category: "Workshop",
       },
       {
@@ -90,7 +90,7 @@ const SCHEDULE: Day[] = [
         title: "AI & B2B global trade in Modern Supply Chains",
         speaker: "Dr. Meera Iyer",
         speakerRole: "Head of Supply Chain Tech, Reliance Logistics",
-        venue: "Main Hall",
+        venue: "Hall 6",
         category: "Keynote",
       },
       {
@@ -98,7 +98,7 @@ const SCHEDULE: Day[] = [
         title: "Last-Mile Freight: Ports, Rail & New Corridors",
         speaker: "Karan Bhatia",
         speakerRole: "COO, Bombay Exhibition Freight",
-        venue: "Hall A",
+        venue: "Hall 6",
         category: "Panel",
       },
       {
@@ -106,7 +106,7 @@ const SCHEDULE: Day[] = [
         title: "Getting Export-Ready: Certifications & Compliance",
         speaker: "Farah Sheikh",
         speakerRole: "Compliance Lead, ITPO",
-        venue: "Workshop Room 1",
+        venue: "Hall 6",
         category: "Workshop",
       },
       {
@@ -114,11 +114,50 @@ const SCHEDULE: Day[] = [
         title: "Closing Address: Where Indian Trade Goes Next",
         speaker: "Rajeev Malhotra",
         speakerRole: "Director General, FIEO",
-        venue: "Main Hall",
+        venue: "Hall 6",
         category: "Keynote",
       },
     ],
   },
+  {
+  id: "day-3",
+  label: "Day 3",
+  date: "17 Dec 2027",
+  sessions: [
+    {
+      time: "10:30 AM",
+      title: "Building Global Brands from India",
+      speaker: "Arjun Mehta",
+      speakerRole: "Founder & Global Trade Strategist",
+      venue: "Hall 6",
+      category: "Keynote",
+    },
+    {
+      time: "11:30 AM",
+      title: "Digital Trade & The Future of Cross-Border Commerce",
+      speaker: "Neha Sharma",
+      speakerRole: "Director, International Business",
+      venue: "Hall 6",
+      category: "Panel",
+    },
+    {
+      time: "1:00 PM",
+      title: "Workshop: Building Your International Market Entry Strategy",
+      speaker: "Rohan Desai",
+      speakerRole: "Global Business Consultant",
+      venue: "Hall 6",
+      category: "Workshop",
+    },
+    {
+      time: "3:00 PM",
+      title: "Global Business Networking & Closing Session",
+      speaker: "All Speakers",
+      speakerRole: "Open Networking",
+      venue: "Expo Lounge",
+      category: "Networking",
+    },
+  ],
+},
 ];
 
 const CATEGORY_STYLES: Record<Category, string> = {
@@ -191,7 +230,7 @@ export default function SeminarPage() {
           <div className="mx-auto mt-9 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-sm font-medium text-white/80">
             <span className="flex items-center gap-2">
               <CalendarDays className="size-4 text-white/60" />
-              15 &amp; 16 Dec 2027
+              15, 16 &amp; 17 Dec 2027
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="size-4 text-white/60" />

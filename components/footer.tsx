@@ -80,11 +80,12 @@ export function Footer() {
 
           <div className="lg:col-span-2">
             <FooterHeading>Zones</FooterHeading>
+
             <ul className="mt-4 space-y-2.5 text-sm">
               {ZONES.map((z) => (
                 <li key={z.slug}>
                   <Link
-                    href={`/exhibit#zone-${z.slug}`}
+                    href={`/visitors#zone-${z.slug}`}
                     className="text-white/70 transition hover:text-white"
                   >
                     {z.name}

@@ -291,7 +291,7 @@ function AboutDropdown() {
               href=""
               className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition hover:bg-muted hover:text-primary"
             >
-              doexim Awards
+              doexim Excellence Awards
             </Link>
           </li>
           <li>
