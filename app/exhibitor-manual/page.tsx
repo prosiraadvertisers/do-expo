@@ -334,7 +334,7 @@ export default function ExhibitorManualPage() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4.5 shrink-0 text-emerald-600" />
-                      <span><strong>Construction Deadline:</strong> Must complete all fabrication by 14 December 2027 at 12:00 PM.</span>
+                      <span><strong>Construction Deadline:</strong> Must complete all fabrication by 14 December 2027 at 3:00 PM.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4.5 shrink-0 text-emerald-600" />
@@ -342,7 +342,7 @@ export default function ExhibitorManualPage() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <AlertTriangle className="mt-0.5 size-4.5 shrink-0 text-amber-600" />
-                      <span><strong>Late Working Surcharge:</strong> ₹10,000 per hour per booth (14 Dec, 5:00 PM – 12:00 Midnight upon special sanction).</span>
+                      <span><strong>Late Working Surcharge:</strong> ₹10,000 per hour per booth (14 Dec, 3:00 PM – 12:00 Midnight upon special sanction).</span>
                     </li>
                   </ul>
                 </div>
@@ -358,7 +358,7 @@ export default function ExhibitorManualPage() {
                   <ul className="space-y-3 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4.5 shrink-0 text-emerald-600" />
-                      <span><strong>Handover Date:</strong> 14 December 2027 from 4:00 PM onwards.</span>
+                      <span><strong>Handover Date:</strong> 14 December 2027 from 12:00 PM onwards.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4.5 shrink-0 text-emerald-600" />
@@ -370,7 +370,7 @@ export default function ExhibitorManualPage() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4.5 shrink-0 text-emerald-600" />
-                      <span><strong>Final Dressing:</strong> Must finish booth graphics and product placement by 14 Dec, 10:00 PM.</span>
+                      <span><strong>Final Dressing:</strong> Must finish booth graphics and product placement by 14 Dec, 6:00 PM.</span>
                     </li>
                   </ul>
                 </div>
@@ -446,10 +446,10 @@ export default function ExhibitorManualPage() {
                     </span>
                     <span className="text-xs font-semibold text-primary">Post-Event</span>
                   </div>
-                  <h4 className="font-heading text-base font-bold text-foreground">Move-Out (17 Dec 2027)</h4>
+                  <h4 className="font-heading text-base font-bold text-foreground">Move-Out (18 Dec 2027)</h4>
                   <p className="text-xs leading-relaxed text-muted-foreground">
                     <strong>Hand-Carry Items:</strong> Permitted from 6:30 PM to 8:00 PM only upon gate-pass verification.<br />
-                    <strong>Heavy & Bare Booths:</strong> 9:00 PM onwards through midnight.
+                    <strong>Heavy & Bare Booths:</strong> 17 Dec 2027 TO 18 Dec 2027 6:00 AM onwards.
                   </p>
                 </div>
               </div>
@@ -681,7 +681,7 @@ export default function ExhibitorManualPage() {
 
               <div className="rounded-2xl border border-border bg-muted/30 p-5 text-xs text-muted-foreground space-y-2.5 leading-relaxed">
                 <p>
-                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;doexim EXPO PRIVATE LIMITED&quot;</strong>.
+                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;prosira adtech  PRIVATE LIMITED&quot;</strong>.
                 </p>
                 <p>
                   • <strong>Digital/Cash Policy:</strong> Direct Cash or UPI payments are strongly discouraged. Any unapproved cash handling requires a ₹5,000 processing surcharge.
@@ -1000,20 +1000,20 @@ export default function ExhibitorManualPage() {
                   <div className="rounded-2xl border border-border/80 bg-card p-5 shadow-xs">
                     <p className="text-xs font-semibold text-muted-foreground">Email Support</p>
                     <a
-                      href="mailto:connect@prosira.in"
+                      href="mailto:btl@prosira.in"
                       className="mt-1.5 flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary transition-colors"
                     >
-                      <Mail className="size-4 text-primary shrink-0" /> connect@prosira.in
+                      <Mail className="size-4 text-primary shrink-0" /> btl@prosira.in
                     </a>
                   </div>
 
                   <div className="rounded-2xl border border-border/80 bg-card p-5 shadow-xs">
                     <p className="text-xs font-semibold text-muted-foreground">Operations Helpline</p>
                     <a
-                      href="tel:+919765259272"
+                      href="tel:+919662443046"
                       className="mt-1.5 flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary transition-colors"
                     >
-                      <Phone className="size-4 text-primary shrink-0" /> +91 97652 59272
+                      <Phone className="size-4 text-primary shrink-0" /> +91 9662443046
                     </a>
                   </div>
                 </div>
