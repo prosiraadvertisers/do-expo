@@ -31,7 +31,7 @@ const expoHighlights = [
   {
     title: "Product Sourcing",
     subtitle: "Discover new products & innovations.",
-    stat: "500+ new products",
+    stat: "5k+ new products",
     icon: Package,
     gradient: "from-cyan-500 to-teal-700",
   },

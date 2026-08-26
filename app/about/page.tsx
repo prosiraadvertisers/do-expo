@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { CtaButton } from "@/components/ui/cta";
+import { Highlights } from "@/components/home/highlights";
 import {
   Users,
   Target,
@@ -242,125 +243,8 @@ export default function AboutPage() {
       </div>
 
       {/* ================= EXPO HIGHLIGHTS ================= */}
+<Highlights />
 
-<section
-  id="expo-highlights"
-  className="relative overflow-hidden bg-white pt-10 pb-10 scroll-mt-14"
->
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.08),transparent_30%)]" />
-
-  <div className="relative mx-auto max-w-7xl px-4">
-    {/* Heading */}
-    <div className="text-center">
-      <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
-        Expo Highlights
-      </span>
-
-      <div className="mx-auto w-full max-w-[1800px] px-4 text-center">
-        <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-4xl xl:text-5xl">
-          Everything That Makes{" "}
-          <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-            doexim Expo Exceptional
-          </span>
-        </h2>
-      </div>
-    </div>
-
-    {/* Bottom Features */}
-    <div className="mt-10 rounded-[32px] border border-slate-200 bg-gradient-to-r from-slate-900 via-blue-900 to-blue-700 p-8 text-white shadow-2xl sm:p-10">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {[
-          "B2B Meetings",
-          "Product Sourcing",
-          "Knowledge Sessions",
-          "Business Networking",
-          "Live Business",
-          "Multiple Sectors",
-          "International Buyers",
-          "Product Launches",
-          "Startup Pavilion",
-          "Government Participation",
-          "Networking Lounge",
-          "Export Workshops",
-        ].map((item) => (
-          <div
-            key={item}
-            className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-4 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
-          >
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-              ✓
-            </span>
-
-            <span className="font-semibold text-white">
-              {item}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-      <section
-        id="faq"
-        className="scroll-mt-24 bg-slate-50 px-4 pt-10 pb-20 sm:px-6 lg:px-8"
-      >
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-14 text-center">
-            <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              Frequently Asked Questions
-            </span>
-
-            <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl">
-              Everything You Need to Know
-            </h2>
-          </div>
-
-          <div className="space-y-3">
-            {[
-              {
-                q: "Who can attend doexim Expo?",
-                a: "Manufacturers, Exporters, Importers, MSMEs, Logistics Companies, Government Organizations, Buyers and Trade Professionals.",
-              },
-              {
-                q: "Why is there a registration fee for visitors?",
-                a: "The registration fee helps us maintain genuine participation and minimize non-business visitors.",
-              },
-              {
-                q: "Can international buyers participate?",
-                a: "Yes. International buyers and delegates are invited to participate.",
-              },
-              {
-                q: "How can I book an exhibition stall?",
-                a: "Visit the Book Your Space page and submit your enquiry.",
-              },
-              {
-                q: "Will there be conferences and seminars?",
-                a: "Yes. Industry experts and government officials will conduct multiple sessions.",
-              },
-              {
-                q: "Are networking opportunities available?",
-                a: "Yes. Dedicated B2B meetings and networking sessions will be organized.",
-              },
-            ].map((item) => (
-              <details
-                key={item.q}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-lg sm:p-6"
-              >
-                <summary className="cursor-pointer list-none text-base font-semibold text-slate-900 flex items-center justify-between sm:text-lg">
-                  {item.q}
-
-                  <ChevronDown className="h-5 w-5 transition duration-300 group-open:rotate-180" />
-                </summary>
-
-                <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-                  {item.a}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="brand-gradient-radial px-4 py-16 text-white sm:px-6 lg:px-8">
