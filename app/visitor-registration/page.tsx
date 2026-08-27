@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 export default function VisitorRegistrationPage() {
   return (
     <>
-      <PageHero
-        
-        title="Your Pass to the Future of B2B global trade"
-      />
-
+      <div className="pt-14">
+      <PageHero         
+        title="Your Pass to the Future of B2B global trade"/>  
+     
+      </div>
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
