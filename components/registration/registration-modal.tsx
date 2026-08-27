@@ -28,8 +28,7 @@ const CONFIG: Record<
     icon: Ticket,
     eyebrow: 'Visitor Registration',
     title: 'Your pass to the future of B2B global trade',
-    blurb: 'Personalised recommendations, priority entry and access to every zone \u2014 completely free.',
-  },
+blurb: "Personalised recommendations, priority entry and access to every zone with a premium visitor experience.",  },
   seminar: {
     icon: GraduationCap,
     eyebrow: 'Seminar & Knowledge Summit Pass',

@@ -14,9 +14,8 @@ export default function VisitorRegistrationPage() {
   return (
     <>
       <PageHero
-        eyebrow="Visitor Registration"
+        
         title="Your Pass to the Future of B2B global trade"
-        subtitle="Get personalized recommendations, priority entry and access to every zone — completely free. Register now and explore India's biggest B2B global trade showcase."
       />
 
       <section className="px-4 py-12 sm:px-6 lg:px-8">
@@ -85,11 +84,7 @@ export default function VisitorRegistrationPage() {
                   )
                 })}
 
-                <div className="glass-card rounded-lg bg-primary/5 p-4 ring-1 ring-primary/20">
-                  <p className="text-xs text-muted-foreground">
-                    <span className="font-semibold text-foreground">📅 Event Dates:</span> 18-20 March 2027 • {new Date().getFullYear() > 2025 ? 'Past edition' : 'In a few months'}
-                  </p>
-                </div>
+               
 
                 <CtaLink href="/event" variant="outline" className="w-full justify-center">
                   View Agenda
