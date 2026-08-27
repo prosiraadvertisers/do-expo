@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Get your  visitor pass to B2B global trade Expo 2027. Personalized recommendations, priority entry and access to all five technology zones.",
 }
 
-export default function FreeVisitorRegistrationPage() {
+export default function VisitorRegistrationPage() {
   return (
     <>
       <PageHero
@@ -33,7 +33,7 @@ export default function FreeVisitorRegistrationPage() {
             <div>
               <div className="sticky top-24 space-y-6">
                 <div className="inline-flex items-center gap-2 rounded-full bg-cta/15 px-3.5 py-1.5 text-xs font-bold text-cta">
-                  <Ticket className="size-4" /> 100% FREE
+                  
                 </div>
 
                 <div>

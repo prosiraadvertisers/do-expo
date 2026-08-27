@@ -54,11 +54,7 @@ function ModalBody({ type }: { type: RegistrationType }) {
   return (
     <>
       <div className="relative overflow-hidden rounded-t-none brand-gradient-radial px-6 py-7 text-white sm:rounded-t-2xl sm:px-8">
-        {type === 'visitor' && (
-          <span className="absolute right-14 top-6 rotate-6 rounded-full bg-cta px-3 py-1 text-xs font-bold text-cta-foreground shadow-lg sm:right-16">
-            100% FREE
-          </span>
-        )}
+        
         <div className="flex items-center gap-3">
           <span className="flex size-11 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25">
             <Icon className="size-6" />

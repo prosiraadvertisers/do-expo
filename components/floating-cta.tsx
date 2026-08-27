@@ -8,6 +8,7 @@ const ACTIONS: { type: RegistrationType; label: string; icon: typeof Store; vari
   { type: 'visitor', label: ' Visitor Registraion', icon: Ticket, variant: 'bg-gold text-gold-foreground' },
   { type: 'buyer-seller', label: 'Buyer Seller Meet', icon: Handshake, variant: 'bg-primary text-primary-foreground' },
   { type: 'exhibitor', label: 'Become an Exhibitor', icon: Store, variant: 'bg-cta text-cta-foreground' },
+  { type: 'seminar', label: 'Seminar & Knowledge Summit', icon: Store, variant: 'bg-emerald-600 text-white' },
 ]
 
 export function FloatingCTA() {

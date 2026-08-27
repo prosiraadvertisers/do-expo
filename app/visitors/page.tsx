@@ -541,7 +541,7 @@ export default function VisitorsPage() {
 
             <div className="mt-10">
               <Link
-                href="/free-visitor-registration"
+                href="/visitor-registration"
                 className="inline-flex items-center rounded-xl bg-white px-8 py-4 text-lg font-semibold text-[#191456] transition hover:scale-105"
               >
                 Register Now →
