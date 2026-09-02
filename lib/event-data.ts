@@ -14,7 +14,7 @@ export const EVENT = {
   tagline: 'Exporting India to the World — Vision 2030',
 startISO: '2027-12-15T09:00:00+05:30',
   dateLabel: '15, 16 & 17 Dec 2027',
-  venue: 'Bombay Exhibition Centre, Nesco Mumbai, India',
+  venue: 'Hall 6, BEC, Nesco Mumbai, India',
   venueShort: 'Mumbai, India',
 }
 
