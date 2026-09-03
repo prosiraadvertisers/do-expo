@@ -234,7 +234,7 @@ const BENEFITS: Benefit[] = [
     },
   },
   {
-    label: "Year-round doexim Digital Platform",
+    label: "3 Months Exclusive doexim Digital Platform",
     tiers: {
       title: "Premium Visibility",
       powered: "Featured Listing",
