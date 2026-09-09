@@ -37,15 +37,19 @@ type Day = {
   id: string;
   label: string;
   date: string;
+  journeyTitle: string;
+  journeyFlow: string;
   sessions: Session[];
 };
 
 const SCHEDULE: Day[] = [
   {
-    id: "day-1",
-    label: "Day 1 — START",
-    date: "15 Dec 2027",
-    sessions: [
+  id: "day-1",
+  label: "Day 1 — START",
+  date: "15 Dec 2027",
+  journeyTitle: "I WANT TO EXPORT",
+  journeyFlow: "Product → Market → Buyer → Pricing → Order",
+  sessions: [
       {
         time: "10:30 AM",
         title: "EXIM ZERO TO HERO",
@@ -114,10 +118,12 @@ const SCHEDULE: Day[] = [
   },
 
   {
-    id: "day-2",
-    label: "Day 2 — EXECUTE",
-    date: "16 Dec 2027",
-    sessions: [
+  id: "day-2",
+  label: "Day 2 — EXECUTE",
+  date: "16 Dec 2027",
+  journeyTitle: "I HAVE AN ORDER",
+  journeyFlow: "Documentation → Banking → CHA → Freight → Customs → Shipment",
+  sessions: [
       {
         time: "10:30 AM",
         title: "Day 1 Recap — From Product to First Order",
@@ -201,11 +207,14 @@ const SCHEDULE: Day[] = [
     ],
   },
 
-  {
-    id: "day-3",
-    label: "Day 3 — SCALE",
-    date: "17 Dec 2027",
-    sessions: [
+ {
+  id: "day-3",
+  label: "Day 3 — SCALE",
+  date: "17 Dec 2027",
+  journeyTitle: "I WANT TO GO GLOBAL",
+  journeyFlow:
+    "Buyers → Digital Marketing → Risk Protection → E-commerce → Distribution → Global Expansion",
+  sessions: [
       {
         time: "10:30 AM",
         title: "EXIM Market Update — What's Moving Globally",
@@ -383,14 +392,21 @@ export default function SeminarPage() {
       {/* ================= SCHEDULE / TIMELINE ================= */}
       <section id="schedule" className="scroll-mt-24 bg-slate-50  pt-14 pb-24">
         <div className="mx-auto max-w-5xl px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mt-5 text-center text-3xl font-black tracking-tight text-slate-900 lg:text-4xl">
-              Two Days of{" "}
-              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                Sessions, Speakers &amp; Networking
-              </span>
-            </h2>
-          </div>
+          <div className="mx-auto max-w-4xl text-center">
+  <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#3024af]">
+    {day.label}
+  </p>
+
+  <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+    {day.journeyTitle}
+  </h2>
+
+  <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-[#3024af] to-cyan-500" />
+
+  <p className="mx-auto mt-5 max-w-3xl text-base font-semibold leading-7 text-slate-600 sm:text-lg">
+    {day.journeyFlow}
+  </p> 
+</div>
 
           {/* Day tabs */}
           <div className="mt-12 flex justify-center gap-3">
