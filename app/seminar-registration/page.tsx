@@ -57,7 +57,7 @@ export default function SeminarRegistrationPage() {
                   {
                     icon: Users,
                     title: "Speaker Q&A & Meetups",
-                    desc: "Direct interactions with domain experts on LC structuring, freight logistics, and global market entry.",
+                    desc: "Direct interactions with domain experts on LC structuring, freight logistics",
                   },
                   {
                     icon: Award,
