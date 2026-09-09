@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 }
 
 const keyDates = [
-  { icon: Ticket, label: "Registration Opens", value: "15 Jun 2027" },
-  { icon: Users, label: "Buyer-Seller Matching", value: "01 Mar 2027" },
+  { icon: Ticket, label: "Registration Opens", value: "1 April 2027" },
+  // { icon: Users, label: "Buyer-Seller Matching", value: "01 Mar 2027" },
   { icon: CalendarDays, label: "Expo Days", value: EVENT.dateLabel },
   { icon: Trophy, label: "Export Excellence Awards", value: "17 Dec 2027" },
 ]
@@ -30,15 +30,22 @@ export default function EventPage() {
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {keyDates.map((k) => (
-              <div key={k.label} className="glass-card rounded-2xl p-5 text-center">
-                <k.icon className="mx-auto mb-2 size-6 text-accent" />
-                <p className="font-heading text-lg font-bold text-foreground">{k.value}</p>
-                <p className="text-xs text-muted-foreground">{k.label}</p>
-              </div>
-            ))}
-          </div>
+         <div className="mb-10 flex flex-wrap justify-center gap-4">
+  {keyDates.map((k) => (
+    <div
+      key={k.label}
+      className="glass-card w-full rounded-2xl p-5 text-center sm:w-[280px] lg:w-[300px]"
+    >
+      <k.icon className="mx-auto mb-2 size-6 text-accent" />
+      <p className="font-heading text-lg font-bold text-foreground">
+        {k.value}
+      </p>
+      <p className="text-xs text-muted-foreground">
+        {k.label}
+      </p>
+    </div>
+  ))}
+</div>
 
           <div className="mb-8 flex flex-col items-center gap-3 text-center">
             <h2 className="text-balance font-heading text-3xl font-extrabold text-foreground sm:text-4xl">

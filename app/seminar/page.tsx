@@ -193,17 +193,15 @@ export default function SeminarPage() {
 
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold backdrop-blur">
-            <GraduationCap className="size-4" /> doexim Knowledge Summit
+            <GraduationCap className="size-4" /> DOEXIM GLOBAL SUMMIT 2027
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-tight lg:text-5xl">
-            Learn. Connect. Grow Globally.
+            ZERO TO HERO — MASTER THE BUSINESS OF INTERNATIONAL TRADE
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-7 text-white/85">
-            Join industry experts, exporters, government officials and
-            international trade leaders for insightful seminar sessions,
-            networking and business opportunities.
+            Keynotes + Masterclasses + Expert Panels + Live Case Studies + Q&A + Buyer/Seller Networking
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -219,12 +217,12 @@ export default function SeminarPage() {
             >
               View Schedule
             </Link>
-            <Link
+            {/* <Link
               href="/seminar-registration"
               className="rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold backdrop-blur transition hover:bg-white/20"
             >
               Dedicated Registration Page
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mx-auto mt-9 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-sm font-medium text-white/80">
@@ -234,7 +232,7 @@ export default function SeminarPage() {
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="size-4 text-white/60" />
-              Bombay Exhibition Centre, Mumbai
+              BEC, Hall 6, Mumbai
             </span>
             <span className="flex items-center gap-2">
               <Users className="size-4 text-white/60" />
