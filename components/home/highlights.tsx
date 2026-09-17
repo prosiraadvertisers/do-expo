@@ -71,7 +71,11 @@ export function Highlights() {
   const goPrev = () => setActive((a) => (a - 1 + n) % n);
   const goNext = () => setActive((a) => (a + 1) % n);
 
+  // Duplicate the partner list so the marquee belt can loop with no seam.
+  const partnerBelt = [...proposedPartners, ...proposedPartners];
+
   return (
+    <>
     <section
       id="expo-highlights"
       className="relative overflow-hidden bg-white py-12 sm:py-12"
@@ -171,5 +175,99 @@ export function Highlights() {
         </div>
       </div>
     </section>
+
+    <section
+      id="proposed-partners"
+      className="relative overflow-hidden bg-white py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-4xl px-4 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-3.5 py-1.5 text-xs font-semibold text-primary sm:px-4 sm:py-2 sm:text-sm">
+          Proposed Partners
+        </span>
+        
+      </div>
+
+      <div
+        className="partner-marquee relative mt-10 sm:mt-14"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        }}
+      >
+        <div className="partner-marquee-track flex w-max items-center gap-4 sm:gap-6">
+          {partnerBelt.map((partner, i) => (
+            <PartnerLogo key={`${partner.name}-${i}`} name={partner.name} src={partner.src} />
+          ))}
+        </div>
+      </div>
+
+      <style jsx>{`
+        .partner-marquee-track {
+          animation: partner-scroll 28s linear infinite;
+        }
+        .partner-marquee:hover .partner-marquee-track,
+        .partner-marquee:focus-within .partner-marquee-track {
+          animation-play-state: paused;
+        }
+        @keyframes partner-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        @media (max-width: 640px) {
+          .partner-marquee-track {
+            animation-duration: 18s;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .partner-marquee-track {
+            animation: none;
+          }
+        }
+      `}</style>
+    </section>
+    </>
+  );
+}
+
+/**
+ * PROPOSED PARTNERS — data + logo chip
+ * A single continuous belt of partner logo chips drifting right-to-left,
+ * looped seamlessly by duplicating the set. Pauses on hover/focus so it
+ * stays usable, respects reduced-motion, and scales its speed/size down
+ * on small screens.
+ *
+ * Put your actual logo files inside: /public/partners/
+ * e.g. /public/partners/meridian-traders.png
+ * Then just update the `src` below to match your filenames.
+ */
+
+const proposedPartners = [
+  { name: "Meridian Traders", src: "/proposedpartner/apeda.png" },
+  { name: "Silverline Exports", src: "/proposedpartner/DGFT.jpg" },
+  { name: "Harbor & Co.", src: "/proposedpartner/ecgc.webp" },
+  { name: "Zenith Logistics", src: "/proposedpartner/eepcindia.png" },
+  { name: "Bluewave Imports", src: "/proposedpartner/eximbank.png" },
+  { name: "Crescent Textiles", src: "/proposedpartner/fieo.png" },
+  { name: "Northgate Freight", src: "/proposedpartner/mccia.png" },
+  { name: "Solaris Commodities", src: "/proposedpartner/mci.png" },
+  { name: "Ironbridge Global", src: "/proposedpartner/msme.png" },
+];
+
+function PartnerLogo({ name, src }: { name: string; src: string }) {
+  return (
+    <div className="flex h-16 w-40 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-5 shadow-sm sm:h-20 sm:w-48">
+      <img
+        src={src}
+        alt={name}
+        className="max-h-9 max-w-full object-contain  transition-all duration-300 hover:grayscale-0 sm:max-h-11"
+        loading="lazy"
+      />
+    </div>
   );
 }
