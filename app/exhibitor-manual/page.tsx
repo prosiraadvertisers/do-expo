@@ -681,7 +681,7 @@ export default function ExhibitorManualPage() {
 
               <div className="rounded-2xl border border-border bg-muted/30 p-5 text-xs text-muted-foreground space-y-2.5 leading-relaxed">
                 <p>
-                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;prosira adtech  PRIVATE LIMITED&quot;</strong>.
+                  • <strong>Payment Mode:</strong> Fabricators/Contractors must submit payment via <strong>Demand Draft (DD)</strong> or <strong>Cheque</strong> drawn in favour of <strong className="text-foreground">&quot;Prosira Adtech Pvt. Ltd.&quot;</strong>.
                 </p>
                 <p>
                   • <strong>Digital/Cash Policy:</strong> Direct Cash or UPI payments are strongly discouraged. Any unapproved cash handling requires a ₹5,000 processing surcharge.
