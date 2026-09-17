@@ -184,18 +184,15 @@ export function Highlights() {
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-3.5 py-1.5 text-xs font-semibold text-primary sm:px-4 sm:py-2 sm:text-sm">
           Proposed Partners
         </span>
-        
+        <h2 className="mx-auto mt-4 max-w-3xl text-2xl font-black tracking-tight text-slate-900 sm:mt-5 sm:text-3xl lg:text-4xl">
+          Organisations{" "}
+          <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+            We're Bringing on Board
+          </span>
+        </h2>
       </div>
 
-      <div
-        className="partner-marquee relative mt-10 sm:mt-14"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-        }}
-      >
+      <div className="partner-marquee relative mt-10 sm:mt-14">
         <div className="partner-marquee-track flex w-max items-center gap-4 sm:gap-6">
           {partnerBelt.map((partner, i) => (
             <PartnerLogo key={`${partner.name}-${i}`} name={partner.name} src={partner.src} />
@@ -206,6 +203,9 @@ export function Highlights() {
       <style jsx>{`
         .partner-marquee-track {
           animation: partner-scroll 28s linear infinite;
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
         .partner-marquee:hover .partner-marquee-track,
         .partner-marquee:focus-within .partner-marquee-track {
@@ -213,10 +213,10 @@ export function Highlights() {
         }
         @keyframes partner-scroll {
           from {
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
           }
           to {
-            transform: translateX(-50%);
+            transform: translate3d(-50%, 0, 0);
           }
         }
         @media (max-width: 640px) {
@@ -242,31 +242,42 @@ export function Highlights() {
  * stays usable, respects reduced-motion, and scales its speed/size down
  * on small screens.
  *
- * Put your actual logo files inside: /public/partners/
- * e.g. /public/partners/meridian-traders.png
- * Then just update the `src` below to match your filenames.
+ * Logo files live in: /public/proposedpartner/
+ * Every chip below uses the SAME fixed box (h-24 w-48, larger on sm+),
+ * and the <img> is told to fill that box height-first via `h-full w-auto`
+ * with object-contain — so a tall square mark (APEDA, MSME) and a long
+ * wordmark (Ministry of Commerce) both read at the same visual size
+ * instead of the wordmark shrinking to "fit" a fixed width.
  */
 
 const proposedPartners = [
-  { name: "Meridian Traders", src: "/proposedpartner/apeda.png" },
-  { name: "Silverline Exports", src: "/proposedpartner/DGFT.jpg" },
-  { name: "Harbor & Co.", src: "/proposedpartner/ecgc.webp" },
-  { name: "Zenith Logistics", src: "/proposedpartner/eepcindia.png" },
-  { name: "Bluewave Imports", src: "/proposedpartner/eximbank.png" },
-  { name: "Crescent Textiles", src: "/proposedpartner/fieo.png" },
-  { name: "Northgate Freight", src: "/proposedpartner/mccia.png" },
-  { name: "Solaris Commodities", src: "/proposedpartner/mci.png" },
-  { name: "Ironbridge Global", src: "/proposedpartner/msme.png" },
+  { name: "India Exim Bank", src: "/proposedpartner/eximbank.png" },
+  { name: "APEDA", src: "/proposedpartner/apeda.png" },
+  { name: "Ministry of MSME, Govt. of India", src: "/proposedpartner/msme.png" },
+  { name: "FIEO", src: "/proposedpartner/fieo.png" },
+  { name: "MCCIA", src: "/proposedpartner/mccia.png" },
+  { name: "Directorate General of Foreign Trade", src: "/proposedpartner/dgft2.jpg" },
+  { name: "ECGC", src: "/proposedpartner/ecgc2.png" },
+  { name: "EEPC India", src: "/proposedpartner/eepcindia.png" },
+  {
+    name: "Ministry of Commerce and Industry",
+    src: "/proposedpartner/mci.png",
+  },
 ];
 
 function PartnerLogo({ name, src }: { name: string; src: string }) {
   return (
-    <div className="flex h-16 w-40 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-5 shadow-sm sm:h-20 sm:w-48">
+    <div className="flex h-24 w-48 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-5 shadow-sm sm:h-28 sm:w-60 sm:px-6">
       <img
         src={src}
         alt={name}
-        className="max-h-9 max-w-full object-contain  transition-all duration-300 hover:grayscale-0 sm:max-h-11"
+        className="h-full max-h-16 w-auto max-w-full object-contain sm:max-h-20"
         loading="lazy"
+        style={{
+          backfaceVisibility: "hidden",
+          transform: "translateZ(0)",
+          imageRendering: "-webkit-optimize-contrast",
+        }}
       />
     </div>
   );
