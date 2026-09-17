@@ -33,7 +33,7 @@ export default function ExhibitionOrganisersPage() {
     <>
       <div className="pt-14">
         <PageHero
-          eyebrow="About doexim Expo"
+          
           title="Exhibition Organisers"
         />
       </div>
