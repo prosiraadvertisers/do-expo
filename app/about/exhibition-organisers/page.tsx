@@ -35,7 +35,6 @@ export default function ExhibitionOrganisersPage() {
         <PageHero
           eyebrow="About doexim Expo"
           title="Exhibition Organisers"
-          subtitle="Building a more connected and opportunity-driven future for international trade."
         />
       </div>
 
