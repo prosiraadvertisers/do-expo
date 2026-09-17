@@ -140,7 +140,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 sm:flex-row">
           <p className="text-xs text-white/60">
-            &copy; {new Date().getFullYear()} prosira advertisers. All rights
+            &copy; {new Date().getFullYear()} Prosira Adtech Pvt. Ltd. All rights
             reserved. prosira.in
           </p>
           <div className="flex items-center gap-2">
