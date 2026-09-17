@@ -266,6 +266,15 @@ function AboutDropdown() {
             </Link>
           </li>
 
+          <li>
+            <Link
+              href="/about/exhibition-organisers"
+              className="block rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted hover:text-primary"
+            >
+              Exhibition Organisers
+            </Link>
+          </li>
+
           
 
           <li>
@@ -438,6 +447,13 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                 className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
               >
                 About doexim Expo
+              </Link>
+              <Link
+                href="/about/exhibition-organisers"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-3 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+              >
+                Exhibition Organisers
               </Link>
               <Link
                 href="/about#expo-highlights"
