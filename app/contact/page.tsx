@@ -23,8 +23,8 @@ export const metadata: Metadata = {
 const ZONE_CONTACTS = [
   {
     zone: "East Zone",
-    phone: "+91 90288 15714",
-    href: "tel:+919028815714",
+    phone: "+91 97305 75714",
+    href: "tel:+919730575714",
     gradient: "from-sky-500 to-blue-700",
     ring: "ring-sky-400/30",
   },
@@ -100,6 +100,8 @@ export default function ContactPage() {
                   Office Address
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Prosira Adtech Pvt. Ltd.
+                  <br />
                   308, Patil Plaza,
                   <br/>
                   Mitra Mandal Chowk,         
