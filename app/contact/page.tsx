@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const ZONE_CONTACTS = [
   {
     zone: "East Zone",
-    phone: "+91 97305 75714",
-    href: "tel:+919730575714",
+    phone: "+91 97652 59272",
+    href: "tel:+919765259272",
     gradient: "from-sky-500 to-blue-700",
     ring: "ring-sky-400/30",
   },
   {
     zone: "West Zone",
-    phone: "+91 97652 59272",
-    href: "tel:+919765259272",
+     phone: "+91 97305 75714",
+    href: "tel:+919730575714",
     gradient: "from-orange-400 to-orange-600",
     ring: "ring-orange-400/30",
   },
