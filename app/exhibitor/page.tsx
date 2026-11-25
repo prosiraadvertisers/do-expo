@@ -17,9 +17,7 @@ export default function ExhibitorPage() {
     <PageHero
       title="Meet Our Exhibitors"
     >
-      <CtaButton variant="cta" size="lg">
-        Become an Exhibitor
-      </CtaButton>
+     
     </PageHero>
   </div>
 
